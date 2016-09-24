@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="sokoban">
+  <ClassDiagramComponents>
+    <Class name="Administrador" package="" visibility="public" xPosition="478.0" yPosition="90.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Jugador" package="" visibility="public" xPosition="932.0" yPosition="50.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="60.0" yPosition="137.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Historial" package="" visibility="public" xPosition="7.0" yPosition="397.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Juego" package="" visibility="public" xPosition="367.0" yPosition="441.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="UntitledClass5" package="" visibility="public" xPosition="752.0" yPosition="351.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="UntitledClass6" package="" visibility="public" xPosition="1092.0" yPosition="348.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="UntitledClass7" package="" visibility="public" xPosition="1073.0" yPosition="200.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Reglamento" package="" visibility="public" xPosition="557.0" yPosition="272.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Nivel" package="" visibility="public" xPosition="305.0" yPosition="324.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
