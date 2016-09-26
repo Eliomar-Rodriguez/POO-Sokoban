@@ -2,56 +2,225 @@
 
 <ClassDiagram name="sokoban">
   <ClassDiagramComponents>
-    <Class name="Administrador" package="" visibility="public" xPosition="478.0" yPosition="90.0">
-      <Fields/>
+    <Class name="Administrador" package="" visibility="public" xPosition="41.0" yPosition="48.0">
+      <Fields>
+        <Field name="nacionalidad" type="String" visibility="private"/>
+        <Field name="nivelesAgregados" type="int" visibility="private"/>
+        <Field name="bestMoves" type="int" visibility="private"/>
+      </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="setNacionalidad" returnType="void" visibility="public"/>
+        <Method name="getNacionalidad" returnType="void" visibility="public"/>
+        <Method name="setNivelesAgregados" returnType="void" visibility="public"/>
+        <Method name="getNivelesAgregados" returnType="void" visibility="public"/>
+        <Method name="setBestMoves" returnType="void" visibility="public"/>
+        <Method name="getBestMoves" returnType="void" visibility="public"/>
+        <Method name="borrarUsuario" returnType="void" visibility="public"/>
+        <Method name="buscarUsuario" returnType="void" visibility="public"/>
+        <Method name="crearUsuario" returnType="void" visibility="public"/>
+        <Method name="cambiarOrdenNivel" returnType="void" visibility="public"/>
+        <Method name="crearNivel" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Jugador" package="" visibility="public" xPosition="932.0" yPosition="50.0">
-      <Fields/>
+    <Class name="Usuario normal" package="" visibility="public" xPosition="546.0" yPosition="31.0">
+      <Fields>
+        <Field name="bestMoves" type="int" visibility="private"/>
+        <Field name="repeticiones" type="int" visibility="private"/>
+        <Field name="nivel" type="int" visibility="private"/>
+      </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="getBestMoves" returnType="void" visibility="public"/>
+        <Method name="setBestMoves" returnType="void" visibility="public"/>
+        <Method name="getNivel" returnType="void" visibility="public"/>
+        <Method name="setNivel" returnType="void" visibility="public"/>
+        <Method name="getRepeticiones" returnType="void" visibility="public"/>
+        <Method name="setRepeticiones" returnType="void" visibility="public"/>
+        <Method name="jugar" returnType="void" visibility="public"/>
+        <Method name="crearGrupo" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Persona" package="" visibility="public" xPosition="60.0" yPosition="137.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
+    <Class name="Persona" package="" visibility="public" xPosition="274.0" yPosition="407.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="cedula" type="String" visibility="private"/>
+        <Field name="correo" type="String" visibility="private"/>
+        <Field name="contra" type="String" visibility="private"/>
+        <Field name="fechaRegistro" type="String" visibility="private"/>
+        <Field name="foto" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="cor"/>
+          <Argument type="String" name="contra"/>
+          <Argument type="String" name="fechaReg"/>
+          <Argument type="String" name="foto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public"/>
+        <Method name="getNombre" returnType="void" visibility="public"/>
+        <Method name="setCedula" returnType="void" visibility="public"/>
+        <Method name="getCedula" returnType="void" visibility="public"/>
+        <Method name="setCorreo" returnType="void" visibility="public"/>
+        <Method name="getCorreo" returnType="void" visibility="public"/>
+        <Method name="setContra" returnType="void" visibility="public"/>
+        <Method name="getContra" returnType="void" visibility="public"/>
+        <Method name="setFechaReg" returnType="void" visibility="public"/>
+        <Method name="getFechaReg" returnType="void" visibility="public"/>
+        <Method name="setFoto" returnType="void" visibility="public"/>
+        <Method name="getFoto" returnType="void" visibility="public"/>
+        <Method name="agregarNombre" returnType="void" visibility="public"/>
+        <Method name="agregarCorreo" returnType="void" visibility="public"/>
+        <Method name="agregarCedula" returnType="void" visibility="public"/>
+        <Method name="agregarContra" returnType="void" visibility="public"/>
+        <Method name="agregarFechaReg" returnType="void" visibility="public"/>
+        <Method name="agregarFoto" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Historial" package="" visibility="public" xPosition="7.0" yPosition="397.0">
-      <Fields/>
+    <Class name="Historial" package="" visibility="public" xPosition="546.0" yPosition="431.0">
+      <Fields>
+        <Field name="yourMoves" type="int" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+        <Field name="tiempo" type="String" visibility="private"/>
+      </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="setYourMoves" returnType="void" visibility="public"/>
+        <Method name="getYourMoves" returnType="void" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public"/>
+        <Method name="getEstado" returnType="void" visibility="public"/>
+        <Method name="setTiempo" returnType="void" visibility="public"/>
+        <Method name="getTiempo" returnType="void" visibility="public"/>
+        <Method name="mostrarHistorial" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Juego" package="" visibility="public" xPosition="367.0" yPosition="441.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
+    <Class name="Juego" package="" visibility="public" xPosition="812.0" yPosition="230.0">
+      <Fields>
+        <Field name="cantMoves" type="int" visibility="private"/>
+        <Field name="tiempo" type="String" visibility="private"/>
+        <Field name="estadoActual" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cM"/>
+          <Argument type="String" name="t"/>
+          <Argument type="String" name="estAct"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setEstado_actual" returnType="void" visibility="public"/>
+        <Method name="getEstado_actual" returnType="void" visibility="public"/>
+        <Method name="setCantidad_moves" returnType="void" visibility="public"/>
+        <Method name="getCantidad_moves" returnType="void" visibility="public"/>
+        <Method name="setTiempo" returnType="void" visibility="public"/>
+        <Method name="getTiempo" returnType="void" visibility="public"/>
+        <Method name="guardar" returnType="void" visibility="public"/>
+        <Method name="salir" returnType="void" visibility="public"/>
+        <Method name="estadoActual" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="UntitledClass5" package="" visibility="public" xPosition="752.0" yPosition="351.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
+    <Class name="Estadisticas" package="" visibility="public" xPosition="1077.0" yPosition="534.0">
+      <Fields>
+        <Field name="jugador" type="String" visibility="private"/>
+        <Field name="juegos_jugados" type="int" visibility="private"/>
+        <Field name="juegos_ganados" type="int" visibility="private"/>
+        <Field name="juegos_perdidos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="j"/>
+          <Argument type="int" name="jJug"/>
+          <Argument type="int" name="jGan"/>
+          <Argument type="int" name="jPer"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setJugador" returnType="void" visibility="public"/>
+        <Method name="getJugador" returnType="void" visibility="public"/>
+        <Method name="setJuegos_jugados" returnType="void" visibility="public"/>
+        <Method name="getJuegos_jugados" returnType="void" visibility="public"/>
+        <Method name="setJuegos_ganados" returnType="void" visibility="public"/>
+        <Method name="getJuegos_ganados" returnType="void" visibility="public"/>
+        <Method name="setJuegos_perdidos" returnType="void" visibility="public"/>
+        <Method name="getJuegos_perdidos" returnType="void" visibility="public"/>
+        <Method name="mostrarEstadistica" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="UntitledClass6" package="" visibility="public" xPosition="1092.0" yPosition="348.0">
+    <Class name="Sokoban Principal" package="" visibility="public" xPosition="793.0" yPosition="72.0">
       <Fields/>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="login" returnType="void" visibility="public"/>
+        <Method name="singin" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="UntitledClass7" package="" visibility="public" xPosition="1073.0" yPosition="200.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
+    <Class name="Grupo" package="" visibility="public" xPosition="257.0" yPosition="90.0">
+      <Fields>
+        <Field name="cantidadJugadores" type="int" visibility="private"/>
+        <Field name="jugadores" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cantJug"/>
+          <Argument type="int" name="jug"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setCantidadJugadores" returnType="void" visibility="public"/>
+        <Method name="getCatidadJugadores" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Reglamento" package="" visibility="public" xPosition="557.0" yPosition="272.0">
-      <Fields/>
+    <Class name="Reglamento" package="" visibility="public" xPosition="1057.0" yPosition="15.0">
+      <Fields>
+        <Field name="moviAnterior" type="int" visibility="private"/>
+        <Field name="deshacer_jugada" type="String" visibility="private"/>
+      </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="setDeshacer_jugada" returnType="void" visibility="public"/>
+        <Method name="getDeshacer_jugada" returnType="void" visibility="public"/>
+        <Method name="setMovi_anterior" returnType="void" visibility="public"/>
+        <Method name="getMovi_anterior" returnType="void" visibility="public"/>
+        <Method name="deshacer" returnType="void" visibility="public"/>
+        <Method name="reglas" returnType="cambiar" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Nivel" package="" visibility="public" xPosition="305.0" yPosition="324.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
+    <Class name="Nivel" package="" visibility="public" xPosition="793.0" yPosition="783.0">
+      <Fields>
+        <Field name="estadoInicial" type="String" visibility="private"/>
+        <Field name="cantMoves" type="int" visibility="private"/>
+        <Field name="idNivel" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cM"/>
+          <Argument type="String" name="idN"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ubicarPersonaje" returnType="void" visibility="public"/>
+        <Method name="estadoInicial" returnType="void" visibility="public"/>
+        <Method name="crearCaja" returnType="void" visibility="public"/>
+        <Method name="reiniciar" returnType="void" visibility="public"/>
+        <Method name="getMovimientos" returnType="void" visibility="public"/>
+        <Method name="setMovimientos" returnType="void" visibility="public"/>
+        <Method name="getIdNivel" returnType="void" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public"/>
+      </Methods>
     </Class>
   </ClassDiagramComponents>
-  <ClassDiagramRelations/>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Grupo" target="Historial" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Usuario normal" target="Persona"/>
+    <HasRelation name="tiene" source="Juego" target="Nivel" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Usuario normal" target="Historial" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="es jugado por" source="Juego" target="Usuario normal" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="crea" source="Usuario normal" target="Grupo" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Administrador" target="Persona"/>
+    <HasRelation name="tiene" source="Nivel" target="Historial" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
 </ClassDiagram>
