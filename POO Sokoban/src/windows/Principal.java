@@ -1,16 +1,20 @@
 
-package poo.sokoban;
+package windows;
 
 import java.awt.*;
 import javax.swing.*;
+import windows.VentanaPrincipal.*;
 
-public class ventana extends javax.swing.JFrame {
+public class Principal extends javax.swing.JFrame {
 
-    public ventana() {
+    public Principal() {
         initComponents();
         VentanaPrincipal Ventana = new VentanaPrincipal();  // creando el objeto Ventana de tipo VentanaPrincipal 
         this.add(Ventana,BorderLayout.CENTER);
         this.pack();
+        
+        
+        //setIconImage(new ImageIcon(getClass().getResource("/Icons/caja.png")).getImage());
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -36,13 +40,10 @@ public class ventana extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
     public static void main(String args[]) {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ventana().setVisible(true);
-                
+                new Principal().setVisible(true);
             }
         });
     }
