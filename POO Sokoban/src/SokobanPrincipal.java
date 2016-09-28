@@ -1,17 +1,20 @@
+
+import java.util.ArrayList;
+
 public class SokobanPrincipal {
 
-    private Object listaJugadores;
+    private ArrayList<UsuarioNormal> listaUsuarios;
 
-    public SokobanPrincipal(Object listaJugadores) {
-        this.listaJugadores = listaJugadores;
+    public SokobanPrincipal() {
+        this.listaUsuarios = new ArrayList();
     }
 
-    public Object getListaJugadores() {
-        return listaJugadores;
+    public ArrayList<UsuarioNormal> getListaUsuarios() {
+        return listaUsuarios;
     }
-
-    public void setListaJugadores(Object listaJugadores) {
-        this.listaJugadores = listaJugadores;
+    
+    public void setListaUsuarios(UsuarioNormal u) {
+        this.listaUsuarios.add(u);
     }
     
     

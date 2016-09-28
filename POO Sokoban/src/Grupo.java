@@ -1,11 +1,18 @@
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 public class Grupo {
 
     private int cantidadJugadores;
-
-    private int jugadores;
     
-    public Grupo(int cantJug, int jug) {
+    private ArrayList<Grupo> listaJugadores;
+
+    public Grupo(int cantidadJugadores) {
+        this.cantidadJugadores = cantidadJugadores;
+        this.listaJugadores = new ArrayList();
     }
+   
 
     public void setCantidadJugadores(int cJ) {
         this.cantidadJugadores = cJ ;
@@ -15,13 +22,21 @@ public class Grupo {
         return cantidadJugadores;
     }
 
-    public int getJugadores() {
-        return jugadores;
+    public ArrayList<Grupo> getListaJugadores() {
+        return listaJugadores;
+    }
+    
+
+    public void setListaJugadores(Grupo j) {
+        if ((listaJugadores.size()>=2)&&(listaJugadores.size()<=4))
+            this.listaJugadores.add(j);
+        else
+        {
+            JOptionPane.showMessageDialog(null,"El minimo de usuarios para crear un grupo es 2 y el maximo es 4.");            
+        }
+        
     }
 
-    public void setJugadores(int jugadores) {
-        this.jugadores = jugadores;
-    }
     
     public void registrarCierreGrupo() {
     }
@@ -40,8 +55,10 @@ public class Grupo {
 
     @Override
     public String toString() {
-        return "Grupo{" + "cantidadJugadores=" + cantidadJugadores + ", jugadores=" + jugadores + '}';
+        return "Grupo{" + "cantidadJugadores=" + cantidadJugadores + ", listaJugadores=" + listaJugadores + '}';
     }
+
+   
     
     
 }
