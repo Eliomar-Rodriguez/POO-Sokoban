@@ -1,5 +1,4 @@
-package poo.sokoban;
-
+package main;
 
 import javax.swing.*;    
 
@@ -8,8 +7,11 @@ public class POOSokoban {
 
     public static void main(String[] args) {
         System.out.print("Hola Mundo!");
-        JOptionPane.showMessageDialog(null,"Falta originalidad le doy un 6.5 xD");
-        // cambios minimos a las 3:11
+        //JOptionPane.showMessageDialog(null,"Falta originalidad le doy un 6.5 xD");
+
+        // cambios minimos a las 3:11 PM
+        //la
+
        System.out.println("\nSubido desde git bash");
     }
     
