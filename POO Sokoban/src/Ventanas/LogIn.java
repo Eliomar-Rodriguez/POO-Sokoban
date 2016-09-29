@@ -20,7 +20,7 @@ public class LogIn extends javax.swing.JFrame {
         setResizable(false);    // no poder cambiar tamano a la ventana
         setSize(900,620);      // tamano
         setLocationRelativeTo(null);    // posicionar ventana en centro
-        setTitle("Iniciar Seccion Sokoban");   // poner titulo a ventana
+        setTitle("Iniciar Sesion Sokoban");   // poner titulo a ventana
     }
 
     /**
@@ -35,7 +35,6 @@ public class LogIn extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnRegistrarse = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         btnEntrar = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
@@ -49,38 +48,26 @@ public class LogIn extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
         jLabel1.setText("usuario");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(180, 210, 190, 40);
+        jLabel1.setBounds(180, 220, 190, 40);
 
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
         jLabel2.setText("contrasena");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(180, 280, 230, 40);
-
-        btnRegistrarse.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
-        btnRegistrarse.setText("Registrarse");
-        btnRegistrarse.setMaximumSize(new java.awt.Dimension(901, 627));
-        btnRegistrarse.setMinimumSize(new java.awt.Dimension(901, 627));
-        btnRegistrarse.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarseActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnRegistrarse);
-        btnRegistrarse.setBounds(290, 450, 270, 50);
+        jLabel2.setBounds(180, 310, 230, 40);
 
         jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(410, 190, 280, 40);
+        jTextField1.setBounds(410, 210, 280, 40);
 
         btnEntrar.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
         btnEntrar.setText("Entrar");
         getContentPane().add(btnEntrar);
-        btnEntrar.setBounds(340, 380, 170, 50);
+        btnEntrar.setBounds(350, 400, 170, 50);
 
         jPasswordField1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jPasswordField1.setEchoChar('*');
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(410, 270, 280, 40);
+        jPasswordField1.setBounds(410, 300, 280, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iniciar sesion.jpg"))); // NOI18N
         jLabel3.setPreferredSize(new java.awt.Dimension(900, 620));
@@ -89,10 +76,6 @@ public class LogIn extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,7 +114,6 @@ public class LogIn extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
-    private javax.swing.JButton btnRegistrarse;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
