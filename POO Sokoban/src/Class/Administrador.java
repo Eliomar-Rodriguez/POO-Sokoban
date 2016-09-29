@@ -1,3 +1,8 @@
+package Class;
+
+
+import Class.Persona;
+
 public class Administrador extends Persona {
 
     private String nacionalidad;

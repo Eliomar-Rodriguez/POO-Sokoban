@@ -1,5 +1,5 @@
 
-package Ventanas;
+package Windows;
 
 
 public class CrearNivel extends javax.swing.JFrame {

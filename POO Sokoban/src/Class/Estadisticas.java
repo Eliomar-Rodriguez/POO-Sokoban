@@ -1,3 +1,5 @@
+package Class;
+
 public class Estadisticas {
 
     private int juegos_jugados;

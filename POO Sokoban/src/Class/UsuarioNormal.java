@@ -1,3 +1,5 @@
+package Class;
+
 public class UsuarioNormal extends Persona {
 
     private int bestMoves;

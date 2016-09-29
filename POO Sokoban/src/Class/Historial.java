@@ -1,3 +1,5 @@
+package Class;
+
 public class Historial {
 
     private int yourMoves;

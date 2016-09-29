@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas;
+package Windows;
 
 import java.util.Calendar;
 
@@ -141,8 +141,8 @@ public class Registro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMailActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        Menu main = new Menu();
-        main.setVisible(true);
+        LogIn login = new LogIn();
+        login.setVisible(true);
         dispose(); // oculta esta ventana y abre la que estoy llamando
     }//GEN-LAST:event_btnSaveActionPerformed
 

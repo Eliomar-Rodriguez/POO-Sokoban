@@ -1,5 +1,5 @@
 
-package Ventanas;
+package Windows;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
