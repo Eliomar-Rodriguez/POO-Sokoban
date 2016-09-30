@@ -10,6 +10,7 @@ public class LogIn extends javax.swing.JFrame {
         setSize(900,620);      // tamano
         setLocationRelativeTo(null);    // posicionar ventana en centro
         setTitle("Iniciar Sesion Sokoban");   // poner titulo a ventana
+        lblAviso.setVisible(false);
     }
 
    
@@ -23,6 +24,8 @@ public class LogIn extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         btnEntrar = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
+        btnEntrar1 = new javax.swing.JButton();
+        lblAviso = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
@@ -38,31 +41,44 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
         jLabel2.setText("contrasena");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(180, 310, 230, 40);
+        jLabel2.setBounds(180, 280, 230, 40);
 
         jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         getContentPane().add(jTextField1);
         jTextField1.setBounds(410, 210, 280, 40);
 
         btnEntrar.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
-        btnEntrar.setText("Entrar");
+        btnEntrar.setText("Registrarse");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
             }
         });
         getContentPane().add(btnEntrar);
-        btnEntrar.setBounds(350, 400, 170, 50);
+        btnEntrar.setBounds(310, 470, 260, 50);
 
         jPasswordField1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jPasswordField1.setEchoChar('*');
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(410, 300, 280, 40);
+        jPasswordField1.setBounds(410, 270, 280, 40);
+
+        btnEntrar1.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
+        btnEntrar1.setText("Entrar");
+        btnEntrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEntrar1);
+        btnEntrar1.setBounds(350, 410, 170, 50);
+
+        lblAviso.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        lblAviso.setForeground(new java.awt.Color(255, 51, 51));
+        lblAviso.setText("usuario o contrasena incorrecta");
+        getContentPane().add(lblAviso);
+        lblAviso.setBounds(250, 340, 380, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iniciar sesion.jpg"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(90, 620));
-        jLabel3.setMinimumSize(new java.awt.Dimension(900, 620));
-        jLabel3.setPreferredSize(new java.awt.Dimension(900, 620));
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 890, 630);
 
@@ -70,8 +86,15 @@ public class LogIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        // TODO add your handling code here:
+        Registro reg = new Registro();
+        reg.setVisible(true);
+        reg.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose(); // cierra esta ventana
     }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void btnEntrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrar1ActionPerformed
+        lblAviso.setVisible(true);
+    }//GEN-LAST:event_btnEntrar1ActionPerformed
 
     
     public static void main(String args[]) {
@@ -85,11 +108,13 @@ public class LogIn extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
+    private javax.swing.JButton btnEntrar1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblAviso;
     // End of variables declaration//GEN-END:variables
 }

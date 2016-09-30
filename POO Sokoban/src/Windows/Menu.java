@@ -100,6 +100,7 @@ public class Menu extends javax.swing.JFrame {
 
         Registro Reg = new Registro();
         Reg.setVisible(true);
+        Reg.setDefaultCloseOperation(HIDE_ON_CLOSE);
         dispose(); // oculta esta ventana y abre la que estoy llamando
     }//GEN-LAST:event_bntRegistrarseActionPerformed
 

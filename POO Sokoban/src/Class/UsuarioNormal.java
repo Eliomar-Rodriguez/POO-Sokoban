@@ -7,13 +7,15 @@ public class UsuarioNormal extends Persona {
     private int repeticiones;
 
     private int nivelActual;
-
+    
     public UsuarioNormal(int bestMoves, int repeticiones, int nivelActual, String n, String id, String cor, String contra, String fechaReg, String foto) {
         super(n, id, cor, contra, fechaReg, foto);
         this.bestMoves = bestMoves;
         this.repeticiones = repeticiones;
         this.nivelActual = nivelActual;
     }
+
+    
 
     public int getBestMoves() {
         return bestMoves;

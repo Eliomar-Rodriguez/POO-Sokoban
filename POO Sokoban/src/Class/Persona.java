@@ -16,6 +16,9 @@ public class Persona {
 
     public Persona(String n, String id, String cor, String contra, String fechaReg, String foto) {
     }
+
+    public Persona() {
+    }
     
     
     public void setNombre(String n) {
