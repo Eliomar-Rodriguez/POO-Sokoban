@@ -7,9 +7,9 @@ import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class Menu extends javax.swing.JFrame {
+public class MenuUsuario extends javax.swing.JFrame {
 
-    public Menu() {
+    public MenuUsuario() {
         initComponents();
         
         setResizable(false);    // no poder cambiar tamano a la ventana
@@ -24,28 +24,29 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bntRegistrarse = new javax.swing.JButton();
+        bntCrearGrupo = new javax.swing.JButton();
         btnEstadisticas = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        btnIniciarSesion = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnJugar = new javax.swing.JButton();
+        btnConfigPerf = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        bntRegistrarse.setBackground(new java.awt.Color(65, 195, 228));
-        bntRegistrarse.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        bntRegistrarse.setText("Registrarse");
-        bntRegistrarse.setAlignmentX(0.5F);
-        bntRegistrarse.setBorder(null);
-        bntRegistrarse.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        bntRegistrarse.addActionListener(new java.awt.event.ActionListener() {
+        bntCrearGrupo.setBackground(new java.awt.Color(65, 195, 228));
+        bntCrearGrupo.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        bntCrearGrupo.setText("CreAr grupo");
+        bntCrearGrupo.setAlignmentX(0.5F);
+        bntCrearGrupo.setBorder(null);
+        bntCrearGrupo.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        bntCrearGrupo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntRegistrarseActionPerformed(evt);
+                bntCrearGrupoActionPerformed(evt);
             }
         });
-        getContentPane().add(bntRegistrarse);
-        bntRegistrarse.setBounds(530, 220, 257, 50);
+        getContentPane().add(bntCrearGrupo);
+        bntCrearGrupo.setBounds(530, 240, 280, 50);
 
         btnEstadisticas.setBackground(new java.awt.Color(65, 195, 228));
         btnEstadisticas.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -59,7 +60,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(490, 270, 361, 50);
+        btnEstadisticas.setBounds(490, 290, 361, 50);
 
         btnSalir.setBackground(new java.awt.Color(65, 195, 228));
         btnSalir.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -73,36 +74,51 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSalir);
-        btnSalir.setBounds(610, 320, 109, 50);
+        btnSalir.setBounds(620, 390, 120, 50);
 
-        btnIniciarSesion.setBackground(new java.awt.Color(65, 195, 228));
-        btnIniciarSesion.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnIniciarSesion.setText("Iniciar Session");
-        btnIniciarSesion.setAlignmentX(0.5F);
-        btnIniciarSesion.setBorder(null);
-        btnIniciarSesion.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+        btnJugar.setBackground(new java.awt.Color(65, 195, 228));
+        btnJugar.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnJugar.setText("Jugar");
+        btnJugar.setAlignmentX(0.5F);
+        btnJugar.setBorder(null);
+        btnJugar.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIniciarSesionActionPerformed(evt);
+                btnJugarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnIniciarSesion);
-        btnIniciarSesion.setBounds(500, 170, 321, 50);
+        getContentPane().add(btnJugar);
+        btnJugar.setBounds(610, 190, 130, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1280, 720);
+        btnConfigPerf.setBackground(new java.awt.Color(65, 195, 228));
+        btnConfigPerf.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnConfigPerf.setText("configurar perfil");
+        btnConfigPerf.setAlignmentX(0.5F);
+        btnConfigPerf.setBorder(null);
+        btnConfigPerf.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnConfigPerf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfigPerfActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnConfigPerf);
+        btnConfigPerf.setBounds(480, 340, 390, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bntRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegistrarseActionPerformed
+    private void bntCrearGrupoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCrearGrupoActionPerformed
 
         Registro Reg = new Registro();
         Reg.setVisible(true);
         Reg.setDefaultCloseOperation(HIDE_ON_CLOSE);
         dispose(); // oculta esta ventana y abre la que estoy llamando
-    }//GEN-LAST:event_bntRegistrarseActionPerformed
+    }//GEN-LAST:event_bntCrearGrupoActionPerformed
 
     private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
         System.out.println("Estadisticas");
@@ -112,23 +128,28 @@ public class Menu extends javax.swing.JFrame {
         System.exit(1);
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
+    private void btnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarActionPerformed
         System.out.println("Inicia Sesion");     
-    }//GEN-LAST:event_btnIniciarSesionActionPerformed
+    }//GEN-LAST:event_btnJugarActionPerformed
+
+    private void btnConfigPerfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigPerfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfigPerfActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new MenuUsuario().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bntRegistrarse;
+    private javax.swing.JButton bntCrearGrupo;
+    private javax.swing.JButton btnConfigPerf;
     private javax.swing.JButton btnEstadisticas;
-    private javax.swing.JButton btnIniciarSesion;
+    private javax.swing.JButton btnJugar;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

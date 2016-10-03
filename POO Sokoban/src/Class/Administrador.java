@@ -1,8 +1,5 @@
 package Class;
 
-
-import Class.Persona;
-
 public class Administrador extends Persona {
 
     private String nacionalidad;
@@ -11,13 +8,20 @@ public class Administrador extends Persona {
 
     private int bestMoves;
 
-    public Administrador(String nacionalidad, int nivelesAgregados, int bestMoves, String n, String id, String cor, String contra, String fechaReg, String foto) {
-        super(n, id, cor, contra, fechaReg, foto);
+    public Administrador (){
+        
+    }
+
+    public Administrador(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
+        super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);
+    }
+    
+    public Administrador(String nacionalidad, int nivelesAgregados, int bestMoves, String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
+        super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);
         this.nacionalidad = nacionalidad;
         this.nivelesAgregados = nivelesAgregados;
         this.bestMoves = bestMoves;
     }
-    
     
     public void setNacionalidad(String nac) {
         this.nacionalidad = nac;

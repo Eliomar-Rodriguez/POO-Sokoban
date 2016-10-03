@@ -13,11 +13,23 @@ public class Persona {
     private String fechaRegistro;
 
     private String foto;
+    
+    private int tipoUsuario;
 
-    public Persona(String n, String id, String cor, String contra, String fechaReg, String foto) {
+    /*public Persona(String n, String id, String cor, String contra, String fechaReg, String foto, int tU) {
     }
 
     public Persona() {
+    }*/
+
+    public Persona(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.correo = correo;
+        this.contra = contra;
+        this.fechaRegistro = fechaRegistro;
+        this.foto = foto;
+        this.tipoUsuario = tipoUsuario;
     }
     
     
@@ -67,6 +79,13 @@ public class Persona {
 
     public String getFoto() {
        return foto;
+    }
+    public void setTipoUsuario(int tU) {
+        this.tipoUsuario = tU;
+    }
+
+    public int getTipoUsuario() {
+        return tipoUsuario;
     }
 
     public void agregarNombre() {

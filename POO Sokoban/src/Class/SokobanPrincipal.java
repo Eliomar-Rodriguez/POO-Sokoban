@@ -5,21 +5,20 @@ import java.util.ArrayList;
 
 public class SokobanPrincipal {
 
-    private ArrayList<UsuarioNormal> listaUsuarios;
+    private ArrayList<Persona> listaUsuarios;
 
     public SokobanPrincipal() {
         this.listaUsuarios = new ArrayList();
     }
 
-    public ArrayList<UsuarioNormal> getListaUsuarios() {
+    public ArrayList<Persona> getListaUsuarios() {
         return listaUsuarios;
     }
     
-    public void setListaUsuarios(UsuarioNormal u) {
+    public void setListaUsuarios(Persona u) {
         this.listaUsuarios.add(u);
     }
-    
-    
+     
     public void login() {
     }
 

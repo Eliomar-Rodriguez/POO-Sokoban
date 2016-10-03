@@ -1,7 +1,11 @@
 
 package Windows;
 
+import Class.Administrador;
 import Class.Persona;
+import Class.SokobanPrincipal;
+import Class.UsuarioNormal;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Registro extends javax.swing.JFrame {
@@ -151,7 +155,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel8.setBounds(340, 160, 99, 24);
 
         btnSave.setBackground(new java.awt.Color(120, 213, 233));
-        btnSave.setFont(new java.awt.Font("Minecrafter", 0, 36)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
         btnSave.setText("resgistrar");
         btnSave.setAlignmentX(0.5F);
         btnSave.setBorder(null);
@@ -274,7 +278,7 @@ public class Registro extends javax.swing.JFrame {
         lblAviso.setForeground(new java.awt.Color(255, 51, 51));
         lblAviso.setText("Debe llenar todos los datos");
         getContentPane().add(lblAviso);
-        lblAviso.setBounds(410, 400, 440, 40);
+        lblAviso.setBounds(420, 400, 440, 40);
 
         lblTipUser.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         lblTipUser.setForeground(new java.awt.Color(255, 51, 51));
@@ -314,49 +318,62 @@ public class Registro extends javax.swing.JFrame {
         cmbUsers.setSelectedIndex(-1);
     }
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        Persona persona = new Persona();
-        if (txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0 | cmbUsers.getSelectedIndex() == -1)
-        {
-            if (cmbUsers.getSelectedIndex() == -1)
-                lblTipUser.setVisible(true);
-            
-            if (txtId.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
-                lblId.setVisible(true);     // poner visible el asterisco de error
-            
-            if (txtMail.getText().isEmpty())    
-                lblMail.setVisible(true);  
-            
-            if (txtName.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
-                lblNombre.setVisible(true);     // poner visible el asterisco de error
-            
-            if (txtPass.getPassword().length == 0)    
-                lblPass.setVisible(true);     // poner visible el asterisco de error
-            lblAviso.setVisible(true);
-        }
-        if (txtNacionalidad.getText().isEmpty())
-            lblNation.setVisible(true);
-        if (txtName.getText().length()!=0 && txtId.getText().length()!=0 && txtMail.getText().length()!=0 && txtPass.getPassword().length!=0 && cmbUsers.getSelectedIndex() != -1)
-            {
-                // llenando el objeto
-                System.out.println("Llenando objeto");
-                persona.setFechaReg(txtDate.getText());
-                persona.setCedula(txtId.getText());
-                persona.setCorreo(txtMail.getText());
-                persona.setNombre(txtName.getText());
-                char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
-                String pass = new String(arrayC);
-                persona.setContra(pass);
-                limpiar();
+        /// instancias
+        Administrador admin = new Administrador();  
+        //Administrador admin = new Administrador();
+        //UsuarioNormal jugador = new UsuarioNormal();
+        
+        SokobanPrincipal soko = new SokobanPrincipal();
+        ArrayList<Persona> lista = soko.getListaUsuarios();
+        
+        if (cmbUsers.getSelectedIndex()==-1) // sino eligieron opcion manda mensaje
+            lblTipUser.setVisible(true);
+        else if (cmbUsers.getSelectedIndex()==0){
+                
+                if (txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0 | txtNacionalidad.getText().isEmpty()){
+                    
+                    if (txtNacionalidad.getText().isEmpty())
+                        lblNation.setVisible(true);
+         
+                    if (txtId.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
+                        lblId.setVisible(true);     // poner visible el asterisco de error
 
-                //
-                //meter el mae en la lista con el .add(persona);
-                //
-                // luego se llama a la ventana registro para iniciar sesion
-                //LogIn login = new LogIn();
-                ////login.setVisible(true);
-                //login.setDefaultCloseOperation(HIDE_ON_CLOSE);
-                //dispose(); // oculta esta ventana y abre la que estoy llamando
-            }
+                    if (txtMail.getText().isEmpty())    
+                        lblMail.setVisible(true);  
+
+                    if (txtName.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
+                        lblNombre.setVisible(true);     // poner visible el asterisco de error
+
+                    if (txtPass.getPassword().length == 0)    
+                        lblPass.setVisible(true);     // poner visible el asterisco de error
+                    lblAviso.setVisible(true);
+                }
+                else{
+                    admin.setNacionalidad(txtNacionalidad.getText());
+                    admin.setCedula(txtId.getText());
+                    admin.setNombre(txtName.getText());
+                    admin.setCorreo(txtMail.getText());
+                    
+                    char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
+                    String pass = new String(arrayC);
+                    
+                    admin.setContra(pass);
+                    admin.setTipoUsuario(cmbUsers.getSelectedIndex());
+                    admin.setFechaReg(txtDate.getText());
+                    
+                    lista.add(admin);
+                    System.out.println("Agregado con exito!");
+                }
+        }  
+        else if(cmbUsers.getSelectedIndex()==1){ // usuario normal
+        
+        }
+
+                LogIn login = new LogIn();
+                login.setVisible(true);
+                login.setDefaultCloseOperation(HIDE_ON_CLOSE);
+                dispose(); // oculta esta ventana y abre la que estoy llamando
+            
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
@@ -366,6 +383,8 @@ public class Registro extends javax.swing.JFrame {
     private void cmbUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbUsersActionPerformed
         if (cmbUsers.getSelectedIndex()==0)
             panelAdmin.setVisible(true);
+        else if (cmbUsers.getSelectedIndex()==1)
+            panelAdmin.setVisible(false);
         lblTipUser.setVisible(false);
         
     }//GEN-LAST:event_cmbUsersActionPerformed
