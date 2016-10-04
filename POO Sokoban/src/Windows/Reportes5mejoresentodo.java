@@ -16,6 +16,8 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
      */
     public Reportes5mejoresentodo() {
         initComponents();
+        panel5m.setVisible(false);
+        panelM.setVisible(false);
     }
 
     /**
@@ -28,10 +30,26 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        cmbCateg = new javax.swing.JComboBox<>();
+        txtNivel = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        panel5m = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        txtQuinto = new javax.swing.JTextField();
+        txtPrimer = new javax.swing.JTextField();
+        txtSegundo = new javax.swing.JTextField();
+        txtCuarto = new javax.swing.JTextField();
+        txtTercero = new javax.swing.JTextField();
+        txtQuintoC = new javax.swing.JTextField();
+        txtPrimerC = new javax.swing.JTextField();
+        txtSegundoC = new javax.swing.JTextField();
+        txtTerceroC = new javax.swing.JTextField();
+        txtCuartoC = new javax.swing.JTextField();
+        panelM = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
@@ -43,40 +61,196 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Selecione la categoria en la que desea ver estadisticas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(240, 140, 587, 40);
+        jLabel2.setBounds(240, 140, 839, 40);
 
-        jComboBox1.setBackground(new java.awt.Color(240, 240, 240));
-        jComboBox1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 Usuarios más insistentes en nivel", "5 Usuarios con ganes optimizados", "5 Usuarios records rotos", "Mejor en movimientos", "Mejor en tiempo", "Usuarios que pasaron un nivel", "Historial de un jugador" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(360, 190, 570, 40);
-
-        jTextField1.setBackground(new java.awt.Color(120, 213, 233));
-        jTextField1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        cmbCateg.setBackground(new java.awt.Color(240, 240, 240));
+        cmbCateg.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        cmbCateg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 Usuarios más insistentes en nivel", "5 Usuarios con ganes optimizados", "5 Usuarios records rotos", "Mejor en movimientos", "Mejor en tiempo", "Usuarios que pasaron un nivel", "Historial de un jugador", "Informacion de nivel creado por administrador" }));
+        cmbCateg.setSelectedIndex(-1);
+        cmbCateg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                cmbCategActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(590, 240, 210, 40);
+        getContentPane().add(cmbCateg);
+        cmbCateg.setBounds(300, 190, 720, 40);
+
+        txtNivel.setBackground(new java.awt.Color(120, 213, 233));
+        txtNivel.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        txtNivel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtNivel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNivelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtNivel);
+        txtNivel.setBounds(590, 240, 210, 40);
 
         jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel1.setText("Nivel");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(480, 250, 52, 32);
+        jLabel1.setBounds(480, 250, 75, 24);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estadisticas.jpg"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 1280, 710);
+        panel5m.setLayout(null);
+
+        jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        jLabel4.setText("cantidad");
+        panel5m.add(jLabel4);
+        jLabel4.setBounds(310, 0, 190, 60);
+
+        jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        jLabel8.setText("nombre");
+        panel5m.add(jLabel8);
+        jLabel8.setBounds(60, 10, 190, 30);
+
+        jTextField2.setBackground(new java.awt.Color(120, 213, 233));
+        jTextField2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        panel5m.add(jTextField2);
+        jTextField2.setBounds(590, 240, 210, 40);
+
+        txtQuinto.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtQuinto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtQuintoActionPerformed(evt);
+            }
+        });
+        panel5m.add(txtQuinto);
+        txtQuinto.setBounds(10, 220, 260, 26);
+
+        txtPrimer.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtPrimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPrimerActionPerformed(evt);
+            }
+        });
+        panel5m.add(txtPrimer);
+        txtPrimer.setBounds(10, 60, 260, 26);
+
+        txtSegundo.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        panel5m.add(txtSegundo);
+        txtSegundo.setBounds(10, 100, 260, 26);
+
+        txtCuarto.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        panel5m.add(txtCuarto);
+        txtCuarto.setBounds(10, 180, 260, 26);
+
+        txtTercero.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtTercero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTerceroActionPerformed(evt);
+            }
+        });
+        panel5m.add(txtTercero);
+        txtTercero.setBounds(10, 140, 260, 26);
+
+        txtQuintoC.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtQuintoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtQuintoCActionPerformed(evt);
+            }
+        });
+        panel5m.add(txtQuintoC);
+        txtQuintoC.setBounds(290, 220, 260, 26);
+
+        txtPrimerC.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtPrimerC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPrimerCActionPerformed(evt);
+            }
+        });
+        panel5m.add(txtPrimerC);
+        txtPrimerC.setBounds(290, 60, 260, 26);
+
+        txtSegundoC.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        panel5m.add(txtSegundoC);
+        txtSegundoC.setBounds(290, 100, 260, 26);
+
+        txtTerceroC.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtTerceroC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTerceroCActionPerformed(evt);
+            }
+        });
+        panel5m.add(txtTerceroC);
+        txtTerceroC.setBounds(290, 140, 260, 26);
+
+        txtCuartoC.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        panel5m.add(txtCuartoC);
+        txtCuartoC.setBounds(290, 180, 260, 26);
+
+        getContentPane().add(panel5m);
+        panel5m.setBounds(60, 280, 580, 370);
+
+        panelM.setLayout(null);
+
+        jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        jLabel9.setText("Nombre");
+        panelM.add(jLabel9);
+        jLabel9.setBounds(10, 10, 190, 30);
+
+        txtNombre.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        panelM.add(txtNombre);
+        txtNombre.setBounds(150, 10, 260, 30);
+
+        getContentPane().add(panelM);
+        panelM.setBounds(610, 360, 690, 160);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNivelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtNivelActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void txtPrimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrimerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPrimerActionPerformed
+
+    private void txtTerceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTerceroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTerceroActionPerformed
+
+    private void txtQuintoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQuintoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtQuintoActionPerformed
+
+    private void cmbCategActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCategActionPerformed
+        if (cmbCateg.getSelectedIndex()==0 | cmbCateg.getSelectedIndex()==1 | cmbCateg.getSelectedIndex()==2)
+            panel5m.setVisible(true);
+        else if (cmbCateg.getSelectedIndex()==3 | cmbCateg.getSelectedIndex()==4)
+            panelM.setVisible(true);
+    }//GEN-LAST:event_cmbCategActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtQuintoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQuintoCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtQuintoCActionPerformed
+
+    private void txtPrimerCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrimerCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPrimerCActionPerformed
+
+    private void txtTerceroCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTerceroCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTerceroCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,10 +266,26 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> cmbCateg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel panel5m;
+    private javax.swing.JPanel panelM;
+    private javax.swing.JTextField txtCuarto;
+    private javax.swing.JTextField txtCuartoC;
+    private javax.swing.JTextField txtNivel;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtPrimer;
+    private javax.swing.JTextField txtPrimerC;
+    private javax.swing.JTextField txtQuinto;
+    private javax.swing.JTextField txtQuintoC;
+    private javax.swing.JTextField txtSegundo;
+    private javax.swing.JTextField txtSegundoC;
+    private javax.swing.JTextField txtTercero;
+    private javax.swing.JTextField txtTerceroC;
     // End of variables declaration//GEN-END:variables
 }
