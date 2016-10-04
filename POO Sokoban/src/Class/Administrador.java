@@ -8,10 +8,6 @@ public class Administrador extends Persona {
 
     private int bestMoves;
 
-    public Administrador (){
-        
-    }
-
     public Administrador(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
         super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);
     }
@@ -21,6 +17,10 @@ public class Administrador extends Persona {
         this.nacionalidad = nacionalidad;
         this.nivelesAgregados = nivelesAgregados;
         this.bestMoves = bestMoves;
+    }
+
+    public Administrador() {
+        super();
     }
     
     public void setNacionalidad(String nac) {
