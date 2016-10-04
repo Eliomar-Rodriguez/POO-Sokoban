@@ -58,17 +58,18 @@
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="7">
-            <StringItem index="0" value="5 usuarios mas insistentes en nivel"/>
-            <StringItem index="1" value="5 usuarios con ganes optimizados"/>
-            <StringItem index="2" value="5 usuarios records rotos"/>
-            <StringItem index="3" value="mejor en movimientos"/>
-            <StringItem index="4" value="mejor en tiempo"/>
-            <StringItem index="5" value="usuarios que pasaron un nivel"/>
-            <StringItem index="6" value="historial de un jugador"/>
+            <StringItem index="0" value="5 Usuarios m&#xe1;s insistentes en nivel"/>
+            <StringItem index="1" value="5 Usuarios con ganes optimizados"/>
+            <StringItem index="2" value="5 Usuarios records rotos"/>
+            <StringItem index="3" value="Mejor en movimientos"/>
+            <StringItem index="4" value="Mejor en tiempo"/>
+            <StringItem index="5" value="Usuarios que pasaron un nivel"/>
+            <StringItem index="6" value="Historial de un jugador"/>
           </StringArray>
         </Property>
       </Properties>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Reportes5mejoresentodo_jComboBox1"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>

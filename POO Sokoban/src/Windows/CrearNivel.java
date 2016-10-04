@@ -28,7 +28,10 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        txtMovimientos = new javax.swing.JTextField();
+        txtFilas = new javax.swing.JTextField();
+        txtColumnas = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Nivel Sokoban");
@@ -94,22 +97,27 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Cantidad de columnas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(390, 650, 360, 40);
+        jLabel2.setBounds(410, 310, 360, 40);
 
         jLabel3.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel3.setText("Cantidad de movientos para resolver");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(390, 590, 400, 40);
+        jLabel3.setBounds(410, 190, 400, 40);
 
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel4.setText("Cantidad de filas");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(390, 620, 360, 40);
+        jLabel4.setBounds(410, 250, 360, 40);
+        getContentPane().add(txtMovimientos);
+        txtMovimientos.setBounds(820, 200, 160, 30);
+        getContentPane().add(txtFilas);
+        txtFilas.setBounds(820, 260, 160, 30);
+        getContentPane().add(txtColumnas);
+        txtColumnas.setBounds(820, 320, 160, 30);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
-        jLabel5.setText("edefe");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 1280, 711);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1280, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -144,9 +152,12 @@ public class CrearNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnCajaRoja;
     private javax.swing.JButton btnPared;
     private javax.swing.JButton btnPersonaje;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField txtColumnas;
+    private javax.swing.JTextField txtFilas;
+    private javax.swing.JTextField txtMovimientos;
     // End of variables declaration//GEN-END:variables
 }

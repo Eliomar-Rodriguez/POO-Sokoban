@@ -47,7 +47,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
 
         jComboBox1.setBackground(new java.awt.Color(240, 240, 240));
         jComboBox1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 usuarios mas insistentes en nivel", "5 usuarios con ganes optimizados", "5 usuarios records rotos", "mejor en movimientos", "mejor en tiempo", "usuarios que pasaron un nivel", "historial de un jugador" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 Usuarios más insistentes en nivel", "5 Usuarios con ganes optimizados", "5 Usuarios records rotos", "Mejor en movimientos", "Mejor en tiempo", "Usuarios que pasaron un nivel", "Historial de un jugador" }));
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(360, 190, 570, 40);
 
