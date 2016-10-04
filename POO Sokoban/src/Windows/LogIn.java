@@ -46,7 +46,7 @@ public class LogIn extends javax.swing.JFrame {
         jLabel1.setBounds(180, 220, 280, 40);
 
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
-        jLabel2.setText("Contraseña");
+        jLabel2.setText("Contrasena");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(180, 290, 230, 40);
 
@@ -62,7 +62,7 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEntrar);
-        btnEntrar.setBounds(340, 450, 186, 50);
+        btnEntrar.setBounds(300, 460, 247, 50);
 
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtPass.setEchoChar('*');
@@ -83,7 +83,7 @@ public class LogIn extends javax.swing.JFrame {
         lblAviso.setForeground(new java.awt.Color(255, 51, 51));
         lblAviso.setText("Usuario o contraseña incorrecta");
         getContentPane().add(lblAviso);
-        lblAviso.setBounds(460, 340, 380, 40);
+        lblAviso.setBounds(280, 340, 380, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iniciar sesion.jpg"))); // NOI18N
         jLabel3.setMaximumSize(new java.awt.Dimension(900, 620));

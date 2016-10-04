@@ -97,23 +97,23 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Cantidad de columnas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(410, 310, 360, 40);
+        jLabel2.setBounds(250, 300, 360, 40);
 
         jLabel3.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel3.setText("Cantidad de movientos para resolver");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(410, 190, 400, 40);
+        jLabel3.setBounds(250, 190, 560, 40);
 
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel4.setText("Cantidad de filas");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(410, 250, 360, 40);
+        jLabel4.setBounds(250, 250, 360, 40);
         getContentPane().add(txtMovimientos);
-        txtMovimientos.setBounds(820, 200, 160, 30);
+        txtMovimientos.setBounds(820, 190, 160, 30);
         getContentPane().add(txtFilas);
-        txtFilas.setBounds(820, 260, 160, 30);
+        txtFilas.setBounds(820, 240, 160, 30);
         getContentPane().add(txtColumnas);
-        txtColumnas.setBounds(820, 320, 160, 30);
+        txtColumnas.setBounds(820, 300, 160, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

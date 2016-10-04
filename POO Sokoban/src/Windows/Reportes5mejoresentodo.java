@@ -50,6 +50,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panelM = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
@@ -96,12 +97,12 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         jLabel4.setText("cantidad");
         panel5m.add(jLabel4);
-        jLabel4.setBounds(310, 0, 190, 60);
+        jLabel4.setBounds(350, 0, 190, 60);
 
         jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         jLabel8.setText("nombre");
         panel5m.add(jLabel8);
-        jLabel8.setBounds(60, 10, 190, 30);
+        jLabel8.setBounds(50, 10, 190, 30);
 
         jTextField2.setBackground(new java.awt.Color(120, 213, 233));
         jTextField2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -184,9 +185,6 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panel5m.add(txtCuartoC);
         txtCuartoC.setBounds(290, 180, 260, 26);
 
-        getContentPane().add(panel5m);
-        panel5m.setBounds(60, 280, 580, 370);
-
         panelM.setLayout(null);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
@@ -203,8 +201,15 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panelM.add(txtNombre);
         txtNombre.setBounds(150, 10, 260, 30);
 
-        getContentPane().add(panelM);
-        panelM.setBounds(610, 360, 690, 160);
+        panel5m.add(panelM);
+        panelM.setBounds(0, 50, 690, 160);
+
+        getContentPane().add(panel5m);
+        panel5m.setBounds(380, 270, 580, 270);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Registrar.jpg"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 0, 1140, 620);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -270,6 +275,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField2;
