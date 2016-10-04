@@ -43,7 +43,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Selecione la categoria en la que desea ver estadisticas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(240, 140, 839, 40);
+        jLabel2.setBounds(240, 140, 587, 40);
 
         jComboBox1.setBackground(new java.awt.Color(240, 240, 240));
         jComboBox1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -65,7 +65,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel1.setText("Nivel");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(480, 250, 75, 24);
+        jLabel1.setBounds(480, 250, 52, 32);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estadisticas.jpg"))); // NOI18N
         getContentPane().add(jLabel3);

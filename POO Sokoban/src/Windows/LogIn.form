@@ -46,7 +46,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Minecrafter" size="30" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="cedula usuario"/>
+        <Property name="text" type="java.lang.String" value="Cedula usuario"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -59,7 +59,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Minecrafter" size="30" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="contrasena"/>
+        <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -91,7 +91,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="310" y="450" width="-1" height="50"/>
+          <AbsoluteConstraints x="340" y="450" width="-1" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -132,11 +132,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="usuario o contrasena incorrecta"/>
+        <Property name="text" type="java.lang.String" value="Usuario o contrase&#xf1;a incorrecta"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="250" y="350" width="380" height="40"/>
+          <AbsoluteConstraints x="460" y="340" width="380" height="40"/>
         </Constraint>
       </Constraints>
     </Component>

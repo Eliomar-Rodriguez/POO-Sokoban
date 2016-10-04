@@ -32,9 +32,7 @@ public class CrearNivel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Nivel Sokoban");
-        setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setPreferredSize(new java.awt.Dimension(1280, 720));
         getContentPane().setLayout(null);
 
         btnPared.setBackground(new java.awt.Color(65, 195, 228));
@@ -101,7 +99,7 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel3.setText("Cantidad de movientos para resolver");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(390, 590, 360, 40);
+        jLabel3.setBounds(390, 590, 400, 40);
 
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel4.setText("Cantidad de filas");
@@ -109,6 +107,7 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel4.setBounds(390, 620, 360, 40);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
+        jLabel5.setText("edefe");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(0, 0, 1280, 711);
 

@@ -36,7 +36,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         bntCrearGrupo.setBackground(new java.awt.Color(65, 195, 228));
         bntCrearGrupo.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        bntCrearGrupo.setText("CreAr grupo");
+        bntCrearGrupo.setText("Crear grupo");
         bntCrearGrupo.setAlignmentX(0.5F);
         bntCrearGrupo.setBorder(null);
         bntCrearGrupo.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -60,7 +60,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(490, 290, 361, 50);
+        btnEstadisticas.setBounds(550, 290, 252, 50);
 
         btnSalir.setBackground(new java.awt.Color(65, 195, 228));
         btnSalir.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -92,7 +92,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         btnConfigPerf.setBackground(new java.awt.Color(65, 195, 228));
         btnConfigPerf.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnConfigPerf.setText("configurar perfil");
+        btnConfigPerf.setText("Configurar perfil");
         btnConfigPerf.setAlignmentX(0.5F);
         btnConfigPerf.setBorder(null);
         btnConfigPerf.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);

@@ -35,7 +35,7 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         btnCrearNivel.setBackground(new java.awt.Color(65, 195, 228));
         btnCrearNivel.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnCrearNivel.setText("crear nivel");
+        btnCrearNivel.setText("Crear nivel");
         btnCrearNivel.setAlignmentX(0.5F);
         btnCrearNivel.setBorder(null);
         btnCrearNivel.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -59,7 +59,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSalir);
-        btnSalir.setBounds(580, 340, 109, 50);
+        btnSalir.setBounds(600, 340, 70, 50);
 
         btnEstadisticas.setBackground(new java.awt.Color(65, 195, 228));
         btnEstadisticas.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -73,11 +73,11 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(460, 290, 361, 50);
+        btnEstadisticas.setBounds(510, 290, 252, 50);
 
         btnCrearRegla.setBackground(new java.awt.Color(65, 195, 228));
         btnCrearRegla.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnCrearRegla.setText("rEGLAMENTO");
+        btnCrearRegla.setText("Reglamento");
         btnCrearRegla.setAlignmentX(0.5F);
         btnCrearRegla.setBorder(null);
         btnCrearRegla.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
