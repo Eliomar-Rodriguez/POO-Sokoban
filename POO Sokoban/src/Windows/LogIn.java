@@ -62,7 +62,7 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEntrar);
-        btnEntrar.setBounds(300, 460, 247, 50);
+        btnEntrar.setBounds(330, 460, 186, 50);
 
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtPass.setEchoChar('*');

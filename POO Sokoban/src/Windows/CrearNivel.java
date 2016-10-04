@@ -25,13 +25,13 @@ public class CrearNivel extends javax.swing.JFrame {
         btnCaja = new javax.swing.JButton();
         btnCajaRoja = new javax.swing.JButton();
         btnPersonaje = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         txtMovimientos = new javax.swing.JTextField();
         txtFilas = new javax.swing.JTextField();
         txtColumnas = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Nivel Sokoban");
@@ -94,11 +94,6 @@ public class CrearNivel extends javax.swing.JFrame {
         getContentPane().add(btnPersonaje);
         btnPersonaje.setBounds(1150, 320, 70, 70);
 
-        jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jLabel2.setText("Cantidad de columnas");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(250, 300, 360, 40);
-
         jLabel3.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel3.setText("Cantidad de movientos para resolver");
         getContentPane().add(jLabel3);
@@ -115,9 +110,15 @@ public class CrearNivel extends javax.swing.JFrame {
         getContentPane().add(txtColumnas);
         txtColumnas.setBounds(820, 300, 160, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1280, 710);
+        jLabel5.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel5.setText("Cantidad de columnas");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(250, 300, 360, 40);
+
+        jLabel6.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel6.setText("Cantidad de columnas");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(250, 300, 360, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -152,10 +153,10 @@ public class CrearNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnCajaRoja;
     private javax.swing.JButton btnPared;
     private javax.swing.JButton btnPersonaje;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtColumnas;
     private javax.swing.JTextField txtFilas;
     private javax.swing.JTextField txtMovimientos;
