@@ -440,7 +440,7 @@ public class Registro extends javax.swing.JFrame {
             jugador.setFoto(direccionImagen);
   
             //lista.add(jugador);
-            SokobanPrincipal.listaUsuarios.add(admin);
+            SokobanPrincipal.listaUsuarios.add(jugador);
             System.out.println("Agregado con exito!");  
                 
             LogIn login = new LogIn();

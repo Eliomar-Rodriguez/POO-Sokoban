@@ -1,6 +1,7 @@
 
 package Windows;
 
+import Class.Administrador;
 import Class.Persona;
 import Class.SokobanPrincipal;
 import Class.UsuarioNormal;
@@ -18,8 +19,7 @@ public class LogIn extends javax.swing.JFrame {
         setTitle("Iniciar Sesion Sokoban");   // poner titulo a ventana
         lblNoExiste.setVisible(false);
         lblAviso.setVisible(false);
-        UsuarioNormal jugador = new UsuarioNormal("Eliomar Rodriguez Arguedas","207680623","rodriguez.elio.97@gmail.com","capitan1","05/10/2016","C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\63444.jpg",1);
-        //SokobanPrincipal.listaUsuarios.add(jugador);
+        
     }
 
    
@@ -148,7 +148,14 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
+        SokobanPrincipal soko = new SokobanPrincipal();
+        
+        Administrador admin = new Administrador("Costarricense",0,0,"Administrador","212223","admin1@administradores.com","abcd","05/10/2016","C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\2.jpg",0);
+        soko.setListaUsuarios(admin);
+        
+        UsuarioNormal jugador = new UsuarioNormal(0,0,0,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
+        soko.setListaUsuarios(jugador);
+        
     }//GEN-LAST:event_formWindowOpened
 
     
