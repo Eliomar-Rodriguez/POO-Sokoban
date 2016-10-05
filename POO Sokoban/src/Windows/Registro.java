@@ -88,7 +88,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel11.setText("Fecha de registro");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(180, 300, 188, 32);
+        jLabel11.setBounds(180, 300, 264, 24);
 
         cmbUsers.setBackground(new java.awt.Color(204, 255, 255));
         cmbUsers.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -141,7 +141,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(180, 140, 190, 32);
+        jLabel7.setBounds(180, 140, 256, 24);
 
         txtName.setBackground(new java.awt.Color(204, 255, 255));
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -161,7 +161,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel8.setText("Cedula");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(180, 180, 77, 32);
+        jLabel8.setBounds(180, 180, 99, 24);
 
         btnSave.setBackground(new java.awt.Color(120, 213, 233));
         btnSave.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -175,17 +175,17 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSave);
-        btnSave.setBounds(350, 460, 170, 40);
+        btnSave.setBounds(350, 460, 260, 40);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel9.setText("Correo");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(180, 220, 80, 32);
+        jLabel9.setBounds(180, 220, 120, 24);
 
         jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jLabel10.setText("Contraseña");
+        jLabel10.setText("Contrasena");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(180, 260, 124, 32);
+        jLabel10.setBounds(180, 260, 180, 24);
 
         panelAdmin.setBackground(new java.awt.Color(120, 213, 233));
         panelAdmin.setLayout(null);
@@ -195,12 +195,12 @@ public class Registro extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel12.setText("Tipo de usuario");
         panelAdmin.add(jLabel12);
-        jLabel12.setBounds(340, 320, 166, 32);
+        jLabel12.setBounds(340, 320, 224, 24);
 
         jLabel14.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel14.setText("Tipo de usuario");
         panelAdmin.add(jLabel14);
-        jLabel14.setBounds(340, 320, 166, 32);
+        jLabel14.setBounds(340, 320, 224, 24);
 
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Nacionalidad");
@@ -251,7 +251,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel13.setText("Tipo de usuario");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(180, 320, 166, 60);
+        jLabel13.setBounds(180, 320, 224, 60);
 
         txtDate.setEditable(false);
         txtDate.setBackground(new java.awt.Color(204, 255, 255));
@@ -413,7 +413,7 @@ public class Registro extends javax.swing.JFrame {
         
         }
 
-                /*LogIn login = new LogIn();
+                LogIn login = new LogIn();
                 login.setVisible(true);
                 login.setDefaultCloseOperation(HIDE_ON_CLOSE);
                 dispose(); // oculta esta ventana y abre la que estoy llamando*/

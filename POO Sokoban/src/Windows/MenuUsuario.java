@@ -1,6 +1,7 @@
 
 package Windows;
 
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -60,7 +61,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(550, 290, 252, 50);
+        btnEstadisticas.setBounds(500, 290, 360, 50);
 
         btnSalir.setBackground(new java.awt.Color(65, 195, 228));
         btnSalir.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -113,15 +114,20 @@ public class MenuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntCrearGrupoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCrearGrupoActionPerformed
-
-        Registro Reg = new Registro();
-        Reg.setVisible(true);
-        Reg.setDefaultCloseOperation(HIDE_ON_CLOSE);
+            
+        CrearGrupo gru = new CrearGrupo();
+        gru.setVisible(true);
+        gru.setDefaultCloseOperation(HIDE_ON_CLOSE);
         dispose(); // oculta esta ventana y abre la que estoy llamando
     }//GEN-LAST:event_bntCrearGrupoActionPerformed
 
     private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
-        System.out.println("Estadisticas");
+        
+        Estadisticas es = new Estadisticas();
+        es.setVisible(true);
+        es.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
+        
     }//GEN-LAST:event_btnEstadisticasActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
