@@ -108,7 +108,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
-        Estadisticas es = new Estadisticas();
+        Reportes5mejoresentodo es = new Reportes5mejoresentodo();
         es.setVisible(true);
         es.setDefaultCloseOperation(HIDE_ON_CLOSE);
         dispose();        // TODO add your handling code here:

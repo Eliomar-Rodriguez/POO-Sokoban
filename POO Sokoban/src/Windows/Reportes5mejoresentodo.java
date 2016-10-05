@@ -60,7 +60,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecraft z2font", 0, 18)); // NOI18N
         jLabel2.setText("Selecione la categoria en la que desea ver estadisticas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(370, 140, 870, 40);
+        jLabel2.setBounds(220, 140, 870, 40);
 
         cmbCateg.setBackground(new java.awt.Color(240, 240, 240));
         cmbCateg.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
