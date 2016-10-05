@@ -57,10 +57,10 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Minecraft z2font", 0, 18)); // NOI18N
         jLabel2.setText("Selecione la categoria en la que desea ver estadisticas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(370, 110, 587, 40);
+        jLabel2.setBounds(370, 140, 870, 40);
 
         cmbCateg.setBackground(new java.awt.Color(240, 240, 240));
         cmbCateg.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -72,7 +72,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cmbCateg);
-        cmbCateg.setBounds(300, 160, 720, 40);
+        cmbCateg.setBounds(300, 190, 720, 40);
 
         txtNivel.setBackground(new java.awt.Color(120, 213, 233));
         txtNivel.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -83,21 +83,21 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNivel);
-        txtNivel.setBounds(590, 210, 210, 40);
+        txtNivel.setBounds(590, 240, 210, 40);
 
-        jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Minecraft z2font", 0, 18)); // NOI18N
         jLabel1.setText("Nivel");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(470, 210, 52, 32);
+        jLabel1.setBounds(422, 240, 100, 18);
 
         panel5m.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Minecraft z2font", 0, 18)); // NOI18N
         jLabel4.setText("Cantidad");
         panel5m.add(jLabel4);
         jLabel4.setBounds(350, 0, 190, 60);
 
-        jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Minecraft z2font", 0, 18)); // NOI18N
         jLabel8.setText("Nombre");
         panel5m.add(jLabel8);
         jLabel8.setBounds(50, 10, 190, 30);
@@ -203,9 +203,9 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panelM.setBounds(0, 50, 690, 160);
 
         getContentPane().add(panel5m);
-        panel5m.setBounds(380, 260, 580, 270);
+        panel5m.setBounds(380, 290, 580, 270);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Registrar.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estadisticas.jpg"))); // NOI18N
         getContentPane().add(jLabel5);
         jLabel5.setBounds(0, 0, 1280, 720);
 

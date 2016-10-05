@@ -39,31 +39,30 @@ public class ConfigUsuario extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtNacionalidad = new javax.swing.JTextField();
-        cmbUsers = new javax.swing.JComboBox<>();
         txtDate = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
         txtMail = new javax.swing.JTextField();
         txtId = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Configuración cuenta de Usuario");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         mostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mostrarActionPerformed(evt);
             }
         });
-        getContentPane().add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 160, 300, 300));
+        getContentPane().add(mostrar);
+        mostrar.setBounds(800, 160, 300, 300);
 
         buscar.setFont(new java.awt.Font("Minecrafter Alt", 0, 22)); // NOI18N
         buscar.setText("Cargar foto");
@@ -72,66 +71,33 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 buscarActionPerformed(evt);
             }
         });
-        getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, -1, 40));
+        getContentPane().add(buscar);
+        buscar.setBounds(890, 480, 200, 40);
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel7.setText("Nombre completo");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 256, 24));
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(250, 170, 256, 24);
 
         jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel8.setText("Cedula");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 99, 24));
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(250, 210, 99, 24);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel9.setText("Correo");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 101, 24));
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(250, 250, 101, 24);
 
         jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel10.setText("Contrasena");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 180, 24));
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(250, 290, 180, 24);
 
         jLabel11.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel11.setText("Fecha de registro");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 280, 24));
-
-        jLabel13.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
-        jLabel13.setText("Tipo de usuario");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 224, 24));
-
-        jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
-        jLabel2.setText("Nacionalidad");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 190, 30));
-
-        txtNacionalidad.setBackground(new java.awt.Color(204, 255, 255));
-        txtNacionalidad.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        txtNacionalidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNacionalidadActionPerformed(evt);
-            }
-        });
-        txtNacionalidad.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtNacionalidadKeyPressed(evt);
-            }
-        });
-        getContentPane().add(txtNacionalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, 260, -1));
-
-        cmbUsers.setBackground(new java.awt.Color(204, 255, 255));
-        cmbUsers.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        cmbUsers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Usuario normal(Jugador)" }));
-        cmbUsers.setSelectedIndex(-1);
-        cmbUsers.setToolTipText("");
-        cmbUsers.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cmbUsersMouseClicked(evt);
-            }
-        });
-        cmbUsers.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbUsersActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 260, -1));
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(250, 330, 280, 24);
 
         txtDate.setEditable(false);
         txtDate.setBackground(new java.awt.Color(204, 255, 255));
@@ -142,7 +108,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtDateActionPerformed(evt);
             }
         });
-        getContentPane().add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 260, -1));
+        getContentPane().add(txtDate);
+        txtDate.setBounds(500, 330, 260, 32);
 
         txtPass.setBackground(new java.awt.Color(204, 255, 255));
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -153,7 +120,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtPassKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 260, 30));
+        getContentPane().add(txtPass);
+        txtPass.setBounds(500, 290, 260, 30);
 
         txtMail.setBackground(new java.awt.Color(204, 255, 255));
         txtMail.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -167,7 +135,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtMailKeyPressed(evt);
             }
         });
-        getContentPane().add(txtMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 260, -1));
+        getContentPane().add(txtMail);
+        txtMail.setBounds(500, 250, 260, 32);
 
         txtId.setBackground(new java.awt.Color(204, 255, 255));
         txtId.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -181,7 +150,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtIdKeyPressed(evt);
             }
         });
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 260, -1));
+        getContentPane().add(txtId);
+        txtId.setBounds(500, 210, 260, 32);
 
         txtName.setBackground(new java.awt.Color(204, 255, 255));
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -195,7 +165,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtNameKeyPressed(evt);
             }
         });
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 260, -1));
+        getContentPane().add(txtName);
+        txtName.setBounds(500, 170, 260, 32);
 
         btnSave.setBackground(new java.awt.Color(120, 204, 255));
         btnSave.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -208,7 +179,12 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, 40));
+        getContentPane().add(btnSave);
+        btnSave.setBounds(490, 480, 360, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -241,26 +217,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
             String direccionImagen = seleccionado;
         }
     }//GEN-LAST:event_buscarActionPerformed
-
-    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
-
-    }//GEN-LAST:event_txtNacionalidadActionPerformed
-
-    private void txtNacionalidadKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNacionalidadKeyPressed
-        //lblNation.setVisible(false);
-    }//GEN-LAST:event_txtNacionalidadKeyPressed
-
-    private void cmbUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbUsersMouseClicked
-        //lblAviso.setVisible(false);
-    }//GEN-LAST:event_cmbUsersMouseClicked
-
-    private void cmbUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbUsersActionPerformed
-        /*if (cmbUsers.getSelectedIndex()==0)
-        panelAdmin.setVisible(true);
-        else if (cmbUsers.getSelectedIndex()==1)
-        panelAdmin.setVisible(false);
-        lblTipUser.setVisible(false);*/
-    }//GEN-LAST:event_cmbUsersActionPerformed
 
     private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
         // TODO add your handling code here:
@@ -391,11 +347,9 @@ public class ConfigUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
     private javax.swing.JButton buscar;
-    private javax.swing.JComboBox<String> cmbUsers;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -403,7 +357,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField txtDate;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtMail;
-    private javax.swing.JTextField txtNacionalidad;
     private javax.swing.JTextField txtName;
     private javax.swing.JPasswordField txtPass;
     // End of variables declaration//GEN-END:variables

@@ -40,104 +40,69 @@ public class CrearGrupo extends javax.swing.JFrame {
         txtNivel3 = new javax.swing.JTextField();
         txtNivel5 = new javax.swing.JTextField();
         botonAgregar_grupo = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear grupo");
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(null);
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(64, 34, 0, 0);
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel4.setText("Nombre del  Grupo");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(390, 160, 276, 24);
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel5.setText("Cantidad de jugadores");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(390, 230, 333, 24);
 
         txtNombregrupo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtNombregrupo);
+        txtNombregrupo.setBounds(740, 150, 169, 32);
 
         txtjugadores.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtjugadores);
+        txtjugadores.setBounds(740, 230, 169, 32);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(42, 286, 222, 56);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel1.setText("Niveles a jugar (Maximo 5)");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(390, 290, 292, 32);
 
         txtNivel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtNivel1);
+        txtNivel1.setBounds(740, 290, 169, 32);
 
         txtNivel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtNivel2);
+        txtNivel2.setBounds(740, 350, 169, 32);
 
         txtNivel4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtNivel4);
+        txtNivel4.setBounds(740, 470, 169, 32);
 
         txtNivel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtNivel3);
+        txtNivel3.setBounds(740, 410, 169, 32);
 
         txtNivel5.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        getContentPane().add(txtNivel5);
+        txtNivel5.setBounds(740, 530, 169, 32);
 
-        botonAgregar_grupo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        botonAgregar_grupo.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         botonAgregar_grupo.setText("Crear grupo");
+        getContentPane().add(botonAgregar_grupo);
+        botonAgregar_grupo.setBounds(410, 360, 212, 34);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(241, 241, 241)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(botonAgregar_grupo)))
-                        .addGap(9, 9, 9)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNivel2, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtjugadores, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                                .addComponent(txtNombregrupo, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                                .addComponent(txtNivel1))
-                            .addComponent(txtNivel4, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                            .addComponent(txtNivel3, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                            .addComponent(txtNivel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE))))
-                .addContainerGap(540, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel3)
-                .addGap(75, 75, 75)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtNombregrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtjugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtNivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtNivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(botonAgregar_grupo)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30)
-                .addComponent(txtNivel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(txtNivel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/grupos.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 1250, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -184,6 +149,7 @@ public class CrearGrupo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtNivel1;
     private javax.swing.JTextField txtNivel2;
     private javax.swing.JTextField txtNivel3;

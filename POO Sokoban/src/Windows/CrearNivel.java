@@ -31,7 +31,10 @@ public class CrearNivel extends javax.swing.JFrame {
         txtFilas = new javax.swing.JTextField();
         txtColumnas = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        botonCrearnivel = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Nivel Sokoban");
@@ -97,12 +100,12 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel3.setText("Cantidad de movientos para resolver");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(250, 190, 560, 40);
+        jLabel3.setBounds(240, 190, 560, 40);
 
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel4.setText("Cantidad de filas");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(250, 250, 360, 40);
+        jLabel4.setBounds(240, 250, 360, 40);
         getContentPane().add(txtMovimientos);
         txtMovimientos.setBounds(820, 190, 160, 30);
         getContentPane().add(txtFilas);
@@ -113,12 +116,26 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel5.setText("Cantidad de columnas");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(250, 300, 360, 40);
+        jLabel5.setBounds(240, 300, 360, 40);
 
-        jLabel6.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jLabel6.setText("Cantidad de columnas");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(250, 300, 360, 40);
+        jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel1.setText("Tipo de caja que desea para el nivel");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(240, 360, 570, 50);
+
+        jComboBox1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caja blanca", "Caja roja", "Ladrillo", "Normal" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(800, 360, 290, 40);
+
+        botonCrearnivel.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        botonCrearnivel.setText("Crear");
+        getContentPane().add(botonCrearnivel);
+        botonCrearnivel.setBounds(560, 460, 180, 30);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1280, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,14 +166,17 @@ public class CrearNivel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCrearnivel;
     private javax.swing.JButton btnCaja;
     private javax.swing.JButton btnCajaRoja;
     private javax.swing.JButton btnPared;
     private javax.swing.JButton btnPersonaje;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtColumnas;
     private javax.swing.JTextField txtFilas;
     private javax.swing.JTextField txtMovimientos;
