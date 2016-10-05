@@ -34,7 +34,7 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         botonCrearnivel = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        imagenGrupo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Nivel Sokoban");
@@ -133,9 +133,9 @@ public class CrearNivel extends javax.swing.JFrame {
         getContentPane().add(botonCrearnivel);
         botonCrearnivel.setBounds(560, 460, 180, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 1280, 710);
+        imagenGrupo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
+        getContentPane().add(imagenGrupo);
+        imagenGrupo.setBounds(0, 0, 1280, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -171,9 +171,9 @@ public class CrearNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnCajaRoja;
     private javax.swing.JButton btnPared;
     private javax.swing.JButton btnPersonaje;
+    private javax.swing.JLabel imagenGrupo;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
