@@ -31,6 +31,7 @@ public class CrearNivel extends javax.swing.JFrame {
         txtMovimientos = new javax.swing.JTextField();
         txtFilas = new javax.swing.JTextField();
         txtColumnas = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -115,7 +116,12 @@ public class CrearNivel extends javax.swing.JFrame {
         getContentPane().add(txtColumnas);
         txtColumnas.setBounds(820, 300, 160, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/crear Nivel.jpg"))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        jButton1.setText("Generar");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(530, 370, 210, 50);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\crear Nivel.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1280, 710);
 
@@ -152,6 +158,7 @@ public class CrearNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnCajaRoja;
     private javax.swing.JButton btnPared;
     private javax.swing.JButton btnPersonaje;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

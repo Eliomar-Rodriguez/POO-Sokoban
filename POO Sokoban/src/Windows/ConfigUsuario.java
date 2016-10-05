@@ -38,12 +38,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtNacionalidad = new javax.swing.JTextField();
-        cmbUsers = new javax.swing.JComboBox<>();
-        txtDate = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
         txtMail = new javax.swing.JTextField();
         txtId = new javax.swing.JTextField();
@@ -90,60 +84,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel10.setText("Contrasena");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 180, 24));
-
-        jLabel11.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
-        jLabel11.setText("Fecha de registro");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 280, 24));
-
-        jLabel13.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
-        jLabel13.setText("Tipo de usuario");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 224, 24));
-
-        jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
-        jLabel2.setText("Nacionalidad");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 190, 30));
-
-        txtNacionalidad.setBackground(new java.awt.Color(204, 255, 255));
-        txtNacionalidad.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        txtNacionalidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNacionalidadActionPerformed(evt);
-            }
-        });
-        txtNacionalidad.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtNacionalidadKeyPressed(evt);
-            }
-        });
-        getContentPane().add(txtNacionalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, 260, -1));
-
-        cmbUsers.setBackground(new java.awt.Color(204, 255, 255));
-        cmbUsers.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        cmbUsers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Usuario normal(Jugador)" }));
-        cmbUsers.setSelectedIndex(-1);
-        cmbUsers.setToolTipText("");
-        cmbUsers.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cmbUsersMouseClicked(evt);
-            }
-        });
-        cmbUsers.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbUsersActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 260, -1));
-
-        txtDate.setEditable(false);
-        txtDate.setBackground(new java.awt.Color(204, 255, 255));
-        txtDate.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        txtDate.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        txtDate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDateActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 260, -1));
 
         txtPass.setBackground(new java.awt.Color(204, 255, 255));
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -209,7 +149,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, -1, 40));
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilUsu.jpg")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, 710));
@@ -245,30 +185,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
             String direccionImagen = seleccionado;
         }
     }//GEN-LAST:event_buscarActionPerformed
-
-    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
-
-    }//GEN-LAST:event_txtNacionalidadActionPerformed
-
-    private void txtNacionalidadKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNacionalidadKeyPressed
-        //lblNation.setVisible(false);
-    }//GEN-LAST:event_txtNacionalidadKeyPressed
-
-    private void cmbUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbUsersMouseClicked
-        //lblAviso.setVisible(false);
-    }//GEN-LAST:event_cmbUsersMouseClicked
-
-    private void cmbUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbUsersActionPerformed
-        /*if (cmbUsers.getSelectedIndex()==0)
-        panelAdmin.setVisible(true);
-        else if (cmbUsers.getSelectedIndex()==1)
-        panelAdmin.setVisible(false);
-        lblTipUser.setVisible(false);*/
-    }//GEN-LAST:event_cmbUsersActionPerformed
-
-    private void txtDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDateActionPerformed
 
     private void txtPassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassKeyPressed
         //lblPass.setVisible(false);
@@ -395,20 +311,14 @@ public class ConfigUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
     private javax.swing.JButton buscar;
-    private javax.swing.JComboBox<String> cmbUsers;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton mostrar;
-    private javax.swing.JTextField txtDate;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtMail;
-    private javax.swing.JTextField txtNacionalidad;
     private javax.swing.JTextField txtName;
     private javax.swing.JPasswordField txtPass;
     // End of variables declaration//GEN-END:variables

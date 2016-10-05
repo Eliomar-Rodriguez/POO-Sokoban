@@ -31,64 +31,60 @@ public class CrearGrupo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtNombregrupo = new javax.swing.JTextField();
-        txtjugadores = new javax.swing.JTextField();
+        txtJugadores = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtIdJug = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear grupo");
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(null);
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(64, 34, 0, 0);
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel4.setText("Nombre del  Grupo");
+        jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel4.setText("Nombre del  grupo");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(330, 250, 300, 32);
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel5.setText("Cantidad de jugadores");
+        jLabel5.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel5.setText("cantidad de jugadores");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(330, 310, 333, 24);
 
-        txtNombregrupo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txtNombregrupo.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(txtNombregrupo);
+        txtNombregrupo.setBounds(710, 232, 290, 40);
 
-        txtjugadores.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        txtJugadores.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(txtJugadores);
+        txtJugadores.setBounds(710, 292, 290, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(56, 56, 56)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtjugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombregrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(540, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel3)
-                .addGap(75, 75, 75)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtNombregrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtjugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(92, 92, 92)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(377, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(42, 283, 222, 56);
+
+        jLabel6.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jLabel6.setText("cedula de jugador");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(330, 360, 274, 40);
+
+        txtIdJug.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(txtIdJug);
+        txtIdJug.setBounds(710, 352, 290, 40);
+
+        jButton1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        jButton1.setText("Agregar");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(780, 410, 150, 33);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\crear grupo.jpg")); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, -20, 1280, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,11 +125,15 @@ public class CrearGrupo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField txtIdJug;
+    private javax.swing.JTextField txtJugadores;
     private javax.swing.JTextField txtNombregrupo;
-    private javax.swing.JTextField txtjugadores;
     // End of variables declaration//GEN-END:variables
 }

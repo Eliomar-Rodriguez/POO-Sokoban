@@ -77,7 +77,7 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         btnCrearRegla.setBackground(new java.awt.Color(65, 195, 228));
         btnCrearRegla.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnCrearRegla.setText("Reglamento");
+        btnCrearRegla.setText("Reglas");
         btnCrearRegla.setAlignmentX(0.5F);
         btnCrearRegla.setBorder(null);
         btnCrearRegla.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -87,7 +87,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCrearRegla);
-        btnCrearRegla.setBounds(500, 230, 260, 50);
+        btnCrearRegla.setBounds(550, 230, 170, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
