@@ -44,6 +44,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
         txtName = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Configuración cuenta de Usuario");
@@ -51,42 +52,48 @@ public class ConfigUsuario extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         mostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mostrarActionPerformed(evt);
             }
         });
-        getContentPane().add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 160, 300, 300));
+        getContentPane().add(mostrar);
+        mostrar.setBounds(800, 150, 300, 300);
 
-        buscar.setFont(new java.awt.Font("Minecrafter Alt", 0, 22)); // NOI18N
+        buscar.setFont(new java.awt.Font("Minecrafter", 0, 22)); // NOI18N
         buscar.setText("Cargar foto");
         buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarActionPerformed(evt);
             }
         });
-        getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 470, -1, 40));
+        getContentPane().add(buscar);
+        buscar.setBounds(850, 470, 199, 40);
 
-        jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 256, 24));
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(220, 170, 290, 24);
 
-        jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel8.setText("Cedula");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 99, 24));
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(220, 220, 290, 24);
 
-        jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel9.setText("Correo");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 101, 24));
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(220, 270, 290, 24);
 
-        jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel10.setText("Contrasena");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 180, 24));
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(220, 320, 290, 24);
 
         txtPass.setBackground(new java.awt.Color(204, 255, 255));
-        txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtPass.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         txtPass.setEchoChar('*');
         txtPass.setPreferredSize(new java.awt.Dimension(5, 26));
         txtPass.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -94,10 +101,11 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtPassKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 260, 30));
+        getContentPane().add(txtPass);
+        txtPass.setBounds(510, 310, 260, 40);
 
         txtMail.setBackground(new java.awt.Color(204, 255, 255));
-        txtMail.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtMail.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         txtMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMailActionPerformed(evt);
@@ -108,10 +116,11 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtMailKeyPressed(evt);
             }
         });
-        getContentPane().add(txtMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 260, -1));
+        getContentPane().add(txtMail);
+        txtMail.setBounds(510, 254, 260, 40);
 
         txtId.setBackground(new java.awt.Color(204, 255, 255));
-        txtId.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtId.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
@@ -122,10 +131,11 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtIdKeyPressed(evt);
             }
         });
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 260, -1));
+        getContentPane().add(txtId);
+        txtId.setBounds(510, 204, 260, 40);
 
         txtName.setBackground(new java.awt.Color(204, 255, 255));
-        txtName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtName.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -136,7 +146,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 txtNameKeyPressed(evt);
             }
         });
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 260, -1));
+        getContentPane().add(txtName);
+        txtName.setBounds(510, 154, 260, 40);
 
         btnSave.setBackground(new java.awt.Color(120, 204, 255));
         btnSave.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -149,10 +160,16 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, 40));
+        getContentPane().add(btnSave);
+        btnSave.setBounds(310, 380, 370, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilUsu.jpg")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, 710));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1290, 710);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -313,6 +330,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
     private javax.swing.JButton buscar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

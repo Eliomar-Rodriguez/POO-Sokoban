@@ -97,7 +97,10 @@ public class MenuAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearNivelActionPerformed
-        System.out.println("Estadisticas");
+        CrearNivel nivel = new CrearNivel();
+        nivel.setVisible(true);
+        nivel.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
     }//GEN-LAST:event_btnCrearNivelActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -105,11 +108,17 @@ public class MenuAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
-        // TODO add your handling code here:
+        Reportes5mejoresentodo es = new Reportes5mejoresentodo();
+        es.setVisible(true);
+        es.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnEstadisticasActionPerformed
 
     private void btnCrearReglaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearReglaActionPerformed
-        // TODO add your handling code here:
+        Reglamento re = new Reglamento();
+        re.setVisible(true);
+        re.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnCrearReglaActionPerformed
 
     public static void main(String args[]) {

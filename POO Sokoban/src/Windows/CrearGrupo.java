@@ -16,6 +16,10 @@ public class CrearGrupo extends javax.swing.JFrame {
      */
     public CrearGrupo() {
         initComponents();
+        lstJugadores.setVisible(false);
+        setResizable(false);
+        setLocationRelativeTo(null);    // posicionar ventana en centro
+        setTitle("Crear grupo");   // poner titulo a ventana
     }
 
     /**
@@ -36,6 +40,8 @@ public class CrearGrupo extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtIdJug = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstJugadores = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,20 +55,25 @@ public class CrearGrupo extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel4.setText("Nombre del  grupo");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(330, 250, 300, 32);
+        jLabel4.setBounds(300, 170, 380, 40);
 
         jLabel5.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel5.setText("cantidad de jugadores");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(330, 310, 333, 24);
+        jLabel5.setBounds(300, 220, 380, 40);
 
         txtNombregrupo.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         getContentPane().add(txtNombregrupo);
-        txtNombregrupo.setBounds(710, 232, 290, 40);
+        txtNombregrupo.setBounds(680, 160, 290, 40);
 
         txtJugadores.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        txtJugadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtJugadoresActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtJugadores);
-        txtJugadores.setBounds(710, 292, 290, 40);
+        txtJugadores.setBounds(680, 220, 290, 40);
 
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         getContentPane().add(jLabel2);
@@ -71,23 +82,41 @@ public class CrearGrupo extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel6.setText("cedula de jugador");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(330, 360, 274, 40);
+        jLabel6.setBounds(300, 280, 380, 40);
 
         txtIdJug.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         getContentPane().add(txtIdJug);
-        txtIdJug.setBounds(710, 352, 290, 40);
+        txtIdJug.setBounds(680, 280, 290, 40);
 
         jButton1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(780, 410, 150, 33);
+        jButton1.setBounds(740, 330, 150, 40);
+
+        jScrollPane1.setViewportView(lstJugadores);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(300, 380, 670, 190);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\crear grupo.jpg")); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -20, 1280, 740);
+        jLabel1.setBounds(0, -10, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJugadoresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtJugadoresActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        lstJugadores.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +161,8 @@ public class CrearGrupo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList<String> lstJugadores;
     private javax.swing.JTextField txtIdJug;
     private javax.swing.JTextField txtJugadores;
     private javax.swing.JTextField txtNombregrupo;

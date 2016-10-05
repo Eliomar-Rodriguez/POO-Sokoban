@@ -55,54 +55,66 @@ public class ConfigAdmin extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setPreferredSize(new java.awt.Dimension(1280, 720));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 170, 340, 310));
+        getContentPane().setLayout(null);
+        getContentPane().add(mostrar);
+        mostrar.setBounds(760, 170, 340, 310);
 
         buscar.setFont(new java.awt.Font("Minecrafter Alt", 0, 22)); // NOI18N
         buscar.setText("Cargar foto");
-        getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, -1, 40));
+        getContentPane().add(buscar);
+        buscar.setBounds(840, 490, 199, 40);
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, 30));
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(206, 150, 270, 30);
 
         jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel8.setText("Cedula");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, 30));
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(210, 200, 260, 30);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel9.setText("Correo");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 140, 30));
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(210, 250, 270, 30);
 
         jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel10.setText("Contrasena");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 180, 30));
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(210, 300, 260, 30);
 
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Nacionalidad");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 190, 30));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(210, 350, 280, 30);
 
         txtNacionalidad.setBackground(new java.awt.Color(204, 255, 255));
         txtNacionalidad.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        getContentPane().add(txtNacionalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 260, 30));
+        getContentPane().add(txtNacionalidad);
+        txtNacionalidad.setBounds(480, 340, 260, 40);
 
         txtPass.setBackground(new java.awt.Color(204, 255, 255));
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtPass.setEchoChar('*');
         txtPass.setPreferredSize(new java.awt.Dimension(5, 26));
-        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 260, 30));
+        getContentPane().add(txtPass);
+        txtPass.setBounds(480, 290, 260, 40);
 
         txtMail.setBackground(new java.awt.Color(204, 255, 255));
         txtMail.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        getContentPane().add(txtMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 260, 30));
+        getContentPane().add(txtMail);
+        txtMail.setBounds(480, 240, 260, 40);
 
         txtId.setBackground(new java.awt.Color(204, 255, 255));
         txtId.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 260, 30));
+        getContentPane().add(txtId);
+        txtId.setBounds(480, 190, 260, 40);
 
         txtName.setBackground(new java.awt.Color(204, 255, 255));
         txtName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 260, 30));
+        getContentPane().add(txtName);
+        txtName.setBounds(480, 140, 260, 40);
 
         btnSave.setBackground(new java.awt.Color(120, 204, 255));
         btnSave.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -110,10 +122,12 @@ public class ConfigAdmin extends javax.swing.JFrame {
         btnSave.setAlignmentX(0.5F);
         btnSave.setBorder(null);
         btnSave.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 370, 50));
+        getContentPane().add(btnSave);
+        btnSave.setBounds(270, 400, 370, 50);
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilAdmin.jpg")); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 710));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 0, 1280, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

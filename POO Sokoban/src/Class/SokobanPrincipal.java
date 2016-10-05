@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class SokobanPrincipal {
 
-    private ArrayList<Persona> listaUsuarios;
+    public static ArrayList<Persona> listaUsuarios;
 
     public SokobanPrincipal() {
         this.listaUsuarios = new ArrayList();

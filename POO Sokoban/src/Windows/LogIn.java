@@ -14,6 +14,7 @@ public class LogIn extends javax.swing.JFrame {
         setSize(900,620);      // tamano
         setLocationRelativeTo(null);    // posicionar ventana en centro
         setTitle("Iniciar Sesion Sokoban");   // poner titulo a ventana
+        lblNoExiste.setVisible(false);
         lblAviso.setVisible(false);
     }
 
@@ -26,9 +27,10 @@ public class LogIn extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
-        btnEntrar = new javax.swing.JButton();
+        btnRegistrarse = new javax.swing.JButton();
         txtPass = new javax.swing.JPasswordField();
-        btnEntrar1 = new javax.swing.JButton();
+        btnEntrar = new javax.swing.JButton();
+        lblNoExiste = new javax.swing.JLabel();
         lblAviso = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -41,12 +43,12 @@ public class LogIn extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
-        jLabel1.setText("Cedula usuario");
+        jLabel1.setText("cedula usuario");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(180, 220, 280, 40);
 
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
-        jLabel2.setText("Contrasena");
+        jLabel2.setText("contrasena");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(180, 290, 230, 40);
 
@@ -54,58 +56,61 @@ public class LogIn extends javax.swing.JFrame {
         getContentPane().add(txtUsuario);
         txtUsuario.setBounds(470, 210, 230, 40);
 
-        btnEntrar.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
-        btnEntrar.setText("Registrarse");
-        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarse.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
+        btnRegistrarse.setText("Registrarse");
+        btnRegistrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEntrarActionPerformed(evt);
+                btnRegistrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar);
-        btnEntrar.setBounds(300, 460, 247, 50);
+        getContentPane().add(btnRegistrarse);
+        btnRegistrarse.setBounds(300, 460, 260, 50);
 
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtPass.setEchoChar('*');
         getContentPane().add(txtPass);
         txtPass.setBounds(470, 280, 230, 40);
 
-        btnEntrar1.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
-        btnEntrar1.setText("Entrar");
-        btnEntrar1.addActionListener(new java.awt.event.ActionListener() {
+        btnEntrar.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
+        btnEntrar.setText("Entrar");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEntrar1ActionPerformed(evt);
+                btnEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar1);
-        btnEntrar1.setBounds(350, 390, 160, 50);
+        getContentPane().add(btnEntrar);
+        btnEntrar.setBounds(350, 400, 160, 50);
+
+        lblNoExiste.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        lblNoExiste.setForeground(new java.awt.Color(255, 51, 51));
+        lblNoExiste.setText("El usuario ingresado no existe");
+        getContentPane().add(lblNoExiste);
+        lblNoExiste.setBounds(270, 340, 350, 40);
 
         lblAviso.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         lblAviso.setForeground(new java.awt.Color(255, 51, 51));
-        lblAviso.setText("Usuario o contraseña incorrecta");
+        lblAviso.setText("Usuario o contrasena incorrecta");
         getContentPane().add(lblAviso);
-        lblAviso.setBounds(280, 340, 380, 40);
+        lblAviso.setBounds(260, 340, 380, 40);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iniciar sesion.jpg"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(900, 620));
-        jLabel3.setMinimumSize(new java.awt.Dimension(900, 620));
-        jLabel3.setPreferredSize(new java.awt.Dimension(900, 620));
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\iniciar sesion.jpg")); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 910, 630);
+        jLabel3.setBounds(0, 0, 900, 630);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+    private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
         Registro reg = new Registro();
         reg.setVisible(true);
         reg.setDefaultCloseOperation(HIDE_ON_CLOSE);
         dispose(); // cierra esta ventana
-    }//GEN-LAST:event_btnEntrarActionPerformed
+    }//GEN-LAST:event_btnRegistrarseActionPerformed
 
-    private void btnEntrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrar1ActionPerformed
-        SokobanPrincipal sok = new SokobanPrincipal();
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        SokobanPrincipal soko = new SokobanPrincipal();
         
-        ArrayList<Persona> lista = sok.getListaUsuarios();
+        //ArrayList<Persona> lista = sok.getListaUsuarios();
         
         if (txtUsuario.getText().isEmpty() | txtPass.getPassword().length == 0)  // si alguno de los dos campos esta vacio muestro alerta
             lblAviso.setVisible(true);
@@ -113,24 +118,28 @@ public class LogIn extends javax.swing.JFrame {
             char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
             String pass = new String(arrayC);
                     
-            for (int i = 0; i < lista.size(); i++) {
-                if (lista.get(i).getContra()==pass && lista.get(i).getCedula()==txtUsuario.getText())
-                    if (lista.get(i).getTipoUsuario()==0){//admin
+            for (int i = 0; i < soko.getListaUsuarios().size(); i++) {
+                
+                if (soko.getListaUsuarios().get(i).getContra().equals(pass) && soko.getListaUsuarios().get(i).getCedula().equals(txtUsuario.getText())){
+                    
+                    if (soko.getListaUsuarios().get(i).getTipoUsuario()==0){//admin
                         MenuAdmin menAdm = new MenuAdmin();
                         menAdm.setVisible(true);
                         menAdm.setDefaultCloseOperation(HIDE_ON_CLOSE);
                         dispose();
                     }
-                    else if (lista.get(i).getTipoUsuario()==1){ // usuario normal
+                    else if (soko.getListaUsuarios().get(i).getTipoUsuario()==1){ // usuario normal
                         MenuUsuario menUsu = new MenuUsuario();
                         menUsu.setVisible(true);
                         menUsu.setDefaultCloseOperation(HIDE_ON_CLOSE);
                         dispose();
                     }
-                        
-            }   
+                }      
+            }  
+            lblAviso.setVisible(false);
+            lblNoExiste.setVisible(true);
         }
-    }//GEN-LAST:event_btnEntrar1ActionPerformed
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     
     public static void main(String args[]) {
@@ -144,12 +153,13 @@ public class LogIn extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
-    private javax.swing.JButton btnEntrar1;
+    private javax.swing.JButton btnRegistrarse;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblAviso;
+    private javax.swing.JLabel lblNoExiste;
     private javax.swing.JPasswordField txtPass;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables

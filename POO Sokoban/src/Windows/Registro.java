@@ -14,6 +14,7 @@ import javax.swing.filechooser.FileFilter;
 
 public class Registro extends javax.swing.JFrame {
 
+    public String direccionImagen = "";
     public Registro() {
         initComponents();
         
@@ -38,6 +39,7 @@ public class Registro extends javax.swing.JFrame {
         lblPass.setVisible(false);
         lblTipUser.setVisible(false);
         lblAviso.setVisible(false);
+        lblFoto.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -74,8 +76,9 @@ public class Registro extends javax.swing.JFrame {
         lblAviso = new javax.swing.JLabel();
         lblTipUser = new javax.swing.JLabel();
         txtPass = new javax.swing.JPasswordField();
-        mostrar = new javax.swing.JButton();
         buscar = new javax.swing.JButton();
+        lblFoto = new javax.swing.JLabel();
+        mostrar = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBoxMenuItem1.setSelected(true);
@@ -94,7 +97,7 @@ public class Registro extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel11.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jLabel11.setText("fecha de registro");
+        jLabel11.setText("Fecha de registro");
         getContentPane().add(jLabel11);
         jLabel11.setBounds(200, 310, 264, 24);
 
@@ -173,7 +176,7 @@ public class Registro extends javax.swing.JFrame {
 
         btnSave.setBackground(new java.awt.Color(120, 213, 233));
         btnSave.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnSave.setText("resgistrar");
+        btnSave.setText("Resgistrar");
         btnSave.setAlignmentX(0.5F);
         btnSave.setBorder(null);
         btnSave.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -183,15 +186,15 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSave);
-        btnSave.setBounds(410, 500, 233, 40);
+        btnSave.setBounds(410, 500, 233, 50);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jLabel9.setText("correo");
+        jLabel9.setText("Correo");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(200, 230, 101, 24);
 
         jLabel10.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        jLabel10.setText("contrasena");
+        jLabel10.setText("Contrasena");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(200, 270, 168, 24);
 
@@ -213,7 +216,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Nacionalidad");
         panelAdmin.add(jLabel2);
-        jLabel2.setBounds(10, 20, 190, 30);
+        jLabel2.setBounds(10, 10, 190, 30);
 
         txtDate1.setBackground(new java.awt.Color(204, 255, 255));
         txtDate1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -248,7 +251,7 @@ public class Registro extends javax.swing.JFrame {
         lblNation.setBounds(570, 10, 20, 40);
 
         getContentPane().add(panelAdmin);
-        panelAdmin.setBounds(190, 370, 590, 60);
+        panelAdmin.setBounds(190, 380, 590, 50);
 
         jLabel13.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel13.setText("Tipo de usuario");
@@ -315,17 +318,6 @@ public class Registro extends javax.swing.JFrame {
         getContentPane().add(txtPass);
         txtPass.setBounds(490, 260, 260, 30);
 
-        mostrar.setMaximumSize(new java.awt.Dimension(280, 270));
-        mostrar.setMinimumSize(new java.awt.Dimension(280, 270));
-        mostrar.setPreferredSize(new java.awt.Dimension(280, 270));
-        mostrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(mostrar);
-        mostrar.setBounds(780, 150, 280, 270);
-
         buscar.setFont(new java.awt.Font("Minecrafter Alt", 0, 22)); // NOI18N
         buscar.setText("Cargar foto");
         buscar.addActionListener(new java.awt.event.ActionListener() {
@@ -334,14 +326,21 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(buscar);
-        buscar.setBounds(810, 430, 220, 40);
+        buscar.setBounds(800, 430, 220, 40);
+
+        lblFoto.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        lblFoto.setForeground(new java.awt.Color(255, 51, 51));
+        lblFoto.setText("*");
+        getContentPane().add(lblFoto);
+        lblFoto.setBounds(1030, 430, 20, 40);
+
+        mostrar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(mostrar);
+        mostrar.setBounds(780, 150, 280, 270);
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\registrar.jpg")); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(1280, 720));
-        jLabel3.setMinimumSize(new java.awt.Dimension(1280, 720));
-        jLabel3.setPreferredSize(new java.awt.Dimension(1280, 720));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, -30, 1290, 760);
+        jLabel3.setBounds(0, -10, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -361,77 +360,82 @@ public class Registro extends javax.swing.JFrame {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         /// instancias
         Administrador admin = new Administrador();  
-        //Administrador admin = new Administrador();
         UsuarioNormal jugador = new UsuarioNormal();
-        //admin.setFoto("");
         SokobanPrincipal soko = new SokobanPrincipal();
-        ArrayList<Persona> lista = soko.getListaUsuarios();
-        if (txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0 | txtNacionalidad.getText().isEmpty()){
-                    
-                    if (txtNacionalidad.getText().isEmpty())
-                        lblNation.setVisible(true);
-         
-                    if (txtId.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
-                        lblId.setVisible(true);     // poner visible el asterisco de error
-
-                    if (txtMail.getText().isEmpty())    
-                        lblMail.setVisible(true);  
-
-                    if (txtName.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
-                        lblNombre.setVisible(true);     // poner visible el asterisco de error
-
-                    if (txtPass.getPassword().length == 0)    
-                        lblPass.setVisible(true);     // poner visible el asterisco de error
-                    lblAviso.setVisible(true);
-                }
-        if (cmbUsers.getSelectedIndex()==-1) // sino eligieron opcion manda mensaje
-            lblTipUser.setVisible(true);
-        else if (cmbUsers.getSelectedIndex()==0){
-                
-                if (txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0 | txtNacionalidad.getText().isEmpty()){
-                    
-                    if (txtNacionalidad.getText().isEmpty())
-                        lblNation.setVisible(true);
-         
-                    if (txtId.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
-                        lblId.setVisible(true);     // poner visible el asterisco de error
-
-                    if (txtMail.getText().isEmpty())    
-                        lblMail.setVisible(true);  
-
-                    if (txtName.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
-                        lblNombre.setVisible(true);     // poner visible el asterisco de error
-
-                    if (txtPass.getPassword().length == 0)    
-                        lblPass.setVisible(true);     // poner visible el asterisco de error
-                    lblAviso.setVisible(true);
-                }
-                else{
-                    admin.setNacionalidad(txtNacionalidad.getText());
-                    admin.setCedula(txtId.getText());
-                    admin.setNombre(txtName.getText());
-                    admin.setCorreo(txtMail.getText());
-                    
-                    char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
-                    String pass = new String(arrayC);
-                    
-                    admin.setContra(pass);
-                    admin.setTipoUsuario(cmbUsers.getSelectedIndex());
-                    admin.setFechaReg(txtDate.getText());
-                    
-                    lista.add(admin);
-                    System.out.println("Agregado con exito!");
-                }
-        }  
-        else if(cmbUsers.getSelectedIndex()==1){ // usuario normal
         
-        }
+        ArrayList<Persona> lista = soko.getListaUsuarios();
+        
+        if (cmbUsers.getSelectedIndex()==-1 | direccionImagen.equals("") | txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0){
+                    
+                if (direccionImagen.equals(""))
+                    lblFoto.setVisible(true);
+                    
+                if (txtId.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
+                    lblId.setVisible(true);     // poner visible el asterisco de error
 
-                /*LogIn login = new LogIn();
+                if (txtMail.getText().isEmpty())    
+                    lblMail.setVisible(true);  
+
+                if (txtName.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
+                    lblNombre.setVisible(true);     // poner visible el asterisco de error
+
+                if (txtPass.getPassword().length == 0)    
+                    lblPass.setVisible(true);     // poner visible el asterisco de error
+                    
+                if (cmbUsers.getSelectedIndex()==-1)    
+                    lblTipUser.setVisible(true); 
+                lblAviso.setVisible(true);
+            }
+        else if (cmbUsers.getSelectedIndex()==0){
+            if (txtNacionalidad.getText().isEmpty())
+                lblNation.setVisible(true);     
+            else{
+                admin.setNombre(txtName.getText());
+                admin.setCedula(txtId.getText());
+                admin.setCorreo(txtMail.getText());
+                
+                char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
+                String pass = new String(arrayC);
+                admin.setContra(pass);
+                
+                admin.setFechaReg(txtDate.getText());
+                admin.setTipoUsuario(cmbUsers.getSelectedIndex());
+                admin.setNacionalidad(txtNacionalidad.getText());
+                admin.setFoto(direccionImagen);
+  
+                //lista.add(admin);
+                SokobanPrincipal.listaUsuarios.add(admin);
+                
+                System.out.println("Agregado con exito!");  
+                
+                LogIn login = new LogIn();
                 login.setVisible(true);
                 login.setDefaultCloseOperation(HIDE_ON_CLOSE);
-                dispose(); // oculta esta ventana y abre la que estoy llamando*/
-            
+                dispose(); // oculta esta ventana y abre la que estoy llamando
+            }    
+        }  
+        else if(cmbUsers.getSelectedIndex()==1){ // usuario normal
+            jugador.setNombre(txtName.getText());
+            jugador.setCedula(txtId.getText());
+            jugador.setCorreo(txtMail.getText());
+                
+            char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
+            String pass = new String(arrayC);
+            jugador.setContra(pass);
+                
+            jugador.setFechaReg(txtDate.getText());
+            jugador.setTipoUsuario(cmbUsers.getSelectedIndex());
+            jugador.setFoto(direccionImagen);
+  
+            //lista.add(jugador);
+            SokobanPrincipal.listaUsuarios.add(admin);
+            System.out.println("Agregado con exito!");  
+                
+            LogIn login = new LogIn();
+            login.setVisible(true);
+            login.setDefaultCloseOperation(HIDE_ON_CLOSE);
+            dispose(); // oculta esta ventana y abre la que estoy llamando
+        }     
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
@@ -487,10 +491,6 @@ public class Registro extends javax.swing.JFrame {
         lblPass.setVisible(false);
     }//GEN-LAST:event_txtPassKeyPressed
 
-    private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
-
-    }//GEN-LAST:event_mostrarActionPerformed
-
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         JFileChooser nuevo = new JFileChooser ();
         // se establece el formato de la imagen a aceptar
@@ -512,7 +512,8 @@ public class Registro extends javax.swing.JFrame {
             ImageIcon icono= new ImageIcon(nueva);
             mostrar.setIcon(icono);
             mostrar.setSize(280, 270);
-            String direccionImagen = seleccionado;
+            direccionImagen = seleccionado;
+            lblFoto.setVisible(false);
         }
     }//GEN-LAST:event_buscarActionPerformed
 
@@ -543,13 +544,14 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblAviso;
+    private javax.swing.JLabel lblFoto;
     private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblMail;
     private javax.swing.JLabel lblNation;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblTipUser;
-    private javax.swing.JButton mostrar;
+    private javax.swing.JLabel mostrar;
     private javax.swing.JPanel panelAdmin;
     private javax.swing.JPanel panelAdmin3;
     private javax.swing.JTextField txtDate;

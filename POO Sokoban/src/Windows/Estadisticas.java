@@ -16,6 +16,12 @@ public class Estadisticas extends javax.swing.JFrame {
      */
     public Estadisticas() {
         initComponents();
+        setResizable(false);
+        txtNivel.setVisible(false);
+        jLabel2.setVisible(false);
+        txtIdJug.setVisible(false);
+        jLabel1.setVisible(false);
+        btnMostrar.setVisible(false);
     }
 
     /**
@@ -27,60 +33,103 @@ public class Estadisticas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cmbEstadisticas = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        panelEstadisticas = new javax.swing.JPanel();
+        txtIdJug = new javax.swing.JTextField();
+        btnMostrar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtNivel = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1280, 720));
+        setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estadisticas de un usuario", "Todos los usuarios que han superado un nivel" }));
+        cmbEstadisticas.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        cmbEstadisticas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estadisticas de un usuario", "Historial de un jugador", "Todos los usuarios que han superado un nivel" }));
+        cmbEstadisticas.setSelectedIndex(-1);
+        cmbEstadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbEstadisticasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cmbEstadisticas);
+        cmbEstadisticas.setBounds(290, 200, 750, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(450, 450, 450)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(482, Short.MAX_VALUE))
+        jLabel1.setFont(new java.awt.Font("Minecrafter", 1, 24)); // NOI18N
+        jLabel1.setText("Cedula del jugador");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(270, 270, 310, 40);
+
+        javax.swing.GroupLayout panelEstadisticasLayout = new javax.swing.GroupLayout(panelEstadisticas);
+        panelEstadisticas.setLayout(panelEstadisticasLayout);
+        panelEstadisticasLayout.setHorizontalGroup(
+            panelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(570, Short.MAX_VALUE))
+        panelEstadisticasLayout.setVerticalGroup(
+            panelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 220, Short.MAX_VALUE)
         );
+
+        getContentPane().add(panelEstadisticas);
+        panelEstadisticas.setBounds(290, 340, 730, 220);
+
+        txtIdJug.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(txtIdJug);
+        txtIdJug.setBounds(600, 270, 180, 38);
+
+        btnMostrar.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        btnMostrar.setText("Mostrar");
+        getContentPane().add(btnMostrar);
+        btnMostrar.setBounds(790, 270, 170, 40);
+
+        jLabel2.setFont(new java.awt.Font("Minecrafter", 1, 24)); // NOI18N
+        jLabel2.setText("Numero de nivel");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(270, 270, 320, 40);
+
+        txtNivel.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(txtNivel);
+        txtNivel.setBounds(600, 270, 180, 40);
+
+        jLabel4.setFont(new java.awt.Font("Minecrafter", 1, 24)); // NOI18N
+        jLabel4.setText("seleccione una opcion");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(440, 150, 490, 40);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\estadisticas.jpg")); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, -10, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Estadisticas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Estadisticas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Estadisticas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Estadisticas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void cmbEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEstadisticasActionPerformed
+        if (cmbEstadisticas.getSelectedIndex()==0 | cmbEstadisticas.getSelectedIndex()==1){
+            txtNivel.setVisible(false);
+            jLabel2.setVisible(false);
+            txtIdJug.setVisible(true);
+            jLabel1.setVisible(true);
+            btnMostrar.setVisible(true);
         }
-        //</editor-fold>
+            
+        else if (cmbEstadisticas.getSelectedIndex()==2){
+            txtNivel.setVisible(true);
+            jLabel2.setVisible(true);
+            txtIdJug.setVisible(false);
+            jLabel1.setVisible(false);
+            btnMostrar.setVisible(true);
+        }                  
+                   
+    }//GEN-LAST:event_cmbEstadisticasActionPerformed
 
-        /* Create and display the form */
+    public static void main(String args[]) {
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Estadisticas().setVisible(true);
@@ -89,6 +138,14 @@ public class Estadisticas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton btnMostrar;
+    private javax.swing.JComboBox<String> cmbEstadisticas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel panelEstadisticas;
+    private javax.swing.JTextField txtIdJug;
+    private javax.swing.JTextField txtNivel;
     // End of variables declaration//GEN-END:variables
 }

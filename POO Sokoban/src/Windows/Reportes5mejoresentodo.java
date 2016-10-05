@@ -35,7 +35,6 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         panel5m = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         txtQuinto = new javax.swing.JTextField();
         txtPrimer = new javax.swing.JTextField();
@@ -47,10 +46,10 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         txtSegundoC = new javax.swing.JTextField();
         txtTerceroC = new javax.swing.JTextField();
         txtCuartoC = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         panelM = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
@@ -66,8 +65,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
 
         cmbCateg.setBackground(new java.awt.Color(240, 240, 240));
         cmbCateg.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
-        cmbCateg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 Usuarios más insistentes en nivel", "5 Usuarios con ganes optimizados", "5 Usuarios records rotos", "Mejor en movimientos", "Mejor en tiempo", "Usuarios que pasaron un nivel", "Historial de un jugador", "Informacion de nivel creado por administrador" }));
-        cmbCateg.setSelectedIndex(-1);
+        cmbCateg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5 Usuarios más insistentes en nivel", "5 Usuarios con ganes optimizados", "5 Usuarios records rotos", "Mejor en movimientos", "Mejor en tiempo", "Usuarios que pasaron un nivel", "Informacion de nivel creado por administrador" }));
         cmbCateg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbCategActionPerformed(evt);
@@ -98,12 +96,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         jLabel4.setText("cantidad");
         panel5m.add(jLabel4);
-        jLabel4.setBounds(340, 0, 190, 60);
-
-        jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
-        jLabel8.setText("nombre");
-        panel5m.add(jLabel8);
-        jLabel8.setBounds(60, 20, 190, 30);
+        jLabel4.setBounds(370, 0, 190, 60);
 
         jTextField2.setBackground(new java.awt.Color(120, 213, 233));
         jTextField2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -186,13 +179,21 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panel5m.add(txtCuartoC);
         txtCuartoC.setBounds(290, 180, 260, 26);
 
+        jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
+        jLabel8.setText("nombre");
+        panel5m.add(jLabel8);
+        jLabel8.setBounds(90, 10, 190, 30);
+
+        getContentPane().add(panel5m);
+        panel5m.setBounds(360, 300, 580, 270);
+
         panelM.setBackground(new java.awt.Color(120, 213, 233));
         panelM.setLayout(null);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
         jLabel9.setText("Nombre");
         panelM.add(jLabel9);
-        jLabel9.setBounds(10, 10, 190, 30);
+        jLabel9.setBounds(20, 10, 190, 30);
 
         txtNombre.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -203,15 +204,8 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panelM.add(txtNombre);
         txtNombre.setBounds(220, 10, 260, 30);
 
-        panel5m.add(panelM);
-        panelM.setBounds(-10, 30, 690, 160);
-
-        getContentPane().add(panel5m);
-        panel5m.setBounds(370, 240, 580, 270);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\estadisticas.jpg")); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, -20, 1280, 720);
+        getContentPane().add(panelM);
+        panelM.setBounds(390, 300, 530, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -276,7 +270,6 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbCateg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
