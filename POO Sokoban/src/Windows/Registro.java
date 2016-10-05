@@ -79,6 +79,7 @@ public class Registro extends javax.swing.JFrame {
         buscar = new javax.swing.JButton();
         lblFoto = new javax.swing.JLabel();
         mostrar = new javax.swing.JLabel();
+        btnAtras = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBoxMenuItem1.setSelected(true);
@@ -338,6 +339,16 @@ public class Registro extends javax.swing.JFrame {
         getContentPane().add(mostrar);
         mostrar.setBounds(780, 150, 280, 270);
 
+        btnAtras.setFont(new java.awt.Font("Minecrafter Alt", 0, 24)); // NOI18N
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(0, 0, 120, 40);
+
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\registrar.jpg")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, -10, 1280, 720);
@@ -363,7 +374,7 @@ public class Registro extends javax.swing.JFrame {
         UsuarioNormal jugador = new UsuarioNormal();
         SokobanPrincipal soko = new SokobanPrincipal();
         
-        ArrayList<Persona> lista = soko.getListaUsuarios();
+        //ArrayList<Persona> lista = soko.getListaUsuarios();
         
         if (cmbUsers.getSelectedIndex()==-1 | direccionImagen.equals("") | txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0){
                     
@@ -406,7 +417,8 @@ public class Registro extends javax.swing.JFrame {
                 //lista.add(admin);
                 SokobanPrincipal.listaUsuarios.add(admin);
                 
-                System.out.println("Agregado con exito!");  
+                System.out.println(SokobanPrincipal.listaUsuarios.size()); 
+                
                 
                 LogIn login = new LogIn();
                 login.setVisible(true);
@@ -517,6 +529,13 @@ public class Registro extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buscarActionPerformed
 
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        LogIn inicio = new LogIn();
+        inicio.setVisible(true);
+        inicio.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
+
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -527,6 +546,7 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton buscar;
     private javax.swing.JComboBox<String> cmbUsers;

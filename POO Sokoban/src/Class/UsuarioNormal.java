@@ -12,10 +12,10 @@ public class UsuarioNormal extends Persona {
     public UsuarioNormal(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
         super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);
     }
+    
     public UsuarioNormal(){
         super();
     }
-    
 
     public UsuarioNormal(int bestMoves, int repeticiones, int nivelActual, String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
         super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);

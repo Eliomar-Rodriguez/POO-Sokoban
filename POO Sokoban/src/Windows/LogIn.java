@@ -3,11 +3,13 @@ package Windows;
 
 import Class.Persona;
 import Class.SokobanPrincipal;
+import Class.UsuarioNormal;
 import java.util.ArrayList;
 
 public class LogIn extends javax.swing.JFrame {
-
+    
     public LogIn() {
+        
         initComponents();
         
         setResizable(false);    // no poder cambiar tamano a la ventana
@@ -16,6 +18,8 @@ public class LogIn extends javax.swing.JFrame {
         setTitle("Iniciar Sesion Sokoban");   // poner titulo a ventana
         lblNoExiste.setVisible(false);
         lblAviso.setVisible(false);
+        UsuarioNormal jugador = new UsuarioNormal("Eliomar Rodriguez Arguedas","207680623","rodriguez.elio.97@gmail.com","capitan1","05/10/2016","C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\63444.jpg",1);
+        //SokobanPrincipal.listaUsuarios.add(jugador);
     }
 
    
@@ -40,6 +44,11 @@ public class LogIn extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(900, 620));
         setMinimumSize(new java.awt.Dimension(900, 620));
         setPreferredSize(new java.awt.Dimension(900, 620));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 30)); // NOI18N
@@ -95,7 +104,7 @@ public class LogIn extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\iniciar sesion.jpg")); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 900, 630);
+        jLabel3.setBounds(0, -20, 900, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -108,9 +117,6 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        SokobanPrincipal soko = new SokobanPrincipal();
-        
-        //ArrayList<Persona> lista = sok.getListaUsuarios();
         
         if (txtUsuario.getText().isEmpty() | txtPass.getPassword().length == 0)  // si alguno de los dos campos esta vacio muestro alerta
             lblAviso.setVisible(true);
@@ -118,17 +124,17 @@ public class LogIn extends javax.swing.JFrame {
             char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
             String pass = new String(arrayC);
                     
-            for (int i = 0; i < soko.getListaUsuarios().size(); i++) {
+            for (int i = 0; i < SokobanPrincipal.listaUsuarios.size(); i++) {
                 
-                if (soko.getListaUsuarios().get(i).getContra().equals(pass) && soko.getListaUsuarios().get(i).getCedula().equals(txtUsuario.getText())){
+                if (SokobanPrincipal.listaUsuarios.get(i).getContra().equals(pass) && SokobanPrincipal.listaUsuarios.get(i).getCedula().equals(txtUsuario.getText())){
                     
-                    if (soko.getListaUsuarios().get(i).getTipoUsuario()==0){//admin
+                    if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==0){//admin
                         MenuAdmin menAdm = new MenuAdmin();
                         menAdm.setVisible(true);
                         menAdm.setDefaultCloseOperation(HIDE_ON_CLOSE);
                         dispose();
                     }
-                    else if (soko.getListaUsuarios().get(i).getTipoUsuario()==1){ // usuario normal
+                    else if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==1){ // usuario normal
                         MenuUsuario menUsu = new MenuUsuario();
                         menUsu.setVisible(true);
                         menUsu.setDefaultCloseOperation(HIDE_ON_CLOSE);
@@ -140,6 +146,10 @@ public class LogIn extends javax.swing.JFrame {
             lblNoExiste.setVisible(true);
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+
+    }//GEN-LAST:event_formWindowOpened
 
     
     public static void main(String args[]) {

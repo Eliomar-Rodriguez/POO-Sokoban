@@ -30,6 +30,7 @@ public class Reglamento extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtReglamento = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        btnAtras = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,6 +58,16 @@ public class Reglamento extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(500, 350, 210, 50);
 
+        btnAtras.setFont(new java.awt.Font("Minecrafter Alt", 0, 24)); // NOI18N
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(0, 0, 120, 40);
+
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\reglamento.jpg")); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 1270, 710);
@@ -67,6 +78,13 @@ public class Reglamento extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        MenuAdmin inicio = new MenuAdmin();
+        inicio.setVisible(true);
+        inicio.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,6 +122,7 @@ public class Reglamento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

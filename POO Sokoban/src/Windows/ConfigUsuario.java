@@ -32,7 +32,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mostrar = new javax.swing.JButton();
         buscar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -43,6 +42,8 @@ public class ConfigUsuario extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        mostrar = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -54,14 +55,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        mostrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(mostrar);
-        mostrar.setBounds(800, 150, 300, 300);
-
         buscar.setFont(new java.awt.Font("Minecrafter", 0, 22)); // NOI18N
         buscar.setText("Cargar foto");
         buscar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +63,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(buscar);
-        buscar.setBounds(850, 470, 199, 40);
+        buscar.setBounds(850, 470, 210, 40);
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
@@ -163,6 +156,20 @@ public class ConfigUsuario extends javax.swing.JFrame {
         getContentPane().add(btnSave);
         btnSave.setBounds(310, 380, 370, 50);
 
+        jButton1.setFont(new java.awt.Font("Minecrafter Alt", 0, 24)); // NOI18N
+        jButton1.setText("Atras");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(0, 0, 120, 40);
+
+        mostrar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(mostrar);
+        mostrar.setBounds(800, 150, 300, 300);
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilUsu.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1290, 710);
@@ -173,10 +180,6 @@ public class ConfigUsuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
-
-    }//GEN-LAST:event_mostrarActionPerformed
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         JFileChooser nuevo = new JFileChooser ();
@@ -290,6 +293,13 @@ public class ConfigUsuario extends javax.swing.JFrame {
         */
     }//GEN-LAST:event_btnSaveActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        MenuUsuario menu = new MenuUsuario();
+        menu.setVisible(true);
+        menu.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -328,13 +338,14 @@ public class ConfigUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
     private javax.swing.JButton buscar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JButton mostrar;
+    private javax.swing.JLabel mostrar;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtMail;
     private javax.swing.JTextField txtName;

@@ -41,6 +41,7 @@ public class Estadisticas extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtNivel = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        btnAtras = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -102,6 +103,16 @@ public class Estadisticas extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(440, 150, 490, 40);
 
+        btnAtras.setFont(new java.awt.Font("Minecrafter Alt", 0, 24)); // NOI18N
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(0, 0, 120, 40);
+
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\estadisticas.jpg")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, -10, 1280, 720);
@@ -128,6 +139,13 @@ public class Estadisticas extends javax.swing.JFrame {
                    
     }//GEN-LAST:event_cmbEstadisticasActionPerformed
 
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        MenuAdmin inicio = new MenuAdmin();
+        inicio.setVisible(true);
+        inicio.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
+
     public static void main(String args[]) {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -138,6 +156,7 @@ public class Estadisticas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnMostrar;
     private javax.swing.JComboBox<String> cmbEstadisticas;
     private javax.swing.JLabel jLabel1;

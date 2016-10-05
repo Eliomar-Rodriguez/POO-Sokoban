@@ -28,6 +28,7 @@ public class CrearNivel extends javax.swing.JFrame {
         txtColumnas = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        btnAtras = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,12 +68,29 @@ public class CrearNivel extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(200, 240, 580, 40);
 
+        btnAtras.setFont(new java.awt.Font("Minecrafter Alt", 0, 24)); // NOI18N
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras);
+        btnAtras.setBounds(0, 0, 120, 40);
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\crear Nivel.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -20, 1280, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        MenuAdmin inicio = new MenuAdmin();
+        inicio.setVisible(true);
+        inicio.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     public static void main(String args[]) {
 
@@ -84,6 +102,7 @@ public class CrearNivel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
