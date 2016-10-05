@@ -50,7 +50,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panelM = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
@@ -62,7 +62,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel2.setText("Selecione la categoria en la que desea ver estadisticas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(240, 140, 839, 40);
+        jLabel2.setBounds(160, 130, 839, 40);
 
         cmbCateg.setBackground(new java.awt.Color(240, 240, 240));
         cmbCateg.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -74,7 +74,7 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cmbCateg);
-        cmbCateg.setBounds(300, 190, 720, 40);
+        cmbCateg.setBounds(220, 180, 720, 40);
 
         txtNivel.setBackground(new java.awt.Color(120, 213, 233));
         txtNivel.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -85,12 +85,12 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNivel);
-        txtNivel.setBounds(590, 240, 210, 40);
+        txtNivel.setBounds(510, 230, 210, 40);
 
         jLabel1.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel1.setText("Nivel");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(480, 250, 75, 24);
+        jLabel1.setBounds(400, 240, 75, 24);
 
         panel5m.setLayout(null);
 
@@ -205,11 +205,12 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
         panelM.setBounds(0, 50, 690, 160);
 
         getContentPane().add(panel5m);
-        panel5m.setBounds(380, 270, 580, 270);
+        panel5m.setBounds(300, 260, 580, 270);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Registrar.jpg"))); // NOI18N
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 1140, 620);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estadisticas.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 1140, 620);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -274,8 +275,8 @@ public class Reportes5mejoresentodo extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbCateg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField2;

@@ -45,7 +45,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCrearNivel);
-        btnCrearNivel.setBounds(560, 190, 260, 50);
+        btnCrearNivel.setBounds(500, 180, 260, 50);
 
         btnSalir.setBackground(new java.awt.Color(65, 195, 228));
         btnSalir.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -59,7 +59,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSalir);
-        btnSalir.setBounds(650, 340, 109, 50);
+        btnSalir.setBounds(580, 330, 109, 50);
 
         btnEstadisticas.setBackground(new java.awt.Color(65, 195, 228));
         btnEstadisticas.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -73,7 +73,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(510, 290, 361, 50);
+        btnEstadisticas.setBounds(450, 280, 361, 50);
 
         btnCrearRegla.setBackground(new java.awt.Color(65, 195, 228));
         btnCrearRegla.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -87,7 +87,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCrearRegla);
-        btnCrearRegla.setBounds(560, 240, 260, 50);
+        btnCrearRegla.setBounds(500, 230, 260, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -101,7 +101,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearNivelActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        System.exit(1);
+        System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed

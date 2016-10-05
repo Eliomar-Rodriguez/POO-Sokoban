@@ -51,11 +51,14 @@ public class ConfigAdmin extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Configuración cuenta de Administrador");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 180, 340, 310));
 
@@ -134,6 +137,9 @@ public class ConfigAdmin extends javax.swing.JFrame {
         btnSave.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 540, 370, 50));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilAdmin.jpg")); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 710));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -181,6 +187,7 @@ public class ConfigAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

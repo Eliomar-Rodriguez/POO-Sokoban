@@ -46,7 +46,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bntCrearGrupo);
-        bntCrearGrupo.setBounds(530, 240, 280, 50);
+        bntCrearGrupo.setBounds(470, 230, 280, 50);
 
         btnEstadisticas.setBackground(new java.awt.Color(65, 195, 228));
         btnEstadisticas.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -60,7 +60,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(550, 290, 252, 50);
+        btnEstadisticas.setBounds(430, 280, 361, 50);
 
         btnSalir.setBackground(new java.awt.Color(65, 195, 228));
         btnSalir.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -74,7 +74,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSalir);
-        btnSalir.setBounds(620, 390, 120, 50);
+        btnSalir.setBounds(560, 380, 120, 50);
 
         btnJugar.setBackground(new java.awt.Color(65, 195, 228));
         btnJugar.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -88,7 +88,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnJugar);
-        btnJugar.setBounds(610, 190, 130, 50);
+        btnJugar.setBounds(550, 180, 130, 50);
 
         btnConfigPerf.setBackground(new java.awt.Color(65, 195, 228));
         btnConfigPerf.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -102,7 +102,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnConfigPerf);
-        btnConfigPerf.setBounds(480, 340, 390, 50);
+        btnConfigPerf.setBounds(420, 330, 390, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menu.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -125,7 +125,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEstadisticasActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        System.exit(1);
+        System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarActionPerformed

@@ -49,13 +49,14 @@ public class ConfigUsuario extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Configuración cuenta de Usuario");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
-        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mostrar.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +73,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 buscarActionPerformed(evt);
             }
         });
-        getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, -1, 40));
+        getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 470, -1, 40));
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 20)); // NOI18N
         jLabel7.setText("Nombre completo");
@@ -208,7 +209,10 @@ public class ConfigUsuario extends javax.swing.JFrame {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, 40));
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, -1, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilUsu.jpg")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -392,6 +396,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
     private javax.swing.JButton btnSave;
     private javax.swing.JButton buscar;
     private javax.swing.JComboBox<String> cmbUsers;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
