@@ -129,7 +129,13 @@ public class CrearNivel extends javax.swing.JFrame {
         nivel.setIdNivel(Integer.parseInt(txtIdNivel.getText()));
         nivel.setCantMoves(Integer.parseInt(txtMovimientos.getText()));
         //nivel.setIdAdmin(idAdmin); // ver como diantres le pongo el id del admin xD
-        SokobanPrincipal.crearMatriz(tamano);
+        
+        SokobanPrincipal.crearMatriz(tamano); // esto no va aqui creo
+        /*
+        hay que pensar bien muchas cosas
+            - el crear matriz mas bien deberia llamarse en crear nivel
+            - tengo que encontrar la manera de obtener el idAmin con el que me registre
+        */
               
         
     }//GEN-LAST:event_btnGenerarActionPerformed
