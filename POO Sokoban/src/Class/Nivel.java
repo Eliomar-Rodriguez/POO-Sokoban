@@ -1,5 +1,7 @@
 package Class;
 
+import Objetos.Objeto;
+
 public class Nivel {
 
     private int cantMoves;
@@ -16,7 +18,7 @@ public class Nivel {
 
     private int columnaPersonaje;
 
-    private int matrizLogica;
+    Objeto [][] matrizLogica = new Objeto [filas][columnas];    // ojo al tipo en caso de que de error con la matriz mas adelante
 
     private String idAdmin;
 
@@ -24,7 +26,8 @@ public class Nivel {
 
     private int movisDuranteJuego;
 
-    public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, int matrizLogica, String idAdmin, int cantPuntos, int movisDuranteJuego) {
+    public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, String idAdmin, int cantPuntos, int movisDuranteJuego) {
+        this.matrizLogica = new Objeto[filas][columnas];
         this.cantMoves = cantMoves;
         this.idNivel = idNivel;
         this.cantCajas = cantCajas;
@@ -32,10 +35,13 @@ public class Nivel {
         this.columnas = columnas;
         this.filaPersonaje = filaPersonaje;
         this.columnaPersonaje = columnaPersonaje;
-        this.matrizLogica = matrizLogica;
         this.idAdmin = idAdmin;
         this.cantPuntos = cantPuntos;
         this.movisDuranteJuego = movisDuranteJuego;
+    }
+
+    public Nivel() {
+        
     }
 
     public int getCantMoves() {
@@ -92,14 +98,6 @@ public class Nivel {
 
     public void setColumnaPersonaje(int columnaPersonaje) {
         this.columnaPersonaje = columnaPersonaje;
-    }
-
-    public int getMatrizLogica() {
-        return matrizLogica;
-    }
-
-    public void setMatrizLogica(int matrizLogica) {
-        this.matrizLogica = matrizLogica;
     }
 
     public String getIdAdmin() {

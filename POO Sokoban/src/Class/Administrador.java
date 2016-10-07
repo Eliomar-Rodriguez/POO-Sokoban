@@ -56,12 +56,6 @@ public class Administrador extends Persona {
     public void cambiarNivelesOptimizados() {
     }
 
-    public void crearCaja() {
-    }
-
-    public void crearMatriz() {
-    }
-
     public void crearPuntos() {
     }
 

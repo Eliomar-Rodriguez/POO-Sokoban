@@ -28,13 +28,14 @@ public class creacionNivel extends javax.swing.JFrame {
     private void initComponents() {
 
         btnCaja = new javax.swing.JButton();
-        btnCajaRoja = new javax.swing.JButton();
         btnPared = new javax.swing.JButton();
         btnPersonaje = new javax.swing.JButton();
+        btnCajaRoja = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(null);
 
         btnCaja.setBackground(new java.awt.Color(65, 195, 228));
         btnCaja.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -47,6 +48,36 @@ public class creacionNivel extends javax.swing.JFrame {
                 btnCajaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCaja);
+        btnCaja.setBounds(1080, 210, 70, 70);
+
+        btnPared.setBackground(new java.awt.Color(65, 195, 228));
+        btnPared.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnPared.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\muro.jpeg")); // NOI18N
+        btnPared.setAlignmentX(0.5F);
+        btnPared.setBorder(null);
+        btnPared.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnPared.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnParedActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnPared);
+        btnPared.setBounds(1171, 328, 70, 70);
+
+        btnPersonaje.setBackground(new java.awt.Color(65, 195, 228));
+        btnPersonaje.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnPersonaje.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Desktop\\Images\\boton.JPG")); // NOI18N
+        btnPersonaje.setAlignmentX(0.5F);
+        btnPersonaje.setBorder(null);
+        btnPersonaje.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnPersonaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPersonajeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnPersonaje);
+        btnPersonaje.setBounds(1171, 398, 80, 70);
 
         btnCajaRoja.setBackground(new java.awt.Color(65, 195, 228));
         btnCajaRoja.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -59,57 +90,8 @@ public class creacionNivel extends javax.swing.JFrame {
                 btnCajaRojaActionPerformed(evt);
             }
         });
-
-        btnPared.setBackground(new java.awt.Color(65, 195, 228));
-        btnPared.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnPared.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/muro.jpeg"))); // NOI18N
-        btnPared.setAlignmentX(0.5F);
-        btnPared.setBorder(null);
-        btnPared.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        btnPared.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnParedActionPerformed(evt);
-            }
-        });
-
-        btnPersonaje.setBackground(new java.awt.Color(65, 195, 228));
-        btnPersonaje.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgBotons/mariobros.gif"))); // NOI18N
-        btnPersonaje.setAlignmentX(0.5F);
-        btnPersonaje.setBorder(null);
-        btnPersonaje.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        btnPersonaje.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPersonajeActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(1171, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCajaRoja, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPared, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPersonaje, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(179, 179, 179)
-                .addComponent(btnCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnCajaRoja, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnPared, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnPersonaje, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(261, Short.MAX_VALUE))
-        );
+        getContentPane().add(btnCajaRoja);
+        btnCajaRoja.setBounds(1170, 210, 70, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -118,10 +100,6 @@ public class creacionNivel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCajaActionPerformed
 
-    private void btnCajaRojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCajaRojaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCajaRojaActionPerformed
-
     private void btnParedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParedActionPerformed
 
     }//GEN-LAST:event_btnParedActionPerformed
@@ -129,6 +107,10 @@ public class creacionNivel extends javax.swing.JFrame {
     private void btnPersonajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonajeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPersonajeActionPerformed
+
+    private void btnCajaRojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCajaRojaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCajaRojaActionPerformed
 
     /**
      * @param args the command line arguments
