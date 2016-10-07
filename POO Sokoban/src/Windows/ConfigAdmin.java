@@ -62,7 +62,7 @@ public class ConfigAdmin extends javax.swing.JFrame {
         buscar.setFont(new java.awt.Font("Minecrafter Alt", 0, 22)); // NOI18N
         buscar.setText("Cargar foto");
         getContentPane().add(buscar);
-        buscar.setBounds(840, 490, 199, 40);
+        buscar.setBounds(840, 490, 200, 40);
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
@@ -125,7 +125,7 @@ public class ConfigAdmin extends javax.swing.JFrame {
         getContentPane().add(btnSave);
         btnSave.setBounds(270, 400, 370, 50);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilAdmin.jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Windows/editPerfil.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 1280, 710);
 

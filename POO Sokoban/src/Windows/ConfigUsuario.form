@@ -240,7 +240,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\USUARIO\Documents\POO proyecto\POO-Sokoban\POO Sokoban\src\Images\editPerfilUsu.jpg"/>
+          <Image iconType="3" name="/Images/editar.jpg"/>
         </Property>
       </Properties>
       <Constraints>

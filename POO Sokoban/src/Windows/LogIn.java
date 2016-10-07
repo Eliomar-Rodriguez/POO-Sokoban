@@ -102,7 +102,7 @@ public class LogIn extends javax.swing.JFrame {
         getContentPane().add(lblAviso);
         lblAviso.setBounds(260, 340, 380, 40);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\iniciar sesion.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/iniciar sesion.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, -20, 900, 660);
 

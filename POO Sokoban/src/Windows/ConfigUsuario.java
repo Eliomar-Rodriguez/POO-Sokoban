@@ -170,7 +170,7 @@ public class ConfigUsuario extends javax.swing.JFrame {
         getContentPane().add(mostrar);
         mostrar.setBounds(800, 150, 300, 300);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\editPerfilUsu.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/editar.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1290, 710);
 

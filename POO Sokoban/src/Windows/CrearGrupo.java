@@ -114,9 +114,9 @@ public class CrearGrupo extends javax.swing.JFrame {
         getContentPane().add(btnAtras);
         btnAtras.setBounds(0, 0, 120, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\crear grupo.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/grupos.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -10, 1280, 720);
+        jLabel1.setBounds(0, 0, 1280, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

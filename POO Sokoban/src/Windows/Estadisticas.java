@@ -113,7 +113,7 @@ public class Estadisticas extends javax.swing.JFrame {
         getContentPane().add(btnAtras);
         btnAtras.setBounds(0, 0, 120, 40);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\estadisticas.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estadisticas.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, -10, 1280, 720);
 
