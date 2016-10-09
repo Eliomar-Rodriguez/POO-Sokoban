@@ -5,9 +5,9 @@ import Objetos.Objeto;
 public class Nivel {
 
     private int cantMoves;
-
+    
     private int idNivel;
-
+    
     private int cantCajas;
 
     private int filas;
@@ -132,7 +132,6 @@ public class Nivel {
     public void reiniciar() {
     }
 
-    
 
     public void determinarGane() {
     }
@@ -158,5 +157,11 @@ public class Nivel {
     public void generarMatriz() {
     }
 
+    @Override
+    public String toString() {
+        return "Nivel{" + "cantMoves=" + cantMoves + ", idNivel=" + idNivel + ", cantCajas=" + cantCajas + ", filas=" + filas + ", columnas=" + columnas + ", filaPersonaje=" + filaPersonaje + ", columnaPersonaje=" + columnaPersonaje + ", matrizLogica=" + matrizLogica + ", idAdmin=" + idAdmin + ", cantPuntos=" + cantPuntos + ", movisDuranteJuego=" + movisDuranteJuego + '}';
+    }
+    
+    
    
 }

@@ -3,6 +3,8 @@ package Windows;
 
 import Class.Nivel;
 import Class.SokobanPrincipal;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class CrearNivel extends javax.swing.JFrame {
@@ -11,6 +13,21 @@ public class CrearNivel extends javax.swing.JFrame {
     public CrearNivel() {
         initComponents();
         
+        // se crean las instancias, para crear el nivel se necesita
+        //cantMoves-idnivel-cantCajas-filas-columnas-filaPersonaje-columnapersonaje-idAdmin-cantpuntos-moven el juego
+        SokobanPrincipal soko = new SokobanPrincipal();
+        Nivel niv = new Nivel(4,1,5,5,5,4,4,"212223",7,8);
+        soko.setlistaNiveles(niv);
+        
+        Nivel niv2 = new Nivel(4,1,5,8,8,4,4,"212223",7,8);
+        soko.setlistaNiveles(niv2);
+        
+        Nivel niv3 = new Nivel(4,1,7,7,7,4,4,"212223",7,8);
+        soko.setlistaNiveles(niv3);
+        
+        Nivel niv4 = new Nivel(4,1,10,10,10,4,4,"212223",7,8);
+        soko.setlistaNiveles(niv4);
+
         //
         setResizable(false);    // no poder cambiar tamano a la ventana
         setSize(1280,720);      // tamano
@@ -136,6 +153,9 @@ public class CrearNivel extends javax.swing.JFrame {
             - el crear matriz mas bien deberia llamarse en crear nivel
             - tengo que encontrar la manera de obtener el idAmin con el que me registre
         */
+        
+       
+        
                       
     }//GEN-LAST:event_btnGenerarActionPerformed
 

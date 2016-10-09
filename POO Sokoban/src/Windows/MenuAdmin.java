@@ -27,8 +27,8 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnCrearNivel = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         btnEstadisticas = new javax.swing.JButton();
-        btnCrearRegla = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnReporte = new javax.swing.JButton();
+        btnCrearRegla1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -59,7 +59,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSalir);
-        btnSalir.setBounds(580, 310, 109, 50);
+        btnSalir.setBounds(580, 360, 108, 50);
 
         btnEstadisticas.setBackground(new java.awt.Color(65, 195, 228));
         btnEstadisticas.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
@@ -73,25 +73,35 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEstadisticas);
-        btnEstadisticas.setBounds(450, 260, 361, 50);
+        btnEstadisticas.setBounds(450, 260, 360, 50);
 
-        btnCrearRegla.setBackground(new java.awt.Color(65, 195, 228));
-        btnCrearRegla.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnCrearRegla.setText("Reglas");
-        btnCrearRegla.setAlignmentX(0.5F);
-        btnCrearRegla.setBorder(null);
-        btnCrearRegla.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        btnCrearRegla.addActionListener(new java.awt.event.ActionListener() {
+        btnReporte.setBackground(new java.awt.Color(65, 195, 228));
+        btnReporte.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnReporte.setText("Reportes");
+        btnReporte.setAlignmentX(0.5F);
+        btnReporte.setBorder(null);
+        btnReporte.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrearReglaActionPerformed(evt);
+                btnReporteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCrearRegla);
-        btnCrearRegla.setBounds(550, 210, 170, 50);
+        getContentPane().add(btnReporte);
+        btnReporte.setBounds(530, 310, 210, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\menuAdmin.jpg")); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1280, 710);
+        btnCrearRegla1.setBackground(new java.awt.Color(65, 195, 228));
+        btnCrearRegla1.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnCrearRegla1.setText("Reglas");
+        btnCrearRegla1.setAlignmentX(0.5F);
+        btnCrearRegla1.setBorder(null);
+        btnCrearRegla1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnCrearRegla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearRegla1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCrearRegla1);
+        btnCrearRegla1.setBounds(550, 210, 170, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,12 +127,19 @@ public class MenuAdmin extends javax.swing.JFrame {
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnEstadisticasActionPerformed
 
-    private void btnCrearReglaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearReglaActionPerformed
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        Reportes es = new Reportes();
+        es.setVisible(true);
+        es.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        dispose();    // TODO add your handling code here:
+    }//GEN-LAST:event_btnReporteActionPerformed
+
+    private void btnCrearRegla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearRegla1ActionPerformed
         Reglamento re = new Reglamento();
         re.setVisible(true);
         re.setDefaultCloseOperation(HIDE_ON_CLOSE);
-        dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCrearReglaActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnCrearRegla1ActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -134,9 +151,9 @@ public class MenuAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearNivel;
-    private javax.swing.JButton btnCrearRegla;
+    private javax.swing.JButton btnCrearRegla1;
     private javax.swing.JButton btnEstadisticas;
+    private javax.swing.JButton btnReporte;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

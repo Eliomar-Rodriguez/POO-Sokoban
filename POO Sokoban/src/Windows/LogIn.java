@@ -6,6 +6,8 @@ import Class.Persona;
 import Class.SokobanPrincipal;
 import Class.UsuarioNormal;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LogIn extends javax.swing.JFrame {
     
@@ -21,8 +23,8 @@ public class LogIn extends javax.swing.JFrame {
         lblAviso.setVisible(false);
         
     }
-
    
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -151,10 +153,10 @@ public class LogIn extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         SokobanPrincipal soko = new SokobanPrincipal();
         
-        Administrador admin = new Administrador("Costarricense",0,0,"Administrador","212223","admin1@administradores.com","abcd","05/10/2016","C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\2.jpg",0);
+        Administrador admin = new Administrador("Costarricense",0,0,"Administrador","212223","admin1@administradores.com","abcd","05/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\2.jpg",0);
         soko.setListaUsuarios(admin);
         
-        UsuarioNormal jugador = new UsuarioNormal(0,0,0,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
+        UsuarioNormal jugador = new UsuarioNormal(0,0,0,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
         soko.setListaUsuarios(jugador);
         
     }//GEN-LAST:event_formWindowOpened

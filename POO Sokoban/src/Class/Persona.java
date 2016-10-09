@@ -16,15 +16,9 @@ public class Persona {
     
     private int tipoUsuario;
     
-    /*public Persona(String n, String id, String cor, String contra, String fechaReg, String foto, int tU) {
-    }
-
-    public Persona() {
-    }*/
 
     public Persona() {
     }
-    
 
     public Persona(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
         this.nombre = nombre;

@@ -25,7 +25,7 @@ public class SokobanPrincipal {
         return listaNiveles;
     }
     
-    public void setListaNiveles(Nivel n) {
+    public void setlistaNiveles(Nivel n) {
         this.listaNiveles.add(n);
     }
      
