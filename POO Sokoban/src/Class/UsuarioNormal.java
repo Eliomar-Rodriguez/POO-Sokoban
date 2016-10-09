@@ -7,7 +7,6 @@ public class UsuarioNormal extends Persona {
     private int repeticiones;
 
     private int nivelActual;
-
     
     public UsuarioNormal(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
         super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);

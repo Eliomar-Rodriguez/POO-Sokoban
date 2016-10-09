@@ -67,8 +67,6 @@ public class Reglamento extends javax.swing.JFrame {
         });
         getContentPane().add(btnAtras);
         btnAtras.setBounds(0, 0, 120, 40);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\reglamento.jpg")); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 1270, 710);
 

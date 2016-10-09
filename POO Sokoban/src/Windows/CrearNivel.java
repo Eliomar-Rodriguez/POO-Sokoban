@@ -136,8 +136,7 @@ public class CrearNivel extends javax.swing.JFrame {
             - el crear matriz mas bien deberia llamarse en crear nivel
             - tengo que encontrar la manera de obtener el idAmin con el que me registre
         */
-              
-        
+                      
     }//GEN-LAST:event_btnGenerarActionPerformed
 
     private void txtMovimientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovimientosActionPerformed

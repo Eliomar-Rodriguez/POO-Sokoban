@@ -15,7 +15,7 @@ public class Persona {
     private String foto;
     
     private int tipoUsuario;
-
+    
     /*public Persona(String n, String id, String cor, String contra, String fechaReg, String foto, int tU) {
     }
 

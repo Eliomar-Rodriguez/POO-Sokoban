@@ -32,7 +32,7 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         btnRegistrarse = new javax.swing.JButton();
-        txtPass = new javax.swing.JPasswordField();
+        txtPassLogin = new javax.swing.JPasswordField();
         btnEntrar = new javax.swing.JButton();
         lblNoExiste = new javax.swing.JLabel();
         lblAviso = new javax.swing.JLabel();
@@ -75,10 +75,10 @@ public class LogIn extends javax.swing.JFrame {
         getContentPane().add(btnRegistrarse);
         btnRegistrarse.setBounds(300, 460, 260, 50);
 
-        txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        txtPass.setEchoChar('*');
-        getContentPane().add(txtPass);
-        txtPass.setBounds(470, 280, 230, 40);
+        txtPassLogin.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtPassLogin.setEchoChar('*');
+        getContentPane().add(txtPassLogin);
+        txtPassLogin.setBounds(470, 280, 230, 40);
 
         btnEntrar.setFont(new java.awt.Font("Minecrafter Alt", 0, 30)); // NOI18N
         btnEntrar.setText("Entrar");
@@ -117,28 +117,29 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        
-        if (txtUsuario.getText().isEmpty() | txtPass.getPassword().length == 0)  // si alguno de los dos campos esta vacio muestro alerta
+        String contraseña = new String(txtPassLogin.getPassword());
+             
+        if (txtUsuario.getText().isEmpty() | contraseña.isEmpty())  // si alguno de los dos campos esta vacio muestro alerta
             lblAviso.setVisible(true);
-        else{                
-            char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
-            String pass = new String(arrayC);
-                    
+        else{                     
             for (int i = 0; i < SokobanPrincipal.listaUsuarios.size(); i++) {
                 
-                if (SokobanPrincipal.listaUsuarios.get(i).getContra().equals(pass) && SokobanPrincipal.listaUsuarios.get(i).getCedula().equals(txtUsuario.getText())){
+                if (SokobanPrincipal.listaUsuarios.get(i).getContra().equals(contraseña)){
                     
-                    if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==0){//admin
-                        MenuAdmin menAdm = new MenuAdmin();
-                        menAdm.setVisible(true);
-                        menAdm.setDefaultCloseOperation(HIDE_ON_CLOSE);
-                        dispose();
-                    }
-                    else if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==1){ // usuario normal
-                        MenuUsuario menUsu = new MenuUsuario();
-                        menUsu.setVisible(true);
-                        menUsu.setDefaultCloseOperation(HIDE_ON_CLOSE);
-                        dispose();
+                    if (SokobanPrincipal.listaUsuarios.get(i).getCedula().equals(txtUsuario.getText())){
+                        
+                        if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==0){//admin
+                            MenuAdmin menAdm = new MenuAdmin();
+                            menAdm.setVisible(true);
+                            menAdm.setDefaultCloseOperation(HIDE_ON_CLOSE);
+                            dispose();
+                        }
+                        else if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==1){ // usuario normal
+                            MenuUsuario menUsu = new MenuUsuario();
+                            menUsu.setVisible(true);
+                            menUsu.setDefaultCloseOperation(HIDE_ON_CLOSE);
+                            dispose();
+                        }
                     }
                 }      
             }  
@@ -177,7 +178,7 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblAviso;
     private javax.swing.JLabel lblNoExiste;
-    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JPasswordField txtPassLogin;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

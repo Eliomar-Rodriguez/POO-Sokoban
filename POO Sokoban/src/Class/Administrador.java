@@ -5,9 +5,9 @@ public class Administrador extends Persona {
     private String nacionalidad;
 
     private int nivelesAgregados;
-
+    
     private int bestMoves;
-
+    
     public Administrador(String nombre, String cedula, String correo, String contra, String fechaRegistro, String foto, int tipoUsuario) {
         super(nombre, cedula, correo, contra, fechaRegistro, foto, tipoUsuario);
     }

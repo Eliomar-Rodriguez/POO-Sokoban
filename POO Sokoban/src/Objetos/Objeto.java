@@ -15,10 +15,10 @@ public class Objeto {
         this.boton = boton;
         this.tipo = t;
     }
-
+    
     public Objeto() {
     }
-
+    
     public int getX() {
         return x;
     }

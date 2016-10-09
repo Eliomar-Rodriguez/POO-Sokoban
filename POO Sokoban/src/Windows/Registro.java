@@ -118,7 +118,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cmbUsers);
-        cmbUsers.setBounds(490, 340, 260, 34);
+        cmbUsers.setBounds(490, 340, 260, 37);
 
         txtMail.setBackground(new java.awt.Color(204, 255, 255));
         txtMail.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -133,7 +133,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtMail);
-        txtMail.setBounds(490, 220, 260, 34);
+        txtMail.setBounds(490, 220, 260, 32);
 
         txtId.setBackground(new java.awt.Color(204, 255, 255));
         txtId.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -148,7 +148,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtId);
-        txtId.setBounds(490, 180, 260, 34);
+        txtId.setBounds(490, 180, 260, 32);
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
@@ -168,7 +168,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtName);
-        txtName.setBounds(490, 140, 260, 34);
+        txtName.setBounds(490, 140, 260, 32);
 
         jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel8.setText("Cedula");
@@ -187,7 +187,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSave);
-        btnSave.setBounds(410, 500, 233, 50);
+        btnSave.setBounds(410, 500, 232, 50);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel9.setText("Correo");
@@ -228,7 +228,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         panelAdmin.add(txtDate1);
-        txtDate1.setBounds(630, 270, 264, 34);
+        txtDate1.setBounds(630, 270, 264, 32);
 
         txtNacionalidad.setBackground(new java.awt.Color(204, 255, 255));
         txtNacionalidad.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -243,7 +243,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         panelAdmin.add(txtNacionalidad);
-        txtNacionalidad.setBounds(300, 10, 260, 34);
+        txtNacionalidad.setBounds(300, 10, 260, 32);
 
         lblNation.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         lblNation.setForeground(new java.awt.Color(255, 51, 51));
@@ -311,6 +311,11 @@ public class Registro extends javax.swing.JFrame {
         txtPass.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtPass.setEchoChar('*');
         txtPass.setPreferredSize(new java.awt.Dimension(5, 26));
+        txtPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassActionPerformed(evt);
+            }
+        });
         txtPass.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtPassKeyPressed(evt);
@@ -348,8 +353,6 @@ public class Registro extends javax.swing.JFrame {
         });
         getContentPane().add(btnAtras);
         btnAtras.setBounds(0, 0, 120, 40);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\registrar.jpg")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, -10, 1280, 720);
 
@@ -375,8 +378,8 @@ public class Registro extends javax.swing.JFrame {
         SokobanPrincipal soko = new SokobanPrincipal();
         
         //ArrayList<Persona> lista = soko.getListaUsuarios();
-        
-        if (cmbUsers.getSelectedIndex()==-1 | direccionImagen.equals("") | txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | txtPass.getPassword().length==0){
+         String contraseña = new String(txtPass.getPassword());
+        if (cmbUsers.getSelectedIndex()==-1 | direccionImagen.equals("") | txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | contraseña.isEmpty()){
                     
                 if (direccionImagen.equals(""))
                     lblFoto.setVisible(true);
@@ -390,7 +393,7 @@ public class Registro extends javax.swing.JFrame {
                 if (txtName.getText().isEmpty())    // si esta vacio se puede usar tambien el .equals("")
                     lblNombre.setVisible(true);     // poner visible el asterisco de error
 
-                if (txtPass.getPassword().length == 0)    
+                if (contraseña.isEmpty())    
                     lblPass.setVisible(true);     // poner visible el asterisco de error
                     
                 if (cmbUsers.getSelectedIndex()==-1)    
@@ -404,21 +407,15 @@ public class Registro extends javax.swing.JFrame {
                 admin.setNombre(txtName.getText());
                 admin.setCedula(txtId.getText());
                 admin.setCorreo(txtMail.getText());
-                
-                char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
-                String pass = new String(arrayC);
-                admin.setContra(pass);
-                
+                admin.setContra(contraseña);
                 admin.setFechaReg(txtDate.getText());
                 admin.setTipoUsuario(cmbUsers.getSelectedIndex());
                 admin.setNacionalidad(txtNacionalidad.getText());
                 admin.setFoto(direccionImagen);
-  
-                //lista.add(admin);
+                
                 SokobanPrincipal.listaUsuarios.add(admin);
                 
-                System.out.println(SokobanPrincipal.listaUsuarios.size()); 
-                
+                System.out.println(SokobanPrincipal.listaUsuarios); 
                 
                 LogIn login = new LogIn();
                 login.setVisible(true);
@@ -431,17 +428,14 @@ public class Registro extends javax.swing.JFrame {
             jugador.setCedula(txtId.getText());
             jugador.setCorreo(txtMail.getText());
                 
-            char [] arrayC = txtPass.getPassword(); // como el getPassword me devuelve un arreglo de char entonces yo lo paso a string
-            String pass = new String(arrayC);
-            jugador.setContra(pass);
+            jugador.setContra(contraseña);
                 
             jugador.setFechaReg(txtDate.getText());
             jugador.setTipoUsuario(cmbUsers.getSelectedIndex());
             jugador.setFoto(direccionImagen);
   
-            //lista.add(jugador);
             SokobanPrincipal.listaUsuarios.add(jugador);
-            System.out.println("Agregado con exito!");  
+            System.out.println(SokobanPrincipal.listaUsuarios);  
                 
             LogIn login = new LogIn();
             login.setVisible(true);
@@ -449,7 +443,7 @@ public class Registro extends javax.swing.JFrame {
             dispose(); // oculta esta ventana y abre la que estoy llamando
         }     
     }//GEN-LAST:event_btnSaveActionPerformed
-
+    
     private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
         
     }//GEN-LAST:event_txtNacionalidadActionPerformed
@@ -535,6 +529,10 @@ public class Registro extends javax.swing.JFrame {
         inicio.setDefaultCloseOperation(HIDE_ON_CLOSE);
         dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPassActionPerformed
 
     public static void main(String args[]) {
         

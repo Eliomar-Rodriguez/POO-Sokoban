@@ -53,7 +53,6 @@ public class creacionNivel extends javax.swing.JFrame {
 
         btnPared.setBackground(new java.awt.Color(65, 195, 228));
         btnPared.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnPared.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\muro.jpeg")); // NOI18N
         btnPared.setAlignmentX(0.5F);
         btnPared.setBorder(null);
         btnPared.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -67,7 +66,6 @@ public class creacionNivel extends javax.swing.JFrame {
 
         btnPersonaje.setBackground(new java.awt.Color(65, 195, 228));
         btnPersonaje.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnPersonaje.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Desktop\\Images\\boton.JPG")); // NOI18N
         btnPersonaje.setAlignmentX(0.5F);
         btnPersonaje.setBorder(null);
         btnPersonaje.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
