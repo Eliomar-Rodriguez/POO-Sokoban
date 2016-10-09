@@ -20,6 +20,10 @@ public class Juego {
         this.ultimaCaja = ultimaCaja;
     }
 
+    public Juego() {
+    }
+    
+
     
     public void setEstado_actual(String eAct) {
         this.estadoActual = eAct;

@@ -21,8 +21,8 @@ public class Estadisticas {
     public String toString() {
         return "Estadisticas{" + "juegos_jugados=" + juegos_jugados + ", juegos_ganados=" + juegos_ganados + ", juegos_perdidos=" + juegos_perdidos + ", tiempo_consumido=" + tiempo_consumido + '}';
     }
-    
-    public Estadisticas(String j, int jJug, int jGan, int jPer) {
+
+    public Estadisticas() {
     }
 
     public void setJuegos_jugados(int jJ) {

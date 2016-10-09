@@ -25,9 +25,10 @@ public class Nivel {
     private int cantPuntos;
 
     private int movisDuranteJuego;
+    
+    private SokobanPrincipal soko = null;
 
     public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, String idAdmin, int cantPuntos, int movisDuranteJuego) {
-        this.matrizLogica = new Objeto[filas][columnas];
         this.cantMoves = cantMoves;
         this.idNivel = idNivel;
         this.cantCajas = cantCajas;
@@ -39,6 +40,23 @@ public class Nivel {
         this.cantPuntos = cantPuntos;
         this.movisDuranteJuego = movisDuranteJuego;
     }
+
+    public Objeto[][] getMatrizLogica() {
+        return matrizLogica;
+    }
+
+    public void setMatrizLogica(Objeto[][] matrizLogica) {
+        this.matrizLogica = matrizLogica;
+    }
+
+    public SokobanPrincipal getSoko() {
+        return soko;
+    }
+
+    public void setSoko(SokobanPrincipal soko) {
+        this.soko = soko;
+    }
+
 
     public Nivel() {
         

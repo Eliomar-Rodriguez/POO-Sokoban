@@ -21,11 +21,16 @@ public class Reportes extends javax.swing.JFrame {
      */
     public Reportes() {
         initComponents();
+        
       
         setResizable(false);    // no poder cambiar tamano a la ventana
         setSize(900,620);      // tamano
         setLocationRelativeTo(null);    // posicionar ventana en centro
         setTitle("Reportes");   // poner titulo a ventana
+        labelUsuario.setVisible(false);
+        txtUsuario.setVisible(false);
+        labelAdmin.setVisible(false);
+        txtAdmin.setVisible(false);
     }
 
     /**
@@ -41,12 +46,21 @@ public class Reportes extends javax.swing.JFrame {
         botonMostrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         AreaReportes = new javax.swing.JTextArea();
+        labelUsuario = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
+        labelAdmin = new javax.swing.JLabel();
+        txtAdmin = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         cmbReportes.setFont(new java.awt.Font("Minecrafter", 0, 14)); // NOI18N
         cmbReportes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1. Niveles con la informacion por nivel que ha introducido un administrador.", "2. Historial de juego con toda la información de un usuario normal X.", "3. Imprimir los 5 usuarios con más ganes óptimos.", "4. Imprimir los 5 usuarios con más records rotos.", "5. Imprimir los 5 usuarios más insistentes en un nivel x.", "6. Imprimir todos los usuarios que han superado un nivel X.", "7. Imprimir las estadísticas de un usuario X.", " " }));
+        cmbReportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbReportesActionPerformed(evt);
+            }
+        });
         getContentPane().add(cmbReportes);
         cmbReportes.setBounds(70, 120, 730, 30);
 
@@ -58,14 +72,37 @@ public class Reportes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botonMostrar);
-        botonMostrar.setBounds(370, 454, 160, 40);
+        botonMostrar.setBounds(370, 470, 160, 40);
 
         AreaReportes.setColumns(20);
         AreaReportes.setRows(5);
         jScrollPane1.setViewportView(AreaReportes);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(130, 200, 580, 220);
+        jScrollPane1.setBounds(130, 220, 580, 220);
+
+        labelUsuario.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        labelUsuario.setText("Id Usuario");
+        getContentPane().add(labelUsuario);
+        labelUsuario.setBounds(270, 160, 150, 30);
+
+        txtUsuario.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtUsuario);
+        txtUsuario.setBounds(440, 160, 180, 40);
+
+        labelAdmin.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        labelAdmin.setText("Id Admin");
+        getContentPane().add(labelAdmin);
+        labelAdmin.setBounds(280, 160, 150, 30);
+
+        txtAdmin.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        getContentPane().add(txtAdmin);
+        txtAdmin.setBounds(440, 160, 180, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -73,23 +110,56 @@ public class Reportes extends javax.swing.JFrame {
     private void botonMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarActionPerformed
             
             if(cmbReportes.getSelectedIndex()==0){
-               if(!SokobanPrincipal.listaNiveles.isEmpty()) { 
-                    Iterator iterador = SokobanPrincipal.listaNiveles.listIterator(); 
-                    while(iterador.hasNext()) {
-                        AreaReportes.append(iterador.next() + "\n");
-                    }
-                }
-               else{
-                   AreaReportes.setText("Lista Vacia");
-               }
+                
+                String [] stockArr = SokobanPrincipal.listaNiveles.toArray(new String[0]);
+                AreaReportes.setText(stockArr.toString());
+               
+            } 
                  
-            }
+            
     }//GEN-LAST:event_botonMostrarActionPerformed
+
+    private void cmbReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbReportesActionPerformed
+        if(cmbReportes.getSelectedIndex()==0){
+                labelAdmin.setVisible(true);
+                txtAdmin.setVisible(true);
+        }
+        else if(cmbReportes.getSelectedIndex()==1) {
+            labelUsuario.setVisible(true);
+            txtUsuario.setVisible(true);
+        }
+        else if(cmbReportes.getSelectedIndex()==2) {
+            //Imprimir los 5 usuarios con más ganes óptimos.
+        }
+        else if(cmbReportes.getSelectedIndex()==3) {
+            // 5 usuarios con mas records rotos
+        }
+        else if(cmbReportes.getSelectedIndex()==4) {
+            // 5 usuarios mas insistentes de un nivel x
+        }
+        else if(cmbReportes.getSelectedIndex()==5) {
+            // usuarios que han superado un nivel x
+        }
+        else if(cmbReportes.getSelectedIndex()==6) {
+            labelUsuario.setVisible(true);
+            txtUsuario.setVisible(true);
+        }
+        else{
+            labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
+        }
+    }//GEN-LAST:event_cmbReportesActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -126,5 +196,9 @@ public class Reportes extends javax.swing.JFrame {
     private javax.swing.JButton botonMostrar;
     private javax.swing.JComboBox<String> cmbReportes;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelAdmin;
+    private javax.swing.JLabel labelUsuario;
+    private javax.swing.JTextField txtAdmin;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

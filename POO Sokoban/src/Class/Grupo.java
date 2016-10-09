@@ -14,6 +14,10 @@ public class Grupo {
         this.cantidadJugadores = cantidadJugadores;
         this.listaJugadores = new ArrayList();
     }
+
+    public Grupo() {
+    }
+    
    
 
     public void setCantidadJugadores(int cJ) {

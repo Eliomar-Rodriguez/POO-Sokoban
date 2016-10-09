@@ -11,6 +11,11 @@ public class Reglamento {
         this.cajasPorMover = cajasPorMover;
     }
 
+    public Reglamento() {
+    }
+    
+    
+
     public int getMoviAnterior() {
         return moviAnterior;
     }

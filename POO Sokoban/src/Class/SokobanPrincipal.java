@@ -11,7 +11,10 @@ public class SokobanPrincipal {
 
     public SokobanPrincipal() {
         this.listaUsuarios = new ArrayList();
+        this.listaNiveles = new ArrayList();
     }
+    
+   
 
     public ArrayList<Persona> getListaUsuarios() {
         return listaUsuarios;
