@@ -5,9 +5,12 @@
  */
 package Windows;
 
+import Class.Historial;
 import Class.SokobanPrincipal;
-import Class.Nivel;
+import java.util.HashSet;
+import Class.Estadisticas;
 import java.util.Iterator;
+import java.util.Set;
 
 
 /**
@@ -22,15 +25,30 @@ public class Reportes extends javax.swing.JFrame {
     public Reportes() {
         initComponents();
         
+        
+        SokobanPrincipal soko = new SokobanPrincipal();
+        Historial h1 = new Historial(4,"Incompleto","7:59 pm");
+        soko.setListaHistorial(h1);
+        
+        Historial h2 = new Historial(4,"Gane optimo","5:16 pm");
+        soko.setListaHistorial(h2);
+        
+        Estadisticas e1 = new Estadisticas(4,4,0,25);
+        soko.setListaEstadisticas(e1);
+        
+        
+        
       
         setResizable(false);    // no poder cambiar tamano a la ventana
         setSize(900,620);      // tamano
         setLocationRelativeTo(null);    // posicionar ventana en centro
         setTitle("Reportes");   // poner titulo a ventana
-        labelUsuario.setVisible(false);
+        labelNivel.setVisible(false);
         txtUsuario.setVisible(false);
         labelAdmin.setVisible(false);
         txtAdmin.setVisible(false);
+        labelUsuario.setVisible(false);
+       
     }
 
     /**
@@ -50,6 +68,7 @@ public class Reportes extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JTextField();
         labelAdmin = new javax.swing.JLabel();
         txtAdmin = new javax.swing.JTextField();
+        labelNivel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -84,7 +103,7 @@ public class Reportes extends javax.swing.JFrame {
         labelUsuario.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         labelUsuario.setText("Id Usuario");
         getContentPane().add(labelUsuario);
-        labelUsuario.setBounds(270, 160, 150, 30);
+        labelUsuario.setBounds(250, 160, 150, 30);
 
         txtUsuario.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -98,11 +117,16 @@ public class Reportes extends javax.swing.JFrame {
         labelAdmin.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         labelAdmin.setText("Id Admin");
         getContentPane().add(labelAdmin);
-        labelAdmin.setBounds(280, 160, 150, 30);
+        labelAdmin.setBounds(250, 160, 150, 30);
 
         txtAdmin.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         getContentPane().add(txtAdmin);
         txtAdmin.setBounds(440, 160, 180, 40);
+
+        labelNivel.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
+        labelNivel.setText("Nivel");
+        getContentPane().add(labelNivel);
+        labelNivel.setBounds(280, 160, 80, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -110,11 +134,55 @@ public class Reportes extends javax.swing.JFrame {
     private void botonMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMostrarActionPerformed
             
             if(cmbReportes.getSelectedIndex()==0){
-                
-                String [] stockArr = SokobanPrincipal.listaNiveles.toArray(new String[0]);
-                AreaReportes.setText(stockArr.toString());
+                if(txtAdmin.getText().isEmpty()){
+                    System.out.println("Debe rellenar los datos");
+                }
+                else{
+                    for (int i = 0; i < SokobanPrincipal.listaUsuarios.size(); i++) {
+                        if (SokobanPrincipal.listaNiveles.get(i).getIdAdmin().equals(txtAdmin)){
+                            
+                            if(!SokobanPrincipal.listaNiveles.isEmpty()) { //tu arraylist o list
+                                Iterator iterador = SokobanPrincipal.listaNiveles.listIterator(); //el objeto iterador te ayuda a recorrer una coleccion.
+                                while(iterador.hasNext()) {
+                                     AreaReportes.append(iterador.next() + "\n"); 
+                                }
+                            }                           
+                        }
+                    }
+                }
                
             } 
+            else if(cmbReportes.getSelectedIndex()==1){
+                
+                         if(!SokobanPrincipal.listaHistorial.isEmpty()) { //tu arraylist o list
+                                Iterator iterador = SokobanPrincipal.listaHistorial.listIterator(); //el objeto iterador te ayuda a recorrer una coleccion.
+                                while(iterador.hasNext()) {
+                                     AreaReportes.append(iterador.next() + "\n"); 
+                                }
+                        }  
+                    
+                
+            }
+            else if(cmbReportes.getSelectedIndex()==2){
+            
+            }
+            else if(cmbReportes.getSelectedIndex()==3){
+            
+            }
+            else if(cmbReportes.getSelectedIndex()==4){
+            
+            }
+            else if(cmbReportes.getSelectedIndex()==5){
+            
+            }
+            else if(cmbReportes.getSelectedIndex()==6){
+                if(!SokobanPrincipal.listaEstadisticas.isEmpty()) { //tu arraylist o list
+                    Iterator iterador = SokobanPrincipal.listaEstadisticas.listIterator(); //el objeto iterador te ayuda a recorrer una coleccion.
+                    while(iterador.hasNext()) {
+                        AreaReportes.append(iterador.next() + "\n"); 
+                    }
+                }  
+            }
                  
             
     }//GEN-LAST:event_botonMostrarActionPerformed
@@ -123,30 +191,64 @@ public class Reportes extends javax.swing.JFrame {
         if(cmbReportes.getSelectedIndex()==0){
                 labelAdmin.setVisible(true);
                 txtAdmin.setVisible(true);
+                labelUsuario.setVisible(false);
+                txtUsuario.setVisible(false);
+                labelNivel.setVisible(false);
         }
         else if(cmbReportes.getSelectedIndex()==1) {
+            labelUsuario.setVisible(false);
+            labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
             labelUsuario.setVisible(true);
             txtUsuario.setVisible(true);
+            
         }
         else if(cmbReportes.getSelectedIndex()==2) {
             //Imprimir los 5 usuarios con más ganes óptimos.
+            labelUsuario.setVisible(false);
+             labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
+            labelUsuario.setVisible(false);
+            txtUsuario.setVisible(false);
+            
         }
         else if(cmbReportes.getSelectedIndex()==3) {
             // 5 usuarios con mas records rotos
+            labelUsuario.setVisible(false);
+            labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
+            labelUsuario.setVisible(false);
+            txtUsuario.setVisible(false);
         }
         else if(cmbReportes.getSelectedIndex()==4) {
             // 5 usuarios mas insistentes de un nivel x
+            labelNivel.setVisible(true);
+            labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
+            labelUsuario.setVisible(false);
+            txtUsuario.setVisible(false);
         }
         else if(cmbReportes.getSelectedIndex()==5) {
             // usuarios que han superado un nivel x
+            labelNivel.setVisible(true);
+            labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
+            labelUsuario.setVisible(false);
+            txtUsuario.setVisible(false);
         }
         else if(cmbReportes.getSelectedIndex()==6) {
+            labelNivel.setVisible(false);
             labelUsuario.setVisible(true);
             txtUsuario.setVisible(true);
+            labelAdmin.setVisible(false);
+            txtAdmin.setVisible(false);
         }
         else{
             labelAdmin.setVisible(false);
             txtAdmin.setVisible(false);
+            labelUsuario.setVisible(false);
+            txtUsuario.setVisible(false);
+            labelNivel.setVisible(false);
         }
     }//GEN-LAST:event_cmbReportesActionPerformed
 
@@ -197,6 +299,7 @@ public class Reportes extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbReportes;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelAdmin;
+    private javax.swing.JLabel labelNivel;
     private javax.swing.JLabel labelUsuario;
     private javax.swing.JTextField txtAdmin;
     private javax.swing.JTextField txtUsuario;

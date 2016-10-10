@@ -7,7 +7,7 @@ public class Historial {
     private String estado;
 
     private String tiempo;
-
+    
     public Historial(int yourMoves, String estado, String tiempo) {
         this.yourMoves = yourMoves;
         this.estado = estado;
@@ -36,7 +36,7 @@ public class Historial {
     public void setTiempo(String t) {
         this.tiempo = t;
     }
-
+    
     public String getTiempo() {
        return tiempo;
     }

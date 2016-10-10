@@ -8,13 +8,48 @@ public class SokobanPrincipal {
 
     public static ArrayList<Persona> listaUsuarios;
     public static ArrayList<Nivel> listaNiveles;
+    public static ArrayList<Historial> listaHistorial;
+    public static ArrayList<Estadisticas> listaEstadisticas;
+    public static ArrayList<UsuarioNormal>listaInsistencia;
+   
 
     public SokobanPrincipal() {
         this.listaUsuarios = new ArrayList();
         this.listaNiveles = new ArrayList();
+        this.listaHistorial = new ArrayList();
+        this.listaEstadisticas = new ArrayList();
+        this.listaInsistencia = new ArrayList();
+       
+    }
+
+    public  ArrayList<UsuarioNormal> getListaInsistencia() {
+        return listaInsistencia;
+    }
+
+    public  void setListaInsistencia(UsuarioNormal u) {
+        this.listaInsistencia.add(u);
     }
     
-   
+    
+
+    public ArrayList<Estadisticas> getListaEstadisticas() {
+        return listaEstadisticas;
+    }
+
+    public  void setListaEstadisticas(Estadisticas e) {
+        this.listaEstadisticas.add(e);
+    }
+    
+    
+
+    public ArrayList<Historial> getListaHistorial() {
+        return listaHistorial;
+    }
+    
+    public void setListaHistorial(Historial h) {
+        this.listaHistorial.add(h);
+    }
+    
 
     public ArrayList<Persona> getListaUsuarios() {
         return listaUsuarios;
