@@ -9,6 +9,7 @@ import Class.Historial;
 import Class.SokobanPrincipal;
 import java.util.HashSet;
 import Class.Estadisticas;
+import Class.UsuarioNormal;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -36,6 +37,11 @@ public class Reportes extends javax.swing.JFrame {
         Estadisticas e1 = new Estadisticas(4,4,0,25);
         soko.setListaEstadisticas(e1);
         
+        UsuarioNormal jugador = new UsuarioNormal(4,45,1,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
+        soko.setListaUsuarios(jugador);
+        
+        UsuarioNormal jugador1 = new UsuarioNormal(4,23,1,"Usuario","123456","josecarlos96@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\2.jpg",1);
+        soko.setListaUsuarios(jugador1);
         
         
       
@@ -149,8 +155,7 @@ public class Reportes extends javax.swing.JFrame {
                             }                           
                         }
                     }
-                }
-               
+                }  
             } 
             else if(cmbReportes.getSelectedIndex()==1){
                 
@@ -164,13 +169,20 @@ public class Reportes extends javax.swing.JFrame {
                 
             }
             else if(cmbReportes.getSelectedIndex()==2){
-            
+                
             }
             else if(cmbReportes.getSelectedIndex()==3){
             
             }
             else if(cmbReportes.getSelectedIndex()==4){
-            
+                if(!SokobanPrincipal.listaUsuarios.isEmpty()) { //tu arraylist o list
+                                Iterator iterador = SokobanPrincipal.listaUsuarios.listIterator(); //el objeto iterador te ayuda a recorrer una coleccion.
+                                while(iterador.hasNext()) {
+                                     AreaReportes.append(iterador.next() + "\n"); 
+                                     
+                                }
+                } 
+                
             }
             else if(cmbReportes.getSelectedIndex()==5){
             

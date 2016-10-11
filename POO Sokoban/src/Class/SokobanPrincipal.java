@@ -10,7 +10,6 @@ public class SokobanPrincipal {
     public static ArrayList<Nivel> listaNiveles;
     public static ArrayList<Historial> listaHistorial;
     public static ArrayList<Estadisticas> listaEstadisticas;
-    public static ArrayList<UsuarioNormal>listaInsistencia;
    
 
     public SokobanPrincipal() {
@@ -18,18 +17,10 @@ public class SokobanPrincipal {
         this.listaNiveles = new ArrayList();
         this.listaHistorial = new ArrayList();
         this.listaEstadisticas = new ArrayList();
-        this.listaInsistencia = new ArrayList();
        
     }
 
-    public  ArrayList<UsuarioNormal> getListaInsistencia() {
-        return listaInsistencia;
-    }
-
-    public  void setListaInsistencia(UsuarioNormal u) {
-        this.listaInsistencia.add(u);
-    }
-    
+   
     
 
     public ArrayList<Estadisticas> getListaEstadisticas() {

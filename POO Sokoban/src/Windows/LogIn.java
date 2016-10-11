@@ -156,7 +156,7 @@ public class LogIn extends javax.swing.JFrame {
         Administrador admin = new Administrador("Costarricense",0,0,"Administrador","212223","admin1@administradores.com","abcd","05/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\2.jpg",0);
         soko.setListaUsuarios(admin);
         
-        UsuarioNormal jugador = new UsuarioNormal(0,0,0,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
+        UsuarioNormal jugador = new UsuarioNormal(4,45,5,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
         soko.setListaUsuarios(jugador);
         
     }//GEN-LAST:event_formWindowOpened
