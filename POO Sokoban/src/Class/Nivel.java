@@ -1,6 +1,5 @@
 package Class;
 
-import Objetos.Objeto;
 
 public class Nivel {
 
@@ -18,7 +17,7 @@ public class Nivel {
 
     private int columnaPersonaje;
 
-    Objeto [][] matrizLogica = new Objeto [filas][columnas];    // ojo al tipo en caso de que de error con la matriz mas adelante
+    int [][] matrizLogica = new int [filas][columnas];    // ojo al tipo en caso de que de error con la matriz mas adelante
 
     private String idAdmin;
 
@@ -27,6 +26,7 @@ public class Nivel {
     private int movisDuranteJuego;
     
     private SokobanPrincipal soko = null;
+    private int[][] matriz;
 
     public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, String idAdmin, int cantPuntos, int movisDuranteJuego) {
         this.cantMoves = cantMoves;
@@ -41,11 +41,11 @@ public class Nivel {
         this.movisDuranteJuego = movisDuranteJuego;
     }
 
-    public Objeto[][] getMatrizLogica() {
+    public int[][] getMatrizLogica() {
         return matrizLogica;
     }
 
-    public void setMatrizLogica(Objeto[][] matrizLogica) {
+    public void setMatrizLogica(int[][] matrizLogica) {
         this.matrizLogica = matrizLogica;
     }
 
@@ -141,6 +141,7 @@ public class Nivel {
     public void setMovisDuranteJuego(int movisDuranteJuego) {
         this.movisDuranteJuego = movisDuranteJuego;
     }
+    
 
     
     
@@ -172,7 +173,18 @@ public class Nivel {
     public void validarMatriz() {
     }
 
-    public void generarMatriz() {
+    public int[][] crearMatriz(int n) {
+        Nivel nivel = new Nivel();
+        int [][] matriz = new int [n][n];
+        
+        for (int x = 0; x < n; x++) {
+            for (int y = 0; y < n; y++) {
+                matriz[x][y]=0;  
+            }  
+        }
+        return matriz;
+        
+        
     }
 
     @Override

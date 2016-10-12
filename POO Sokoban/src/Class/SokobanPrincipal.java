@@ -1,7 +1,6 @@
 package Class;
 
 
-import Objetos.Vacio;
 import java.util.ArrayList;
 
 public class SokobanPrincipal {
@@ -131,20 +130,4 @@ public class SokobanPrincipal {
     public void crearCaja() {
     }
     
-    public static void crearMatriz(int n) {
-        Vacio vacio = new Vacio();
-        Nivel nivel = new Nivel();
-        
-        for (int x = 0; x < n; x++) {
-            for (int y = 0; y < n; y++) {
-                vacio.setX(x);
-                vacio.setY(y);
-                vacio.setTipo('v');
-                //vacio.setBoton(); // falta ponerle la imagen al boton para que arranque con una imagen predeterminada
-                nivel.matrizLogica[x][y]=vacio;
-                                
-            }
-            
-        }
-    }
 }

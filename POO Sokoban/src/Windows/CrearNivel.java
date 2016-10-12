@@ -3,9 +3,23 @@ package Windows;
 
 import Class.Nivel;
 import Class.SokobanPrincipal;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Image;
+import javafx.scene.image.*;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import javafx.scene.image.ImageView;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 
 public class CrearNivel extends javax.swing.JFrame {
@@ -39,10 +53,16 @@ public class CrearNivel extends javax.swing.JFrame {
         btnAtras = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtMovimientos = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Nivel Sokoban");
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
@@ -70,7 +90,7 @@ public class CrearNivel extends javax.swing.JFrame {
         jLabel5.setBounds(200, 240, 580, 40);
 
         cmbTamano.setFont(new java.awt.Font("Minecrafter", 0, 18)); // NOI18N
-        cmbTamano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "13", "14", "15" }));
+        cmbTamano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10x10", "11x11", "12x12", "13x13", "14x14", "15x15" }));
         cmbTamano.setSelectedIndex(-1);
         getContentPane().add(cmbTamano);
         cmbTamano.setBounds(780, 240, 270, 40);
@@ -99,6 +119,10 @@ public class CrearNivel extends javax.swing.JFrame {
         getContentPane().add(txtMovimientos);
         txtMovimientos.setBounds(780, 180, 270, 40);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\crear Nivel.jpg")); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1280, 720);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,7 +135,10 @@ public class CrearNivel extends javax.swing.JFrame {
 
     private void btnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarActionPerformed
         
+        
         Nivel nivel = new Nivel();
+        int idNivel=Integer.parseUnsignedInt(txtIdNivel.getText());
+        int cantMoves=Integer.parseInt(txtMovimientos.getText());
         int tamano =0;
         if (cmbTamano.getSelectedIndex()==0)
             tamano = 10;
@@ -126,40 +153,20 @@ public class CrearNivel extends javax.swing.JFrame {
         else if (cmbTamano.getSelectedIndex()==5)
             tamano = 15;
         
-        nivel.setColumnas(tamano);
-        nivel.setFilas(tamano);
-        nivel.setIdNivel(Integer.parseInt(txtIdNivel.getText()));
-        nivel.setCantMoves(Integer.parseInt(txtMovimientos.getText()));
-        //nivel.setIdAdmin(idAdmin); // ver como diantres le pongo el id del admin xD
-        
-        SokobanPrincipal.crearMatriz(tamano); // esto no va aqui creo
-        /*
-        hay que pensar bien muchas cosas
-            - el crear matriz mas bien deberia llamarse en crear nivel
-            - tengo que encontrar la manera de obtener el idAmin con el que me registre
-        */        
-
+        creacionNivel nuevoNivel = new creacionNivel(tamano,idNivel,cantMoves);
+        nuevoNivel.setVisible(true);
+        nuevoNivel.setSize(1280, 720);
+        //nuevoNivel.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        //dispose();       
         
     }//GEN-LAST:event_btnGenerarActionPerformed
-     private void formWindowOpened(java.awt.event.WindowEvent evt) {
-        SokobanPrincipal soko = new SokobanPrincipal();
-        Nivel niv = new Nivel(4,1,5,5,5,4,4,"212223",7,8);
-        soko.setlistaNiveles(niv);
-        
-        Nivel niv2 = new Nivel(4,1,5,8,8,4,4,"212223",7,8);
-        soko.setlistaNiveles(niv2);
-        
-        Nivel niv3 = new Nivel(4,1,7,7,7,4,4,"212223",7,8);
-        soko.setlistaNiveles(niv3);
-        
-        Nivel niv4 = new Nivel(4,1,10,10,10,4,4,"212223",7,8);
-        soko.setlistaNiveles(niv4);
-        
-        System.out.println(SokobanPrincipal.listaNiveles);
-     }
     private void txtMovimientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovimientosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMovimientosActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowOpened
 
     public static void main(String args[]) {
 
@@ -174,6 +181,7 @@ public class CrearNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnGenerar;
     private javax.swing.JComboBox<String> cmbTamano;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

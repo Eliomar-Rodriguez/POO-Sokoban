@@ -5,17 +5,92 @@
  */
 package Windows;
 
+import Class.Nivel;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.Label;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Antonio Rodriguez
  */
 public class creacionNivel extends javax.swing.JFrame {
 
+    int tamano;
+    int idNivel;
+    int cantMoves;
+
     /**
      * Creates new form creacionNivel
      */
     public creacionNivel() {
         initComponents();
+        
+        Nivel nivel = new Nivel();
+
+        int[][] matriz = nivel.crearMatriz(10);
+        System.out.println(matriz.length);
+        int tamano1 = 10;
+        /*nivel.setColumnas(this.tamano);
+        nivel.setFilas(this.tamano);
+        nivel.setIdNivel(this.getIdNivel());
+        nivel.setCantMoves(this.getCantMoves());*/
+        panelGame.setSize(tamano1*40, tamano1*40);
+        panelGame.setLayout(new GridLayout(tamano1, tamano1));
+        int jj=0;
+        System.out.println("tamano matriz " + matriz.length);
+
+        for (int x = 0; x < matriz.length ; x++) {
+
+            for (int y = 0; y < matriz.length ; y++) {
+                //b.setLocation(x*65, y*65);
+                Button b = new Button();
+
+                //b.setVisible(true);
+
+                b.setBackground(Color.LIGHT_GRAY);
+                panelGame.add(b).setLocation(x, y);
+                jj++;
+                this.setVisible(true);
+                panelGame.setVisible(true);
+                System.out.println(" x  "+x+" y  "+y+" j  "+jj);
+
+            }
+
+        }
+    }
+
+    public creacionNivel(int tamano, int idNivel, int cantMoves) {
+        this.tamano = tamano;
+        this.idNivel = idNivel;
+        this.cantMoves = cantMoves;
+    }
+
+    public int getTamano() {
+        return tamano;
+    }
+
+    public void setTamano(int tamano) {
+        this.tamano = tamano;
+    }
+
+    public int getIdNivel() {
+        return idNivel;
+    }
+
+    public void setIdNivel(int idNivel) {
+        this.idNivel = idNivel;
+    }
+
+    public int getCantMoves() {
+        return cantMoves;
+    }
+
+    public void setCantMoves(int cantMoves) {
+        this.cantMoves = cantMoves;
     }
 
     /**
@@ -29,67 +104,168 @@ public class creacionNivel extends javax.swing.JFrame {
 
         btnCaja = new javax.swing.JButton();
         btnPared = new javax.swing.JButton();
-        btnPersonaje = new javax.swing.JButton();
+        btnPunR = new javax.swing.JButton();
         btnCajaRoja = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        panelGame = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        btnPersonaje = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1280, 720));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         btnCaja.setBackground(new java.awt.Color(65, 195, 228));
         btnCaja.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnCaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/caja.png"))); // NOI18N
+        btnCaja.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("file:/C:/Users/USUARIO/Documents/POO proyecto/POO-Sokoban/POO Sokoban/src/Icons/caja.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
         btnCaja.setAlignmentX(0.5F);
         btnCaja.setBorder(null);
         btnCaja.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnCaja.setMaximumSize(new java.awt.Dimension(40, 40));
+        btnCaja.setMinimumSize(new java.awt.Dimension(40, 40));
+        btnCaja.setPreferredSize(new java.awt.Dimension(45, 45));
         btnCaja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCajaActionPerformed(evt);
             }
         });
         getContentPane().add(btnCaja);
-        btnCaja.setBounds(1080, 210, 70, 70);
+        btnCaja.setBounds(1140, 90, 58, 58);
 
         btnPared.setBackground(new java.awt.Color(65, 195, 228));
         btnPared.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnPared.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("file:/C:/Users/USUARIO/Documents/POO proyecto/POO-Sokoban/POO Sokoban/src/Icons/muro.jpeg")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
         btnPared.setAlignmentX(0.5F);
         btnPared.setBorder(null);
         btnPared.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnPared.setPreferredSize(new java.awt.Dimension(40, 40));
         btnPared.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnParedActionPerformed(evt);
             }
         });
         getContentPane().add(btnPared);
-        btnPared.setBounds(1171, 328, 70, 70);
+        btnPared.setBounds(1140, 210, 58, 58);
 
-        btnPersonaje.setBackground(new java.awt.Color(65, 195, 228));
-        btnPersonaje.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnPersonaje.setAlignmentX(0.5F);
-        btnPersonaje.setBorder(null);
-        btnPersonaje.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        btnPersonaje.addActionListener(new java.awt.event.ActionListener() {
+        btnPunR.setBackground(new java.awt.Color(65, 195, 228));
+        btnPunR.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnPunR.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("file:/C:/Users/USUARIO/Documents/POO proyecto/POO-Sokoban/POO Sokoban/src/Icons/puntoRojo.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
+        btnPunR.setAlignmentX(0.5F);
+        btnPunR.setBorder(null);
+        btnPunR.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnPunR.setPreferredSize(new java.awt.Dimension(40, 40));
+        btnPunR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPersonajeActionPerformed(evt);
+                btnPunRActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPersonaje);
-        btnPersonaje.setBounds(1171, 398, 80, 70);
+        getContentPane().add(btnPunR);
+        btnPunR.setBounds(1140, 270, 58, 58);
 
         btnCajaRoja.setBackground(new java.awt.Color(65, 195, 228));
         btnCajaRoja.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
-        btnCajaRoja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cajaRoja.jpg"))); // NOI18N
+        btnCajaRoja.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("file:/C:/Users/USUARIO/Documents/POO proyecto/POO-Sokoban/POO Sokoban/src/Icons/cajaRoja.jpg")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
         btnCajaRoja.setAlignmentX(0.5F);
         btnCajaRoja.setBorder(null);
         btnCajaRoja.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnCajaRoja.setMaximumSize(new java.awt.Dimension(40, 40));
+        btnCajaRoja.setMinimumSize(new java.awt.Dimension(40, 40));
+        btnCajaRoja.setPreferredSize(new java.awt.Dimension(40, 40));
         btnCajaRoja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCajaRojaActionPerformed(evt);
             }
         });
         getContentPane().add(btnCajaRoja);
-        btnCajaRoja.setBounds(1170, 210, 70, 70);
+        btnCajaRoja.setBounds(1140, 150, 58, 58);
+
+        jButton1.setFont(new java.awt.Font("Minecrafter Alt", 0, 24)); // NOI18N
+        jButton1.setText("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(1064, 629, 149, 40);
+
+        panelGame.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelGame.setMaximumSize(new java.awt.Dimension(620, 620));
+        panelGame.setMinimumSize(new java.awt.Dimension(620, 620));
+        panelGame.setPreferredSize(new java.awt.Dimension(620, 620));
+        panelGame.add(jLabel1);
+
+        getContentPane().add(panelGame);
+        panelGame.setBounds(300, 50, 620, 620);
+
+        btnPersonaje.setBackground(new java.awt.Color(65, 195, 228));
+        btnPersonaje.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
+        btnPersonaje.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\personaje.JPG")); // NOI18N
+        btnPersonaje.setAlignmentX(0.5F);
+        btnPersonaje.setBorder(null);
+        btnPersonaje.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnPersonaje.setPreferredSize(new java.awt.Dimension(40, 40));
+        btnPersonaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPersonajeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnPersonaje);
+        btnPersonaje.setBounds(1140, 330, 58, 58);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\juego.jpg")); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -102,13 +278,53 @@ public class creacionNivel extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnParedActionPerformed
 
-    private void btnPersonajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonajeActionPerformed
+    private void btnPunRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPunRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnPersonajeActionPerformed
+    }//GEN-LAST:event_btnPunRActionPerformed
 
     private void btnCajaRojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCajaRojaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCajaRojaActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        /*Nivel nivel = new Nivel();
+        
+        int [][] matriz = nivel.crearMatriz(this.tamano);
+        System.out.println(matriz.length);
+        
+        nivel.setColumnas(this.tamano);
+        nivel.setFilas(this.tamano);
+        nivel.setIdNivel(this.getIdNivel());
+        nivel.setCantMoves(this.getCantMoves());
+        
+        panelGame.setLayout(new GridLayout(this.tamano, this.tamano, 0, 0));
+        
+        
+        System.out.println("tamano matriz " + matriz.length);
+        for (int x = 1; x < matriz.length+1; x++) {
+            
+            for (int y = 1; y < matriz.length+1; y++) {
+                //b.setLocation(x*65, y*65);
+                Button b = new Button();
+                
+                b.setVisible(true);
+          
+                b.setBackground(Color.LIGHT_GRAY);
+                panelGame.add(b);
+                
+                
+            }
+            
+        }*/
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnPersonajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonajeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPersonajeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,5 +366,10 @@ public class creacionNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnCajaRoja;
     private javax.swing.JButton btnPared;
     private javax.swing.JButton btnPersonaje;
+    private javax.swing.JButton btnPunR;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel panelGame;
     // End of variables declaration//GEN-END:variables
 }
