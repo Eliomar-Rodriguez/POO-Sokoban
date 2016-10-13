@@ -30,15 +30,16 @@ public class creacionNivel extends javax.swing.JFrame {
         initComponents();
         
         Nivel nivel = new Nivel();
-
-        int[][] matriz = nivel.crearMatriz(10);
+        int tamano1 = 4;
+        int[][] matriz = nivel.crearMatriz(tamano1);
+       
         System.out.println(matriz.length);
-        int tamano1 = 10;
+        
         /*nivel.setColumnas(this.tamano);
         nivel.setFilas(this.tamano);
         nivel.setIdNivel(this.getIdNivel());
         nivel.setCantMoves(this.getCantMoves());*/
-        panelGame.setSize(tamano1*40, tamano1*40);
+        //panelGame.setSize(tamano1*50, tamano1*50);
         panelGame.setLayout(new GridLayout(tamano1, tamano1));
         int jj=0;
         System.out.println("tamano matriz " + matriz.length);
@@ -48,19 +49,26 @@ public class creacionNivel extends javax.swing.JFrame {
             for (int y = 0; y < matriz.length ; y++) {
                 //b.setLocation(x*65, y*65);
                 Button b = new Button();
+                if (x==0 | y ==0 | x==3 | y==3)
+                    b.setBackground(Color.RED);
+                else
+                    b.setBackground(Color.LIGHT_GRAY);
+                    
 
                 //b.setVisible(true);
 
-                b.setBackground(Color.LIGHT_GRAY);
+                //b.setBackground(Color.LIGHT_GRAY);
                 panelGame.add(b).setLocation(x, y);
                 jj++;
                 this.setVisible(true);
                 panelGame.setVisible(true);
                 System.out.println(" x  "+x+" y  "+y+" j  "+jj);
+                //b.paint(g);
 
             }
 
         }
+        
     }
 
     public creacionNivel(int tamano, int idNivel, int cantMoves) {

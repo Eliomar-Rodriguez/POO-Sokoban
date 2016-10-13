@@ -118,7 +118,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cmbUsers);
-        cmbUsers.setBounds(490, 340, 260, 37);
+        cmbUsers.setBounds(490, 340, 260, 34);
 
         txtMail.setBackground(new java.awt.Color(204, 255, 255));
         txtMail.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -133,7 +133,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtMail);
-        txtMail.setBounds(490, 220, 260, 32);
+        txtMail.setBounds(490, 220, 260, 34);
 
         txtId.setBackground(new java.awt.Color(204, 255, 255));
         txtId.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -148,7 +148,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtId);
-        txtId.setBounds(490, 180, 260, 32);
+        txtId.setBounds(490, 180, 260, 34);
 
         jLabel7.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel7.setText("Nombre completo");
@@ -168,7 +168,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtName);
-        txtName.setBounds(490, 140, 260, 32);
+        txtName.setBounds(490, 140, 260, 34);
 
         jLabel8.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel8.setText("Cedula");
@@ -187,7 +187,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSave);
-        btnSave.setBounds(410, 500, 232, 50);
+        btnSave.setBounds(410, 500, 233, 50);
 
         jLabel9.setFont(new java.awt.Font("Minecrafter", 0, 24)); // NOI18N
         jLabel9.setText("Correo");
@@ -228,7 +228,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         panelAdmin.add(txtDate1);
-        txtDate1.setBounds(630, 270, 264, 32);
+        txtDate1.setBounds(630, 270, 264, 34);
 
         txtNacionalidad.setBackground(new java.awt.Color(204, 255, 255));
         txtNacionalidad.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -243,7 +243,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         panelAdmin.add(txtNacionalidad);
-        txtNacionalidad.setBounds(300, 10, 260, 32);
+        txtNacionalidad.setBounds(300, 10, 260, 34);
 
         lblNation.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         lblNation.setForeground(new java.awt.Color(255, 51, 51));
