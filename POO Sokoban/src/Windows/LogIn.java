@@ -43,9 +43,7 @@ public class LogIn extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(900, 620));
         setMinimumSize(new java.awt.Dimension(900, 620));
-        setPreferredSize(new java.awt.Dimension(900, 620));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -119,16 +117,16 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        String contraseña = new String(txtPassLogin.getPassword());
-             
-        if (txtUsuario.getText().isEmpty() | contraseña.isEmpty())  // si alguno de los dos campos esta vacio muestro alerta
+            
+        if (txtUsuario.getText().isEmpty() | txtPassLogin.getPassword().length==0)  // si alguno de los dos campos esta vacio muestro alerta
             lblAviso.setVisible(true);
-        else{                     
+        else{
+            //char [] arrayC = txtPassLogin.getPassword();
+            String contraseña = new String(txtPassLogin.getPassword());
+         
             for (int i = 0; i < SokobanPrincipal.listaUsuarios.size(); i++) {
-                
-                if (SokobanPrincipal.listaUsuarios.get(i).getContra().equals(contraseña)){
                     
-                    if (SokobanPrincipal.listaUsuarios.get(i).getCedula().equals(txtUsuario.getText())){
+                    if (SokobanPrincipal.listaUsuarios.get(i).getCedula()==(txtUsuario.getText()) && SokobanPrincipal.listaUsuarios.get(i).getContra()==(contraseña)){
                         
                         if (SokobanPrincipal.listaUsuarios.get(i).getTipoUsuario()==0){//admin
                             MenuAdmin menAdm = new MenuAdmin();
@@ -143,7 +141,7 @@ public class LogIn extends javax.swing.JFrame {
                             dispose();
                         }
                     }
-                }      
+                     
             }  
             lblAviso.setVisible(false);
             lblNoExiste.setVisible(true);

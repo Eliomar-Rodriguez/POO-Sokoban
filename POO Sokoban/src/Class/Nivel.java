@@ -1,5 +1,7 @@
 package Class;
 
+import java.awt.Color;
+import Class.Objeto;
 
 public class Nivel {
 
@@ -17,7 +19,7 @@ public class Nivel {
 
     private int columnaPersonaje;
 
-    int [][] matrizLogica = new int [filas][columnas];    // ojo al tipo en caso de que de error con la matriz mas adelante
+    public Objeto [][] matrizLogica;    // ojo al tipo en caso de que de error con la matriz mas adelante
 
     private String idAdmin;
 
@@ -28,7 +30,7 @@ public class Nivel {
     private SokobanPrincipal soko = null;
     private int[][] matriz;
 
-    public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, String idAdmin, int cantPuntos, int movisDuranteJuego) {
+    /*public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, String idAdmin, int cantPuntos, int movisDuranteJuego) {
         this.cantMoves = cantMoves;
         this.idNivel = idNivel;
         this.cantCajas = cantCajas;
@@ -39,23 +41,30 @@ public class Nivel {
         this.idAdmin = idAdmin;
         this.cantPuntos = cantPuntos;
         this.movisDuranteJuego = movisDuranteJuego;
+    }*/
+
+    public Nivel(int cantMoves, int idNivel, int cantCajas, int filas, int columnas, int filaPersonaje, int columnaPersonaje, String idAdmin, int cantPuntos, int movisDuranteJuego, int[][] matriz) {
+        this.cantMoves = cantMoves;
+        this.idNivel = idNivel;
+        this.cantCajas = cantCajas;
+        this.filas = filas;
+        this.columnas = columnas;
+        this.filaPersonaje = filaPersonaje;
+        this.columnaPersonaje = columnaPersonaje;
+        this.idAdmin = idAdmin;
+        this.cantPuntos = cantPuntos;
+        this.movisDuranteJuego = movisDuranteJuego;
+        this.matriz = matriz;
+        this.matrizLogica = new Objeto[filas][columnas];
     }
 
-    public int[][] getMatrizLogica() {
+    public Objeto[][] getMatrizLogica() {
         return matrizLogica;
     }
-
-    public void setMatrizLogica(int[][] matrizLogica) {
+    public void setMatrizLogica(Objeto[][] matrizLogica) {
         this.matrizLogica = matrizLogica;
     }
 
-    public SokobanPrincipal getSoko() {
-        return soko;
-    }
-
-    public void setSoko(SokobanPrincipal soko) {
-        this.soko = soko;
-    }
 
 
     public Nivel() {
@@ -173,18 +182,19 @@ public class Nivel {
     public void validarMatriz() {
     }
 
-    public int[][] crearMatriz(int n) {
-        Nivel nivel = new Nivel();
-        int [][] matriz = new int [n][n];
+    public void crearMatriz(int n) {
+        Objeto [][] matrizLogica1 = new Objeto[n+1][n+1];
+        //Nivel nivel = new Nivel();
         
-        for (int x = 0; x < n; x++) {
-            for (int y = 0; y < n; y++) {
-                matriz[x][y]=0;  
-            }  
+        
+        
+        for (int i = 0; i < n+1; i++) {
+            for (int j = 0; j < n+1; j++) {
+                Objeto obj = new Objeto(i*58,j*58);
+                matrizLogica1[i][j]=obj;
+            }    
         }
-        return matriz;
-        
-        
+        this.setMatrizLogica(matrizLogica1);
     }
 
     @Override

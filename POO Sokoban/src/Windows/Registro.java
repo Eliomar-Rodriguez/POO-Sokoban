@@ -353,8 +353,10 @@ public class Registro extends javax.swing.JFrame {
         });
         getContentPane().add(btnAtras);
         btnAtras.setBounds(0, 0, 120, 40);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\registrar.jpg")); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, -10, 1280, 720);
+        jLabel3.setBounds(0, 0, 1280, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -378,6 +380,7 @@ public class Registro extends javax.swing.JFrame {
         SokobanPrincipal soko = new SokobanPrincipal();
         
         //ArrayList<Persona> lista = soko.getListaUsuarios();
+         //char [] arrayC = txtPass.getPassword();
          String contraseña = new String(txtPass.getPassword());
         if (cmbUsers.getSelectedIndex()==-1 | direccionImagen.equals("") | txtName.getText().isEmpty() | txtId.getText().isEmpty() | txtMail.getText().isEmpty() | contraseña.isEmpty()){
                     
@@ -415,7 +418,7 @@ public class Registro extends javax.swing.JFrame {
                 
                 SokobanPrincipal.listaUsuarios.add(admin);
                 
-                System.out.println(SokobanPrincipal.listaUsuarios); 
+                //System.out.println(SokobanPrincipal.listaUsuarios); 
                 
                 LogIn login = new LogIn();
                 login.setVisible(true);
@@ -435,7 +438,7 @@ public class Registro extends javax.swing.JFrame {
             jugador.setFoto(direccionImagen);
   
             SokobanPrincipal.listaUsuarios.add(jugador);
-            System.out.println(SokobanPrincipal.listaUsuarios);  
+            //System.out.println(SokobanPrincipal.listaUsuarios);  
                 
             LogIn login = new LogIn();
             login.setVisible(true);

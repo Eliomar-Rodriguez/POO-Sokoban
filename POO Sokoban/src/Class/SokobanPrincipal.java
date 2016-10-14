@@ -56,15 +56,6 @@ public class SokobanPrincipal {
     public void setlistaNiveles(Nivel n) {
         this.listaNiveles.add(n);
     }
-     
-    public void login() {
-    }
-
-    public void crearUsuario() {
-    }
-
-    public void borrarUsuario() {
-    }
 
     public void buscarUsuario() {
     }
