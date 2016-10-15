@@ -375,8 +375,7 @@ public class Registro extends javax.swing.JFrame {
     }
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         /// instancias
-        Administrador admin = new Administrador();  
-        UsuarioNormal jugador = new UsuarioNormal();
+        //System.out.println("len de la lista "+SokobanPrincipal.listaUsuarios.size());
         SokobanPrincipal soko = new SokobanPrincipal();
         
         //ArrayList<Persona> lista = soko.getListaUsuarios();
@@ -407,6 +406,9 @@ public class Registro extends javax.swing.JFrame {
             if (txtNacionalidad.getText().isEmpty())
                 lblNation.setVisible(true);     
             else{
+                Administrador admin = new Administrador();  
+                admin.setNivelesAgregados(0);
+                admin.setBestMoves(0);
                 admin.setNombre(txtName.getText());
                 admin.setCedula(txtId.getText());
                 admin.setCorreo(txtMail.getText());
@@ -422,29 +424,34 @@ public class Registro extends javax.swing.JFrame {
                 
                 LogIn login = new LogIn();
                 login.setVisible(true);
-                login.setDefaultCloseOperation(HIDE_ON_CLOSE);
+                //login.setDefaultCloseOperation(HIDE_ON_CLOSE);
                 dispose(); // oculta esta ventana y abre la que estoy llamando
             }    
         }  
         else if(cmbUsers.getSelectedIndex()==1){ // usuario normal
-            jugador.setNombre(txtName.getText());
-            jugador.setCedula(txtId.getText());
-            jugador.setCorreo(txtMail.getText());
-                
-            jugador.setContra(contraseña);
-                
-            jugador.setFechaReg(txtDate.getText());
-            jugador.setTipoUsuario(cmbUsers.getSelectedIndex());
-            jugador.setFoto(direccionImagen);
-  
-            SokobanPrincipal.listaUsuarios.add(jugador);
+            
+            
+            String nombre,cedula,correo,fechaReg,foto;
+            int tipoUsu,nivelAct,repet;
+            
+            nombre = txtName.getText();
+            cedula = txtId.getText();
+            correo = txtMail.getText();
+            fechaReg = txtDate.getText();
+            tipoUsu = cmbUsers.getSelectedIndex();
+            
+            
+            UsuarioNormal jugador = new UsuarioNormal(0,0,0,nombre,cedula,correo,contraseña,fechaReg, direccionImagen, tipoUsu);
+            
+            SokobanPrincipal.listaUsuarios.add(new UsuarioNormal(0,0,0,nombre,cedula,correo,contraseña,fechaReg, direccionImagen, tipoUsu));
             //System.out.println(SokobanPrincipal.listaUsuarios);  
-                
+            System.out.println("len de la lista "+SokobanPrincipal.listaUsuarios.size());
             LogIn login = new LogIn();
             login.setVisible(true);
-            login.setDefaultCloseOperation(HIDE_ON_CLOSE);
-            dispose(); // oculta esta ventana y abre la que estoy llamando
-        }     
+            //login.setDefaultCloseOperation(HIDE_ON_CLOSE);
+            //dispose(); // oculta esta ventana y abre la que estoy llamando
+        }
+        
     }//GEN-LAST:event_btnSaveActionPerformed
     
     private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed

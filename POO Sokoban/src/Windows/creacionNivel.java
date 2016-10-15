@@ -14,6 +14,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import Class.Nivel;
 import Class.Objeto;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -24,66 +27,16 @@ public class creacionNivel extends javax.swing.JFrame {
     int tamano;
     int idNivel;
     int cantMoves;
+    static int x,y;
+    static String foto = null;
 
     /**
      * Creates new form creacionNivel
      */
     public creacionNivel() {
         initComponents();
-        
-        Nivel nivel = new Nivel();
-        int tamano1 = 11;
-       
-       
-        nivel.crearMatriz(tamano1);
-        
-        Objeto[][] matriz = nivel.getMatrizLogica();
-       
-        System.out.println(matriz.length);
-        
-        nivel.setColumnas(this.tamano);
-        nivel.setFilas(this.tamano);
-        //nivel.setIdNivel(this.getIdNivel());
-        //nivel.setCantMoves(this.getCantMoves());
-        //panelGame.setSize(tamano1*50, tamano1*50);
-        //JPanel panelGame = new JPanel();
-        //panelGame.setSize(tamano1*58, tamano1*58);
-        panelGame.setLayout(new GridLayout(tamano1, tamano1,0,0));
-        int jj=0;
-        System.out.println("tamano matriz " + matriz.length);
-        //panelGame.setVisible(true);
-        //this.add(panelGame);
-        
-        for (int x = 0; x < tamano1 ; x++) {
-
-            for (int y = 0; y < tamano1 ; y++) {
-                //b.setLocation(x*65, y*65);
-                //Button b = new Button();
-                              
-                
-                if (x==0 | y ==0 | x==tamano1-1 | y==tamano1-1){
-                    matriz[x][y].getB().setBackground(Color.RED);
-                    matriz[x][y].getB().setEnabled(false);
-                            }
-                else
-                    matriz[x][y].getB().setBackground(Color.LIGHT_GRAY);
-                
-                
-                
-                //b.setVisible(true);
-
-                //b.setBackground(Color.LIGHT_GRAY);
-                panelGame.add(matriz[x][y].getB());
-                jj++;
-                //this.setVisible(true);
-                panelGame.setVisible(true);
-                System.out.println(" x  "+x+" y  "+y+" j  "+jj);
-                //b.paint(g);
-
-            }
-
-        }
-        
+        this.setVisible(true);
+               
     }
 
     public creacionNivel(int tamano, int idNivel, int cantMoves) {
@@ -132,6 +85,8 @@ public class creacionNivel extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         btnPersonaje = new javax.swing.JButton();
         panelGame = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -160,6 +115,7 @@ public class creacionNivel extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        btnCaja.setToolTipText("Caja");
         btnCaja.setAlignmentX(0.5F);
         btnCaja.setBorder(null);
         btnCaja.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -187,6 +143,7 @@ public class creacionNivel extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        btnPared.setToolTipText("Pared");
         btnPared.setAlignmentX(0.5F);
         btnPared.setBorder(null);
         btnPared.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -212,6 +169,7 @@ public class creacionNivel extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        btnPunR.setToolTipText("Punto Rojo");
         btnPunR.setAlignmentX(0.5F);
         btnPunR.setBorder(null);
         btnPunR.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -237,6 +195,7 @@ public class creacionNivel extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        btnCajaRoja.setToolTipText("Caja Roja");
         btnCajaRoja.setAlignmentX(0.5F);
         btnCajaRoja.setBorder(null);
         btnCajaRoja.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -264,6 +223,7 @@ public class creacionNivel extends javax.swing.JFrame {
         btnPersonaje.setBackground(new java.awt.Color(65, 195, 228));
         btnPersonaje.setFont(new java.awt.Font("Minecrafter Alt", 0, 36)); // NOI18N
         btnPersonaje.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\personaje.JPG")); // NOI18N
+        btnPersonaje.setToolTipText("Personaje");
         btnPersonaje.setAlignmentX(0.5F);
         btnPersonaje.setBorder(null);
         btnPersonaje.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -284,6 +244,15 @@ public class creacionNivel extends javax.swing.JFrame {
         getContentPane().add(panelGame);
         panelGame.setBounds(300, 60, 600, 600);
 
+        jLabel1.setText("hola2");
+        jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(929, 170, 170, 20);
+
+        jLabel3.setText("hola");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(920, 130, 220, 30);
+
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Images\\juego.jpg")); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 1280, 720);
@@ -292,51 +261,76 @@ public class creacionNivel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCajaActionPerformed
-        // TODO add your handling code here:
+        foto = "C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\caja.png";
     }//GEN-LAST:event_btnCajaActionPerformed
 
     private void btnParedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParedActionPerformed
-
+        foto = "C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\muro.jpeg";
     }//GEN-LAST:event_btnParedActionPerformed
 
     private void btnPunRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPunRActionPerformed
-        // TODO add your handling code here:
+        foto = "C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\puntoRojo.png";
     }//GEN-LAST:event_btnPunRActionPerformed
 
     private void btnCajaRojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCajaRojaActionPerformed
-        // TODO add your handling code here:
+        foto = "C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\cajaRoja.jpg";
     }//GEN-LAST:event_btnCajaRojaActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        /*Nivel nivel = new Nivel();
+        Nivel nivel = new Nivel();
+        int tamano1 = 11;
+       
+       
+        nivel.crearMatriz(tamano1);
         
-        int [][] matriz = nivel.crearMatriz(this.tamano);
+        Objeto[][] matriz = nivel.getMatrizLogica();
+       
         System.out.println(matriz.length);
         
-        nivel.setColumnas(this.tamano);
-        nivel.setFilas(this.tamano);
-        nivel.setIdNivel(this.getIdNivel());
-        nivel.setCantMoves(this.getCantMoves());
-        
-        panelGame.setLayout(new GridLayout(this.tamano, this.tamano, 0, 0));
-        
-        
+        nivel.setColumnas(tamano1);
+        nivel.setFilas(tamano1);
+        //nivel.setIdNivel(this.getIdNivel());
+        //nivel.setCantMoves(this.getCantMoves());
+        //panelGame.setSize(tamano1*50, tamano1*50);
+        //JPanel panelGame = new JPanel();
+        //panelGame.setSize(tamano1*58, tamano1*58);
+        panelGame.setLayout(new GridLayout(tamano1, tamano1,0,0));
+        int jj=0;
         System.out.println("tamano matriz " + matriz.length);
-        for (int x = 1; x < matriz.length+1; x++) {
-            
-            for (int y = 1; y < matriz.length+1; y++) {
+        //panelGame.setVisible(true);
+        //this.add(panelGame);        
+        for (int x = 0; x < tamano1 ; x++) {
+            for (int y = 0; y < tamano1 ; y++) {
                 //b.setLocation(x*65, y*65);
-                Button b = new Button();
+                //Button b = new Button();   
+                if (x==0 | y ==0 | x==tamano1-1 | y==tamano1-1){
+                    matriz[x][y].getB().setBackground(Color.GRAY);
+                    matriz[x][y].getB().setEnabled(false);
+                }
+                else{
+                    matriz[x][y].getB().setBackground(Color.LIGHT_GRAY);
+                    //matriz[x][y].getB().matriz[x][y].getX()));
+                    
+                    matriz[x][y].getB().addActionListener (new ActionListener() {
+                        
+                        public void actionPerformed (ActionEvent evt) {
+                        
+                        
+                        for (int i = 0; i < tamano1; i++) {
+                            for (int j = 0; j < tamano1; j++) {
+                                
+                                    jLabel1.setText("No encuentro la posicion :(");    
+                            }   
+                        }
+                    }
+                });
                 
-                b.setVisible(true);
-          
-                b.setBackground(Color.LIGHT_GRAY);
-                panelGame.add(b);
-                
+                } 
+                panelGame.add(matriz[x][y].getB());               
+                panelGame.setVisible(true);
                 
             }
-            
-        }*/
+        }
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -344,7 +338,7 @@ public class creacionNivel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnPersonajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonajeActionPerformed
-        // TODO add your handling code here:
+        foto = "C:\\Users\\USUARIO\\Documents\\POO proyecto\\POO-Sokoban\\POO Sokoban\\src\\Icons\\personaje.JPG";
     }//GEN-LAST:event_btnPersonajeActionPerformed
 
     private void panelGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelGameMouseClicked
@@ -397,7 +391,9 @@ public class creacionNivel extends javax.swing.JFrame {
     private javax.swing.JButton btnPersonaje;
     private javax.swing.JButton btnPunR;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel panelGame;
     // End of variables declaration//GEN-END:variables
 }

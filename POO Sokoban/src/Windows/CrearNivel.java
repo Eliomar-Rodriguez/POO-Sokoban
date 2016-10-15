@@ -153,9 +153,8 @@ public class CrearNivel extends javax.swing.JFrame {
         else if (cmbTamano.getSelectedIndex()==5)
             tamano = 15;
         
-        creacionNivel nuevoNivel = new creacionNivel(tamano,idNivel,cantMoves);
-        nuevoNivel.setVisible(true);
-        nuevoNivel.setSize(1280, 720);
+        creacionNivel cr = new creacionNivel();
+        cr.setVisible(true);
         //nuevoNivel.setDefaultCloseOperation(HIDE_ON_CLOSE);
         //dispose();       
         

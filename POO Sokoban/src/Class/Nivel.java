@@ -190,7 +190,7 @@ public class Nivel {
         
         for (int i = 0; i < n+1; i++) {
             for (int j = 0; j < n+1; j++) {
-                Objeto obj = new Objeto(i*58,j*58);
+                Objeto obj = new Objeto(i, j);
                 matrizLogica1[i][j]=obj;
             }    
         }

@@ -117,13 +117,13 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-            
+         String contraseña = new String(txtPassLogin.getPassword());
+            System.out.println("len de la lista"+SokobanPrincipal.listaUsuarios.size()+"contra " + contraseña);   
         if (txtUsuario.getText().isEmpty() | txtPassLogin.getPassword().length==0)  // si alguno de los dos campos esta vacio muestro alerta
             lblAviso.setVisible(true);
         else{
             //char [] arrayC = txtPassLogin.getPassword();
-            String contraseña = new String(txtPassLogin.getPassword());
-         
+            
             for (int i = 0; i < SokobanPrincipal.listaUsuarios.size(); i++) {
                     
                     if (SokobanPrincipal.listaUsuarios.get(i).getCedula()==(txtUsuario.getText()) && SokobanPrincipal.listaUsuarios.get(i).getContra()==(contraseña)){
@@ -154,7 +154,7 @@ public class LogIn extends javax.swing.JFrame {
         Administrador admin = new Administrador("Costarricense",0,0,"Administrador","212223","admin1@administradores.com","abcd","05/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\2.jpg",0);
         soko.setListaUsuarios(admin);
         
-        UsuarioNormal jugador = new UsuarioNormal(4,45,5,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
+        UsuarioNormal jugador = new UsuarioNormal(4,45,0,"Usuario","121314","josecarlos95@gmail.com","1234","03/10/2016","C:\\Users\\Peniche\\Documents\\NetBeansProjects\\POO-Sokoban\\POO Sokoban\\src\\ImgUsers\\1.jpg",1);
         soko.setListaUsuarios(jugador);
         
     }//GEN-LAST:event_formWindowOpened

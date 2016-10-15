@@ -2,6 +2,7 @@
 package Class;
 
 import java.awt.Button;
+import java.awt.Color;
 
 public class Objeto {
     public Button b = new Button();
@@ -23,6 +24,9 @@ public class Objeto {
 
     public void setB(Button b) {
         this.b = b;
+    }
+    public void setCaja(){
+        b.setBackground(Color.MAGENTA);
     }
 
     public int getX() {
